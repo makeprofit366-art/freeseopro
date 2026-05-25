@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -7,93 +7,150 @@
 <meta name="description" content="Free AI SEO tool for bloggers. Get titles, H1, meta description, keywords, schema markup, and a 40-point publish checklist instantly.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-/* ─── RESET ─── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
-body{font-family:'Inter',sans-serif;background:#080c14;color:#e8eaf2;min-height:100vh;line-height:1.6;overflow-x:hidden}
+body{font-family:'DM Sans',sans-serif;min-height:100vh;line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
 
-/* ─── CSS VARIABLES ─── */
-:root{
-  --bg:#080c14;
-  --card:#0e1420;
-  --card2:#131a28;
-  --card3:#1a2235;
-  --border:#1e2a3d;
-  --border2:#28395a;
+/* ─── DARK THEME ─── */
+[data-theme="dark"]{
+  --bg:#070d1a;
+  --card:#0d1526;
+  --card2:#111d30;
+  --card3:#172238;
+  --border:#1c2e47;
+  --border2:#243a5c;
   --accent:#3b82f6;
   --accent-light:#60a5fa;
   --accent-dim:rgba(59,130,246,0.1);
-  --accent-glow:rgba(59,130,246,0.15);
   --green:#22c55e;
-  --green-dim:rgba(34,197,94,0.12);
   --amber:#f59e0b;
   --red:#ef4444;
   --purple:#a855f7;
   --cyan:#06b6d4;
-  --t1:#e8eaf2;
-  --t2:#8892a4;
-  --t3:#4a5568;
-  --r:12px;--r2:8px;--r3:6px;
-  --shadow:0 4px 24px rgba(0,0,0,0.4);
+  --t1:#e8edf8;
+  --t2:#7d8fa8;
+  --t3:#3d526b;
+  --shadow:0 4px 32px rgba(0,0,0,0.5);
+  --bg-gradient:radial-gradient(ellipse 900px 500px at -5% -5%,rgba(59,130,246,0.09),transparent 55%),radial-gradient(ellipse 600px 400px at 110% 100%,rgba(168,85,247,0.06),transparent 60%);
+  --preview-bg:#fff;
+  --preview-text:#000;
+  --g-title:#1a0dab;
+  --g-url:#3c4043;
+  --g-desc:#4d5156;
+  --code-bg:#040a14;
+  --code-text:#7dd3fc;
+  --snippet-bg:#040a14;
+  --fb-bg:#1c2026;
+  --fb-text:#e7e9ea;
+  --fb-desc:#8b8b8b;
 }
 
-/* ─── AMBIENT BG ─── */
-body::before{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:
-    radial-gradient(ellipse 800px 500px at -10% -5%,rgba(59,130,246,0.07),transparent 60%),
-    radial-gradient(ellipse 600px 400px at 110% 100%,rgba(168,85,247,0.05),transparent 60%);
+/* ─── LIGHT THEME ─── */
+[data-theme="light"]{
+  --bg:#f0f4f8;
+  --card:#ffffff;
+  --card2:#f8fafc;
+  --card3:#eef2f7;
+  --border:#dde4ed;
+  --border2:#c8d3e0;
+  --accent:#2563eb;
+  --accent-light:#1d4ed8;
+  --accent-dim:rgba(37,99,235,0.08);
+  --green:#16a34a;
+  --amber:#d97706;
+  --red:#dc2626;
+  --purple:#7c3aed;
+  --cyan:#0891b2;
+  --t1:#0f172a;
+  --t2:#475569;
+  --t3:#94a3b8;
+  --shadow:0 4px 24px rgba(0,0,0,0.08);
+  --bg-gradient:radial-gradient(ellipse 900px 500px at -5% -5%,rgba(37,99,235,0.04),transparent 55%),radial-gradient(ellipse 600px 400px at 110% 100%,rgba(124,58,237,0.03),transparent 60%);
+  --preview-bg:#fff;
+  --preview-text:#000;
+  --g-title:#1a0dab;
+  --g-url:#3c4043;
+  --g-desc:#4d5156;
+  --code-bg:#1e293b;
+  --code-text:#7dd3fc;
+  --snippet-bg:#f8fafc;
+  --fb-bg:#f0f4f8;
+  --fb-text:#1e293b;
+  --fb-desc:#475569;
 }
+
+body{background:var(--bg);color:var(--t1)}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:var(--bg-gradient)}
 
 /* ─── LAYOUT ─── */
 .page{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column}
-.wrap{max-width:820px;margin:0 auto;padding:0 16px;width:100%}
+.wrap{max-width:840px;margin:0 auto;padding:0 16px;width:100%}
+
+/* ─── TOP BAR ─── */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 0 0}
+.logo-row{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;background:var(--card);border:1px solid var(--border);border-radius:100px;box-shadow:var(--shadow)}
+.logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.logo-name{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;letter-spacing:-.3px}
+.logo-name span{color:var(--accent-light)}
+.logo-tag{font-size:10px;color:var(--t3);font-weight:600;padding:2px 8px;background:var(--card3);border-radius:100px}
+
+/* ─── THEME TOGGLE ─── */
+.theme-toggle{background:var(--card);border:1px solid var(--border);border-radius:100px;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--t2);transition:all .2s;font-family:'DM Sans',sans-serif}
+.theme-toggle:hover{border-color:var(--accent);color:var(--t1)}
+.theme-icon{font-size:16px;line-height:1}
 
 /* ─── HEADER ─── */
 .header{padding:28px 0 0;text-align:center}
-.logo-row{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;padding:8px 16px;background:var(--card);border:1px solid var(--border);border-radius:100px}
-.logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;animation:blink 2s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.logo-name{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;letter-spacing:-.3px}
-.logo-name span{color:var(--accent-light)}
-.logo-tag{font-size:11px;color:var(--t3);font-weight:500;padding:2px 8px;background:var(--card3);border-radius:100px}
-
-h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;color:#fff}
+h1{font-family:'Syne',sans-serif;font-size:clamp(28px,5.5vw,48px);font-weight:800;letter-spacing:-2px;line-height:1.05;margin-bottom:12px;color:var(--t1)}
 .h1-sub{color:var(--accent-light);display:block}
-.sub{color:var(--t2);font-size:15px;max-width:420px;margin:0 auto 20px;line-height:1.6}
+.sub{color:var(--t2);font-size:15px;max-width:440px;margin:0 auto 20px;line-height:1.6}
 .pills{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:32px}
 .pill{background:var(--card2);border:1px solid var(--border);border-radius:100px;padding:5px 13px;font-size:12px;font-weight:500;color:var(--t2)}
 .pill.blue{color:var(--accent-light);border-color:rgba(59,130,246,0.3)}
 
+/* ─── TAB BAR (Advanced Modes) ─── */
+.tab-bar{display:flex;gap:6px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:5px;margin-bottom:16px;overflow-x:auto}
+.tab-btn{flex:1;min-width:fit-content;padding:9px 14px;border-radius:9px;border:none;background:transparent;color:var(--t2);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .18s;white-space:nowrap}
+.tab-btn:hover{color:var(--t1);background:var(--card2)}
+.tab-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 12px rgba(59,130,246,0.3)}
+
 /* ─── INPUT CARD ─── */
-.input-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:20px;transition:border-color .2s,box-shadow .2s}
-.input-card:focus-within{border-color:rgba(59,130,246,0.4);box-shadow:0 0 0 3px rgba(59,130,246,0.08)}
-.field-lbl{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin-bottom:8px;display:flex;align-items:center;gap:6px}
-.field-lbl .req{color:var(--red);font-size:13px;line-height:1}
+.input-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;box-shadow:var(--shadow);transition:border-color .2s}
+.input-card:focus-within{border-color:rgba(59,130,246,0.4)}
+.field-lbl{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.field-lbl .req{color:var(--red);font-size:13px}
 .main-row{display:flex;gap:10px;align-items:center}
-.kw-inp{flex:1;background:var(--card3);border:1.5px solid var(--border2);border-radius:var(--r2);color:var(--t1);font-family:'Inter',sans-serif;font-size:16px;padding:13px 16px;outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none}
-.kw-inp:focus{border-color:var(--accent);background:#0f172a}
+.kw-inp{flex:1;background:var(--card3);border:1.5px solid var(--border2);border-radius:9px;color:var(--t1);font-family:'DM Sans',sans-serif;font-size:16px;padding:13px 16px;outline:none;transition:border-color .2s,background .2s}
+.kw-inp:focus{border-color:var(--accent)}
 .kw-inp::placeholder{color:var(--t3)}
-.go-btn{background:var(--accent);color:#fff;border:none;border-radius:var(--r2);padding:13px 22px;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s,box-shadow .15s;letter-spacing:-.2px;box-shadow:0 0 20px rgba(59,130,246,0.3);display:flex;align-items:center;gap:8px}
-.go-btn:hover:not(:disabled){background:#2563eb;box-shadow:0 0 30px rgba(59,130,246,0.4)}
+.go-btn{background:var(--accent);color:#fff;border:none;border-radius:9px;padding:13px 22px;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .15s;box-shadow:0 0 20px rgba(59,130,246,0.3);display:flex;align-items:center;gap:8px}
+.go-btn:hover:not(:disabled){background:#1d4ed8;box-shadow:0 0 30px rgba(59,130,246,0.45)}
 .go-btn:active:not(:disabled){transform:scale(.97)}
 .go-btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
-.go-btn .btn-icon{font-size:16px;line-height:1}
-.opt-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-.sub-inp{width:100%;background:var(--card3);border:1.5px solid var(--border);border-radius:var(--r3);color:var(--t1);font-family:'Inter',sans-serif;font-size:14px;padding:10px 13px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.opt-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px}
+.sub-inp{width:100%;background:var(--card3);border:1.5px solid var(--border);border-radius:7px;color:var(--t1);font-family:'DM Sans',sans-serif;font-size:14px;padding:10px 13px;outline:none;transition:border-color .2s}
 .sub-inp:focus{border-color:var(--accent)}
 .sub-inp::placeholder{color:var(--t3)}
+select.sub-inp{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+
+/* ─── ADVANCED OPTIONS PANEL ─── */
+.adv-panel{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:16px;margin-top:12px;display:none}
+.adv-panel.show{display:block}
+.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.adv-toggle{background:none;border:1px dashed var(--border2);border-radius:7px;color:var(--t3);font-size:12px;font-weight:600;padding:7px 14px;cursor:pointer;display:flex;align-items:center;gap:6px;margin-top:10px;font-family:'DM Sans',sans-serif;transition:all .15s;width:100%;justify-content:center}
+.adv-toggle:hover{color:var(--t2);border-color:var(--accent)}
 
 /* ─── PROGRESS ─── */
-.progress-area{display:none;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:20px}
+.progress-area{display:none;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:16px}
 .progress-area.show{display:block}
 .prog-title{font-size:13px;font-weight:600;color:var(--t2);margin-bottom:14px;display:flex;align-items:center;gap:8px}
 .prog-spinner{width:16px;height:16px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .step-grid{display:flex;flex-direction:column;gap:6px}
-.step{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:var(--r3);transition:background .2s}
+.step{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:7px;transition:background .2s}
 .step.active{background:var(--card3);border:1px solid var(--border2)}
 .step.done,.step.pending{border:1px solid transparent}
 .step.done{opacity:.45}
@@ -107,7 +164,7 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 
 /* ─── RESULTS ─── */
 #results{display:none}
-.block{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px;animation:fadeUp .3s ease both}
+.block{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px;box-shadow:var(--shadow);animation:fadeUp .3s ease both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
 /* Block header */
@@ -119,19 +176,19 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 .bh-icon.purple{background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.2)}
 .bh-icon.cyan{background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2)}
 .bh-icon.red{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2)}
-.bh-title{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;letter-spacing:-.3px;line-height:1.2}
+.bh-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;letter-spacing:-.3px;line-height:1.2}
 .bh-sub{font-size:12px;color:var(--t3);margin-top:1px}
 .bh-badge{margin-left:auto;flex-shrink:0;background:var(--card3);border:1px solid var(--border2);border-radius:100px;padding:3px 10px;font-size:11px;font-weight:600;color:var(--t3)}
 
 /* Output box */
-.obox{background:var(--card2);border:1px solid var(--border);border-radius:var(--r2);padding:14px 16px;margin-bottom:10px}
+.obox{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:14px 16px;margin-bottom:10px}
 .obox:last-child{margin-bottom:0}
 .obox-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;gap:8px;flex-wrap:wrap}
 .obox-lbl{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--t3)}
 .obox-meta{font-size:11px;color:var(--t2)}
 .obox-val{font-size:14px;line-height:1.6;color:var(--t1);word-break:break-word}
-.obox-val.large{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:600;color:#fff}
-.obox-val.mono{font-family:'Courier New',monospace;font-size:12px;color:#7dd3fc;line-height:1.8;white-space:pre-wrap;overflow-x:auto;max-height:240px;overflow-y:auto}
+.obox-val.large{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--t1)}
+.obox-val.mono{font-family:'Courier New',monospace;font-size:12px;color:var(--code-text);line-height:1.8;white-space:pre-wrap;overflow-x:auto;max-height:240px;overflow-y:auto}
 .char-hint{font-size:11px;margin-top:6px;display:flex;align-items:center;gap:4px}
 .char-hint.ok{color:var(--green)}
 .char-hint.warn{color:var(--amber)}
@@ -140,13 +197,13 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 .char-fill{height:100%;border-radius:2px}
 
 /* Copy button */
-.cbtn{background:transparent;border:1px solid var(--border2);border-radius:5px;color:var(--t2);cursor:pointer;font-size:11px;font-weight:600;padding:4px 10px;transition:all .15s;font-family:'Inter',sans-serif;white-space:nowrap;flex-shrink:0}
+.cbtn{background:transparent;border:1px solid var(--border2);border-radius:5px;color:var(--t2);cursor:pointer;font-size:11px;font-weight:600;padding:4px 10px;transition:all .15s;font-family:'DM Sans',sans-serif;white-space:nowrap;flex-shrink:0}
 .cbtn:hover{color:var(--t1);border-color:var(--accent-light)}
 .cbtn.ok{color:var(--green);border-color:var(--green)}
 
 /* Overview grid */
-.ov-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.ov-card{background:var(--card2);border:1px solid var(--border);border-radius:var(--r2);padding:13px 15px}
+.ov-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.ov-card{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:13px 15px}
 .ov-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--t3);margin-bottom:5px}
 .ov-val{font-size:13px;font-weight:600;color:var(--t1);line-height:1.3}
 .ov-val.accent{color:var(--accent-light)}
@@ -160,22 +217,20 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 .ring-bg{fill:none;stroke:var(--card3);stroke-width:7}
 .ring-fg{fill:none;stroke-width:7;stroke-linecap:round;transition:stroke-dashoffset 1.2s cubic-bezier(.34,1.56,.64,1)}
 .ring-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.ring-n{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;line-height:1;color:#fff}
+.ring-n{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;line-height:1;color:var(--t1)}
 .ring-of{font-size:10px;color:var(--t3);margin-top:1px}
-.ring-info{}
-.ring-grade{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:3px}
+.ring-grade{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--t1);margin-bottom:3px}
 .ring-desc{font-size:13px;color:var(--t2);line-height:1.4}
 
-/* Options (titles / H1) */
+/* Options */
 .opts{display:flex;flex-direction:column;gap:8px}
-.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--card2);border:1.5px solid var(--border);border-radius:var(--r2);cursor:pointer;transition:all .15s;user-select:none}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--card2);border:1.5px solid var(--border);border-radius:9px;cursor:pointer;transition:all .15s;user-select:none}
 .opt:hover{border-color:rgba(59,130,246,.4);background:var(--card3)}
-.opt.sel{border-color:var(--accent);background:rgba(59,130,246,.08)}
+.opt.sel{border-color:var(--accent);background:var(--accent-dim)}
 .opt-n{width:24px;height:24px;border-radius:50%;background:var(--card3);border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:1px;transition:all .2s}
 .opt.sel .opt-n{background:var(--accent);border-color:var(--accent);color:#fff}
 .opt-txt{font-size:14px;line-height:1.5;font-weight:500;color:var(--t2);transition:color .15s;flex:1;word-break:break-word}
-.opt.sel .opt-txt{color:#fff}
-.opt-copy{flex-shrink:0}
+.opt.sel .opt-txt{color:var(--t1)}
 
 /* Keywords chips */
 .chip-wrap{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
@@ -193,7 +248,7 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 
 /* Content outline */
 .h2-block{margin-bottom:12px}
-.h2-row{display:flex;align-items:center;gap:10px;background:var(--card2);border:1px solid var(--border);border-radius:var(--r2);padding:11px 14px;cursor:pointer;transition:border-color .15s}
+.h2-row{display:flex;align-items:center;gap:10px;background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:11px 14px;cursor:pointer;transition:border-color .15s}
 .h2-row:hover{border-color:var(--border2)}
 .h2-label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--accent-light);flex-shrink:0}
 .h2-text{font-size:14px;font-weight:600;flex:1;word-break:break-word}
@@ -201,7 +256,7 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 .h2-children{padding-left:12px;padding-top:6px;display:flex;flex-direction:column;gap:5px}
 .h3-row{display:flex;align-items:center;gap:8px;padding:7px 12px;background:var(--card3);border-left:2px solid rgba(59,130,246,.3);border-radius:0 5px 5px 0;font-size:13px;color:var(--t2)}
 .h3-label{font-size:9px;font-weight:700;color:var(--t3);flex-shrink:0}
-.tip-row{margin-top:5px;padding:8px 12px;background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.15);border-radius:var(--r3);font-size:12px;color:var(--amber);display:flex;gap:6px}
+.tip-row{margin-top:5px;padding:8px 12px;background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.15);border-radius:7px;font-size:12px;color:var(--amber);display:flex;gap:6px}
 
 /* Alt texts */
 .alt-row{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
@@ -210,7 +265,7 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 .alt-txt{flex:1;font-size:13px;line-height:1.5;word-break:break-word}
 
 /* Table */
-.seo-tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;overflow:hidden;border-radius:var(--r3)}
+.seo-tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;overflow:hidden;border-radius:7px}
 .seo-tbl th{text-align:left;padding:9px 12px;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--t3);background:var(--card3);border-bottom:1px solid var(--border)}
 .seo-tbl td{padding:9px 12px;border-bottom:1px solid var(--border);font-size:13px}
 .seo-tbl tr:last-child td{border-bottom:none}
@@ -224,39 +279,67 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 .faq-a{font-size:13px;color:var(--t2);line-height:1.6}
 
 /* Snippet box */
-.snippet-box{background:#05090f;border:1px solid var(--border2);border-radius:var(--r2);padding:14px 16px;font-size:14px;line-height:1.7;position:relative;margin-top:6px}
+.snippet-box{background:var(--snippet-bg);border:1px solid var(--border2);border-radius:9px;padding:14px 16px;font-size:14px;line-height:1.7;position:relative;margin-top:6px}
 .snippet-tag{position:absolute;top:-10px;left:12px;background:var(--accent);color:#fff;font-size:10px;font-weight:700;letter-spacing:.5px;padding:2px 9px;border-radius:100px}
 
-/* Schema code */
-.code-box{background:#05090f;border:1px solid var(--border);border-radius:var(--r2);padding:14px;font-family:'Courier New',monospace;font-size:11.5px;line-height:1.8;color:#7dd3fc;overflow-x:auto;white-space:pre;max-height:260px;overflow-y:auto}
+/* Code */
+.code-box{background:var(--code-bg);border:1px solid var(--border);border-radius:9px;padding:14px;font-family:'Courier New',monospace;font-size:11.5px;line-height:1.8;color:var(--code-text);overflow-x:auto;white-space:pre;max-height:260px;overflow-y:auto}
 
 /* Social preview */
-.g-prev{background:#fff;border-radius:10px;padding:14px 16px;margin-bottom:12px}
-.g-url{font-size:12px;color:#3c4043;margin-bottom:3px;display:flex;align-items:center;gap:4px}
-.g-url-text{color:#3c4043}
-.g-title{font-size:18px;color:#1a0dab;margin-bottom:4px;font-weight:400;line-height:1.3;font-family:Arial,sans-serif}
-.g-desc{font-size:14px;color:#4d5156;line-height:1.5;font-family:Arial,sans-serif}
-
-.fb-prev{background:#1c2026;border-radius:10px;overflow:hidden;margin-bottom:12px}
-.fb-img{height:55px;background:linear-gradient(135deg,#1e2a3d,#131a28);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--t3)}
+.g-prev{background:var(--preview-bg);border-radius:10px;padding:14px 16px;margin-bottom:12px}
+.g-url{font-size:12px;color:var(--g-url);margin-bottom:3px;display:flex;align-items:center;gap:4px}
+.g-title{font-size:18px;color:var(--g-title);margin-bottom:4px;font-weight:400;line-height:1.3;font-family:Arial,sans-serif}
+.g-desc{font-size:14px;color:var(--g-desc);line-height:1.5;font-family:Arial,sans-serif}
+.fb-prev{background:var(--fb-bg);border-radius:10px;overflow:hidden;margin-bottom:12px;border:1px solid var(--border)}
+.fb-img{height:55px;background:linear-gradient(135deg,var(--card3),var(--card2));display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--t3)}
 .fb-body{padding:10px 14px;border-top:3px solid #4267B2}
-.fb-domain{font-size:11px;color:#8b8b8b;text-transform:uppercase;margin-bottom:3px;font-family:Arial,sans-serif}
-.fb-title{font-size:15px;font-weight:700;color:#e7e9ea;margin-bottom:3px;line-height:1.3;font-family:Arial,sans-serif}
-.fb-desc{font-size:13px;color:#8b8b8b;line-height:1.4;font-family:Arial,sans-serif}
+.fb-domain{font-size:11px;color:var(--t3);text-transform:uppercase;margin-bottom:3px;font-family:Arial,sans-serif}
+.fb-title{font-size:15px;font-weight:700;color:var(--fb-text);margin-bottom:3px;line-height:1.3;font-family:Arial,sans-serif}
+.fb-desc{font-size:13px;color:var(--fb-desc);line-height:1.4;font-family:Arial,sans-serif}
+
+/* ─── RANK MATH / WORDPRESS PANEL ─── */
+.rank-panel{}
+.rm-score-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.rm-card{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:14px}
+.rm-card-title{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--t3);margin-bottom:10px}
+.rm-item{display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px}
+.rm-item:last-child{border-bottom:none;padding-bottom:0}
+.rm-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.rm-dot.ok{background:var(--green)}
+.rm-dot.warn{background:var(--amber)}
+.rm-dot.err{background:var(--red)}
+.rm-text{flex:1;line-height:1.4;word-break:break-word}
+.rm-copy{flex-shrink:0}
+
+/* ─── COMPETITOR ANALYSIS PANEL ─── */
+.comp-grid{display:flex;flex-direction:column;gap:8px}
+.comp-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:12px 14px;display:flex;align-items:flex-start;gap:12px}
+.comp-rank{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--t3);flex-shrink:0;width:28px;text-align:center}
+.comp-info{flex:1;min-width:0}
+.comp-gap-title{font-size:12px;font-weight:700;color:var(--t1);margin-bottom:3px}
+.comp-gap-desc{font-size:12px;color:var(--t2);line-height:1.5}
+.comp-tag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:100px;flex-shrink:0;margin-top:2px}
+.comp-tag.gap{background:rgba(239,68,68,.12);color:var(--red);border:1px solid rgba(239,68,68,.2)}
+.comp-tag.win{background:rgba(34,197,94,.1);color:var(--green);border:1px solid rgba(34,197,94,.2)}
+
+/* ─── CONTENT BRIEF PANEL ─── */
+.brief-section{margin-bottom:16px}
+.brief-title{font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--t3);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.brief-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:13px;color:var(--t2);line-height:1.5;border-bottom:1px dashed var(--border)}
+.brief-item:last-child{border-bottom:none}
+.brief-num{font-size:10px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:3px;width:16px}
 
 /* Checklist */
 .cl-stats{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:13px}
-.cl-pct{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--green)}
+.cl-pct{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--green)}
 .cl-of{font-size:13px;color:var(--t2);margin-top:2px}
 .cl-bar-wrap{height:6px;background:var(--card3);border-radius:3px;margin-bottom:16px;overflow:hidden}
 .cl-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--green));border-radius:3px;transition:width .4s ease}
-
 .cl-cats{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
-.cl-cat{background:var(--card2);border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--t2);cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif}
+.cl-cat{background:var(--card2);border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--t2);cursor:pointer;transition:all .15s;font-family:'DM Sans',sans-serif}
 .cl-cat:hover,.cl-cat.on{background:var(--accent-dim);border-color:rgba(59,130,246,.4);color:var(--accent-light)}
-
 .cl-list{display:flex;flex-direction:column;gap:5px}
-.cl-row{display:flex;align-items:flex-start;gap:11px;padding:10px 12px;border-radius:var(--r3);cursor:pointer;transition:background .15s;border:1px solid transparent;user-select:none}
+.cl-row{display:flex;align-items:flex-start;gap:11px;padding:10px 12px;border-radius:7px;cursor:pointer;transition:background .15s;border:1px solid transparent;user-select:none}
 .cl-row:hover{background:var(--card2)}
 .cl-row.done{background:rgba(34,197,94,.04);border-color:rgba(34,197,94,.12)}
 .cl-row.done .cl-task{color:var(--t3);text-decoration:line-through}
@@ -270,8 +353,6 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 .pr-dot.high{background:var(--amber)}
 .pr-dot.medium{background:var(--accent)}
 .pr-dot.low{background:var(--t3)}
-
-/* Priority legend */
 .pr-legend{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
 .pr-leg-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--t2)}
 
@@ -280,31 +361,40 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,44px);font-we
 .sdiv::before,.sdiv::after{content:'';flex:1;height:1px;background:var(--border)}
 
 /* Tip info box */
-.tip-box{background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.15);border-radius:var(--r3);padding:10px 14px;font-size:13px;color:var(--t2);margin-bottom:12px;line-height:1.6;display:flex;gap:8px}
+.tip-box{background:var(--accent-dim);border:1px solid rgba(59,130,246,.15);border-radius:7px;padding:10px 14px;font-size:13px;color:var(--t2);margin-bottom:12px;line-height:1.6;display:flex;gap:8px}
 .tip-box span:first-child{flex-shrink:0}
+
+/* Export bar */
+.export-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.exp-btn{background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--t2);font-size:12px;font-weight:600;padding:8px 14px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:all .15s;font-family:'DM Sans',sans-serif}
+.exp-btn:hover{border-color:var(--accent);color:var(--t1)}
 
 /* Footer */
 footer{text-align:center;padding:24px 0 36px;color:var(--t3);font-size:12px;margin-top:8px}
 footer a{color:var(--t2);text-decoration:none}
 
 /* ─── RESPONSIVE ─── */
-@media(max-width:560px){
+@media(max-width:600px){
   .main-row{flex-direction:column;gap:10px}
   .go-btn{width:100%;justify-content:center;padding:14px}
-  .opt-row{grid-template-columns:1fr}
+  .opt-row{grid-template-columns:1fr 1fr}
   .ov-grid{grid-template-columns:1fr 1fr}
+  .rm-score-row{grid-template-columns:1fr}
+  .adv-grid{grid-template-columns:1fr}
   .bh{flex-wrap:wrap;gap:8px}
   .bh-badge{margin-left:0}
   .score-wrap{flex-direction:column;text-align:center}
-  .ring-info{text-align:center}
   .cl-stats{flex-direction:column;gap:4px;text-align:center}
   .pills{gap:6px}
   .pill{font-size:11px;padding:4px 10px}
+  .tab-btn{font-size:12px;padding:8px 10px}
+  .export-bar{gap:6px}
 }
 @media(max-width:380px){
   .block{padding:16px 14px}
   .obox{padding:12px}
   .wrap{padding:0 12px}
+  .opt-row{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -312,22 +402,41 @@ footer a{color:var(--t2);text-decoration:none}
 <div class="page">
 <div class="wrap">
 
-<!-- HEADER -->
-<div class="header">
+<!-- TOP BAR -->
+<div class="topbar">
   <div class="logo-row">
     <div class="logo-dot"></div>
     <div class="logo-name">SEO<span>Pro</span></div>
     <div class="logo-tag">FREE TOOL</div>
   </div>
+  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+    <span class="theme-icon" id="themeIcon">☀️</span>
+    <span id="themeLabel">Light Mode</span>
+  </button>
+</div>
+
+<!-- HEADER -->
+<div class="header">
   <h1>Full SEO Blueprint<span class="h1-sub">In Under 30 Seconds</span></h1>
   <p class="sub">Enter your keyword. Get everything a professional SEO needs — titles, H1, meta, keywords, schema, snippets, and a 40-point checklist.</p>
   <div class="pills">
     <span class="pill blue">✦ 100% Free</span>
-    <span class="pill">Groq AI (Ultra Fast)</span>
+    <span class="pill">Ultra Fast AI</span>
     <span class="pill">40-Point Checklist</span>
     <span class="pill">Schema Generator</span>
     <span class="pill">Featured Snippets</span>
+    <span class="pill">Rank Math Ready</span>
+    <span class="pill">Competitor Gaps</span>
   </div>
+</div>
+
+<!-- MODE TABS -->
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="setMode('blueprint',this)">📋 Full Blueprint</button>
+  <button class="tab-btn" onclick="setMode('rankmath',this)">📊 Rank Math Guide</button>
+  <button class="tab-btn" onclick="setMode('competitor',this)">🔍 Competitor Gaps</button>
+  <button class="tab-btn" onclick="setMode('brief',this)">📝 Content Brief</button>
+  <button class="tab-btn" onclick="setMode('wordpress',this)">🔧 WordPress Checklist</button>
 </div>
 
 <!-- INPUT -->
@@ -336,8 +445,7 @@ footer a{color:var(--t2);text-decoration:none}
   <div class="main-row">
     <input class="kw-inp" id="kwInp" type="text" placeholder="e.g. best free seo tools for bloggers" autocomplete="off" autocorrect="off">
     <button class="go-btn" id="goBtn" onclick="run()">
-      <span class="btn-icon">⚡</span>
-      Generate
+      <span>⚡</span> Generate
     </button>
   </div>
   <div class="opt-row">
@@ -347,49 +455,184 @@ footer a{color:var(--t2);text-decoration:none}
     </div>
     <div>
       <div class="field-lbl" style="margin-top:14px">Language</div>
-      <input class="sub-inp" id="langInp" type="text" placeholder="English" value="English" autocomplete="off">
+      <select class="sub-inp" id="langInp">
+        <option value="English">English</option>
+        <option value="Telugu">Telugu</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+        <option value="German">German</option>
+        <option value="Portuguese">Portuguese</option>
+        <option value="Arabic">Arabic</option>
+        <option value="Japanese">Japanese</option>
+      </select>
+    </div>
+    <div>
+      <div class="field-lbl" style="margin-top:14px">Content Type</div>
+      <select class="sub-inp" id="typeInp">
+        <option value="">Auto Detect</option>
+        <option value="Blog Post">Blog Post</option>
+        <option value="Pillar Page">Pillar Page</option>
+        <option value="How-To Guide">How-To Guide</option>
+        <option value="Listicle">Listicle</option>
+        <option value="Product Page">Product Page</option>
+        <option value="Review Article">Review Article</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ADVANCED OPTIONS -->
+  <button class="adv-toggle" onclick="toggleAdv()" id="advToggle">⚙️ Advanced Options <span id="advArrow">▼</span></button>
+  <div class="adv-panel" id="advPanel">
+    <div class="adv-grid">
+      <div>
+        <div class="field-lbl">Target Audience</div>
+        <input class="sub-inp" id="audienceInp" placeholder="e.g. beginners, marketers" autocomplete="off">
+      </div>
+      <div>
+        <div class="field-lbl">Competitor Domain</div>
+        <input class="sub-inp" id="competitorInp" placeholder="e.g. ahrefs.com" autocomplete="off">
+      </div>
+      <div>
+        <div class="field-lbl">Tone of Voice</div>
+        <select class="sub-inp" id="toneInp">
+          <option value="">Auto</option>
+          <option value="Conversational">Conversational</option>
+          <option value="Professional">Professional</option>
+          <option value="Educational">Educational</option>
+          <option value="Casual & Friendly">Casual & Friendly</option>
+          <option value="Authoritative">Authoritative</option>
+        </select>
+      </div>
+      <div>
+        <div class="field-lbl">Target Word Count</div>
+        <select class="sub-inp" id="wordcountInp">
+          <option value="">Auto</option>
+          <option value="500-800">Short (500-800)</option>
+          <option value="800-1500">Medium (800-1500)</option>
+          <option value="1500-2500">Long (1500-2500)</option>
+          <option value="2500-4000">Pillar (2500-4000)</option>
+        </select>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- PROGRESS -->
 <div class="progress-area" id="progArea">
-  <div class="prog-title"><div class="prog-spinner"></div>Generating your SEO blueprint…</div>
+  <div class="prog-title"><div class="prog-spinner"></div><span id="progLabel">Generating your SEO blueprint…</span></div>
   <div class="step-grid" id="stepGrid"></div>
 </div>
 
 <!-- RESULTS -->
 <div id="results"></div>
 
-<footer>Made for bloggers &amp; digital marketers who want to rank fast. Powered by <a href="https://groq.com" target="_blank">Groq AI</a> (free &amp; fast).</footer>
+<footer>Made for bloggers &amp; digital marketers who want to rank fast.</footer>
 
-</div><!-- /wrap -->
-</div><!-- /page -->
+</div>
+</div>
 
 <script>
 'use strict';
 
-// ─── STEP DEFINITIONS ───────────────────────────────────────────
-const STEPS=[
-  {l:'Detecting search intent & difficulty',s:'Analyzing keyword type, volume tier…'},
-  {l:'Generating 5 title options',s:'Power words, numbers, emotional triggers…'},
-  {l:'Creating H1 tag variations',s:'3 H1 options with focus keyword…'},
-  {l:'Writing meta descriptions',s:'150-158 chars with CTA and keyword…'},
-  {l:'Building keyword research',s:'Primary, LSI, long-tail, questions…'},
-  {l:'Designing content outline',s:'Full H2/H3 structure with writing tips…'},
-  {l:'Crafting intro & conclusion',s:'Copy-ready paragraphs you can use directly…'},
-  {l:'Generating image alt texts',s:'5 descriptive, keyword-rich alt attributes…'},
-  {l:'Optimizing for featured snippets',s:'Paragraph, table, FAQ snippets…'},
-  {l:'Building JSON-LD schema markup',s:'Structured data ready to paste in head…'},
-  {l:'Assembling 40-point checklist',s:'Your personal SEO publish guide…'},
-];
+// ─── THEME ───────────────────────────────────────────────────────
+let currentTheme = localStorage.getItem('seopro-theme') || 'dark';
+document.documentElement.setAttribute('data-theme', currentTheme);
+updateThemeBtn();
+
+function updateThemeBtn(){
+  const dark = currentTheme === 'dark';
+  document.getElementById('themeIcon').textContent = dark ? '☀️' : '🌙';
+  document.getElementById('themeLabel').textContent = dark ? 'Light Mode' : 'Dark Mode';
+}
+
+function toggleTheme(){
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  localStorage.setItem('seopro-theme', currentTheme);
+  updateThemeBtn();
+}
+
+// ─── MODE ────────────────────────────────────────────────────────
+let currentMode = 'blueprint';
+function setMode(m, btn){
+  currentMode = m;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const labels = {
+    blueprint:'Generating your full SEO blueprint…',
+    rankmath:'Building your Rank Math guide…',
+    competitor:'Analyzing competitor content gaps…',
+    brief:'Creating your content brief…',
+    wordpress:'Building WordPress SEO checklist…'
+  };
+  document.getElementById('progLabel').textContent = labels[m] || 'Generating…';
+}
+
+// ─── ADVANCED TOGGLE ─────────────────────────────────────────────
+function toggleAdv(){
+  const p = document.getElementById('advPanel');
+  const a = document.getElementById('advArrow');
+  const show = p.classList.toggle('show');
+  a.textContent = show ? '▲' : '▼';
+}
+
+// ─── STEPS ───────────────────────────────────────────────────────
+const STEPS_MAP = {
+  blueprint:[
+    {l:'Detecting search intent & difficulty',s:'Analyzing keyword type, volume tier…'},
+    {l:'Generating 5 title options',s:'Power words, numbers, emotional triggers…'},
+    {l:'Creating H1 tag variations',s:'3 H1 options with focus keyword…'},
+    {l:'Writing meta descriptions',s:'150-158 chars with CTA and keyword…'},
+    {l:'Building keyword research',s:'Primary, LSI, long-tail, questions…'},
+    {l:'Designing content outline',s:'Full H2/H3 structure with writing tips…'},
+    {l:'Crafting intro & conclusion',s:'Copy-ready paragraphs…'},
+    {l:'Generating image alt texts',s:'5 descriptive, keyword-rich alt attributes…'},
+    {l:'Optimizing for featured snippets',s:'Paragraph, table, FAQ snippets…'},
+    {l:'Building JSON-LD schema markup',s:'Structured data ready to paste…'},
+    {l:'Assembling 40-point checklist',s:'Your personal SEO publish guide…'},
+  ],
+  rankmath:[
+    {l:'Analyzing Rank Math requirements',s:'Basic SEO, Additional, Title Readability…'},
+    {l:'Generating focus keyword data',s:'Primary keyword placement strategy…'},
+    {l:'Writing SEO title options',s:'With power words, numbers, sentiment…'},
+    {l:'Crafting meta description',s:'150-160 chars with focus keyword + CTA…'},
+    {l:'Building URL slug',s:'SEO-friendly permalink structure…'},
+    {l:'Creating H2/H3 with keywords',s:'Subheadings with keyword placement…'},
+    {l:'Schema markup for Rank Math',s:'Article, FAQ, HowTo schema code…'},
+    {l:'Generating Rank Math score tips',s:'How to hit 80+ score on Rank Math…'},
+  ],
+  competitor:[
+    {l:'Analyzing top-ranking content',s:'What pages rank #1-10 for this keyword…'},
+    {l:'Identifying content gaps',s:'Topics competitors cover that you should…'},
+    {l:'Finding missing keywords',s:'LSI and semantic gaps in top results…'},
+    {l:'Checking content depth',s:'Word count, sections, media competitors use…'},
+    {l:'Schema gap analysis',s:'What schema competitors are missing…'},
+    {l:'Building gap-fill strategy',s:'How to outrank with better content…'},
+  ],
+  brief:[
+    {l:'Defining content goal & intent',s:'What the reader needs to find…'},
+    {l:'Building audience persona',s:'Who is searching this keyword…'},
+    {l:'Creating detailed outline',s:'Section by section with key points…'},
+    {l:'Sourcing data requirements',s:'Stats, studies, examples to include…'},
+    {l:'Defining CTAs & conversions',s:'What action should readers take…'},
+    {l:'Writing editorial notes',s:'Tone, style, formatting guidelines…'},
+  ],
+  wordpress:[
+    {l:'Pre-publish SEO checklist',s:'Title, meta, slug, focus keyword…'},
+    {l:'Rank Math settings guide',s:'How to configure each Rank Math field…'},
+    {l:'Image optimization checklist',s:'Alt text, filename, compression…'},
+    {l:'Internal linking strategy',s:'Which pages to link to and from…'},
+    {l:'Technical SEO verification',s:'Canonical, robots, speed checks…'},
+    {l:'Post-publish action plan',s:'GSC submit, social share, indexing…'},
+  ]
+};
 
 let checkState={}, clData=[], clFilter='all';
 
-// ─── UTILITIES ──────────────────────────────────────────────────
 function $(id){return document.getElementById(id)}
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-function escQ(s){return String(s).replace(/\\/g,'\\\\').replace(/`/g,'\\`').replace(/\$/g,'\\$')}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function escQ(s){return String(s||'').replace(/\\/g,'\\\\').replace(/`/g,'\\`').replace(/\$/g,'\\$')}
 
 function copy(text,btn){
   navigator.clipboard.writeText(text).then(()=>{
@@ -406,9 +649,8 @@ function charBar(len,min,max){
   return `<div class="char-hint ${cls}">${msg}<div class="char-bar"><div class="char-fill" style="width:${pct}%;background:${ok?'var(--green)':over?'var(--red)':'var(--amber)'}"></div></div></div>`;
 }
 
-// ─── PROGRESS ANIMATION ──────────────────────────────────────────
-function drawSteps(active){
-  $('stepGrid').innerHTML=STEPS.map((s,i)=>{
+function drawSteps(active, steps){
+  $('stepGrid').innerHTML=steps.map((s,i)=>{
     const cls=i<active?'done':i===active?'active':'pending';
     const dot=i<active?'✓':(i+1);
     return `<div class="step ${cls}">
@@ -418,12 +660,310 @@ function drawSteps(active){
   }).join('');
 }
 
-function animateProgress(cb){
-  let i=0; drawSteps(0);
+function animateProgress(steps, cb){
+  let i=0; drawSteps(0, steps);
   const iv=setInterval(()=>{
-    i++; if(i>=STEPS.length){clearInterval(iv);drawSteps(STEPS.length);setTimeout(cb,250);return;}
-    drawSteps(i);
-  },310);
+    i++; if(i>=steps.length){clearInterval(iv);drawSteps(steps.length, steps);setTimeout(cb,250);return;}
+    drawSteps(i, steps);
+  },330);
+}
+
+// ─── BUILD PROMPT ────────────────────────────────────────────────
+function buildPrompt(mode, kw, focus, lang, opts){
+  const audience = opts.audience ? `\nTarget Audience: "${opts.audience}"` : '';
+  const competitor = opts.competitor ? `\nCompetitor Domain: "${opts.competitor}"` : '';
+  const tone = opts.tone ? `\nTone: "${opts.tone}"` : '';
+  const wc = opts.wordcount ? `\nTarget Word Count: "${opts.wordcount}"` : '';
+  const type = opts.type ? `\nContent Type Override: "${opts.type}"` : '';
+
+  if(mode === 'rankmath'){
+    return `You are an expert SEO consultant. Generate a complete Rank Math SEO optimization guide for:
+Keyword: "${kw}"
+Focus Keyword: "${focus}"
+Language: "${lang}"${audience}${tone}${type}
+
+Return ONLY this JSON:
+{
+  "keyword": "${kw}",
+  "focusKeyword": "${focus}",
+  "intent": "Informational|Commercial|Transactional|Navigational",
+  "difficulty": "Easy|Medium|Hard",
+  "rankMathGuide": {
+    "basicSEO": [
+      {"item":"Add Focus Keyword to SEO Title","status":"required","value":"exact paste value here","tip":"explanation"},
+      {"item":"Add Focus Keyword to Meta Description","status":"required","value":"exact paste value here","tip":"explanation"},
+      {"item":"Use Focus Keyword in URL","status":"required","value":"url-slug-here","tip":"explanation"},
+      {"item":"Use Focus Keyword in First 10% of Content","status":"required","value":"suggested opening sentence with keyword","tip":"explanation"},
+      {"item":"Use Focus Keyword in Content","status":"required","value":"","tip":"Use keyword naturally every 150-200 words"},
+      {"item":"Content Length: 600-2500 Words","status":"required","value":"","tip":"Aim for 1500-2000 words minimum"}
+    ],
+    "titleOptions": [
+      {"title":"power word title with focus keyword and number","chars":0,"sentiment":"positive","powerWord":"word used"},
+      {"title":"question format title","chars":0,"sentiment":"neutral","powerWord":""},
+      {"title":"how-to format title","chars":0,"sentiment":"positive","powerWord":"word"},
+      {"title":"listicle title with benefit","chars":0,"sentiment":"positive","powerWord":"word"},
+      {"title":"urgency title with emotion","chars":0,"sentiment":"negative","powerWord":"word"}
+    ],
+    "metaDescription": "150-158 char meta with focus keyword + CTA",
+    "urlSlug": "focus-keyword-url-slug",
+    "h1": "H1 with focus keyword - different from title",
+    "h2WithKeywords": ["H2 with secondary keyword","H2 heading 2","H2 FAQ: Questions About topic","H2 with long-tail keyword"],
+    "additionalChecks": [
+      {"item":"Use Focus Keyword in H2/H3 subheadings","status":"required","value":"which H2 to add keyword to","tip":""},
+      {"item":"Add image with focus keyword as alt text","status":"required","value":"alt text: focus-keyword descriptive text","tip":""},
+      {"item":"Add Internal Links","status":"required","value":"","tip":"Link 2-3 related posts from this article"},
+      {"item":"Add External DoFollow Links","status":"required","value":"","tip":"Link to 1-2 authority sites like Wikipedia, official docs"},
+      {"item":"Keyword Density ~1%","status":"required","value":"","tip":"For 1500 word post, use keyword ~15 times"},
+      {"item":"Add a Short Permalink","status":"required","value":"","tip":"Under 5 words, hyphens only"}
+    ],
+    "titleReadability": [
+      {"item":"Focus Keyword near beginning of SEO title","status":"required","value":"Move keyword to first 3 words","tip":""},
+      {"item":"Add Positive or Negative Sentiment Word","status":"required","value":"e.g. Best, Worst, Amazing, Avoid","tip":""},
+      {"item":"Add a Power Word","status":"required","value":"e.g. Ultimate, Proven, Essential, Secret","tip":""},
+      {"item":"Add a Number to Title","status":"required","value":"e.g. 10 Best, 7 Ways, Top 5","tip":""}
+    ],
+    "contentReadability": [
+      {"item":"Use Table of Contents","status":"recommended","value":"Add TOC plugin or manual anchor links","tip":""},
+      {"item":"Short Paragraphs (2-3 lines max)","status":"recommended","value":"","tip":""},
+      {"item":"Add Images Every 300 Words","status":"recommended","value":"","tip":"Use WebP format, compressed under 100KB"}
+    ]
+  },
+  "schemaForRankMath": "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"TITLE\",\"description\":\"META\",\"author\":{\"@type\":\"Person\",\"name\":\"Author Name\"}}",
+  "faqSchema": [{"q":"FAQ question 1?","a":"Answer 1."},{"q":"FAQ question 2?","a":"Answer 2."},{"q":"FAQ question 3?","a":"Answer 3."}]
+}`;
+  }
+
+  if(mode === 'competitor'){
+    return `You are an expert SEO content strategist. Analyze competitor content gaps for:
+Keyword: "${kw}"
+Focus Keyword: "${focus}"
+Language: "${lang}"${audience}${competitor}
+
+Return ONLY this JSON:
+{
+  "keyword": "${kw}",
+  "focusKeyword": "${focus}",
+  "competitorInsights": {
+    "typicalTopRankers": ["type of site 1","type of site 2","type of site 3"],
+    "avgWordCount": "estimated average word count for top 10",
+    "commonContentTypes": ["Blog Post","How-To","Listicle"],
+    "commonSchemaUsed": ["Article","FAQPage","HowTo"]
+  },
+  "contentGaps": [
+    {"gap":"Topic or angle most competitors miss","priority":"High|Medium|Low","opportunity":"How to exploit this gap","angle":"Specific content angle to use"},
+    {"gap":"gap 2","priority":"High","opportunity":"opportunity 2","angle":"angle 2"},
+    {"gap":"gap 3","priority":"High","opportunity":"opportunity 3","angle":"angle 3"},
+    {"gap":"gap 4","priority":"Medium","opportunity":"opportunity 4","angle":"angle 4"},
+    {"gap":"gap 5","priority":"Medium","opportunity":"opportunity 5","angle":"angle 5"},
+    {"gap":"gap 6","priority":"Low","opportunity":"opportunity 6","angle":"angle 6"}
+  ],
+  "keywordGaps": {
+    "missingLSI": ["lsi keyword competitors miss 1","lsi 2","lsi 3","lsi 4"],
+    "missingLongTail": ["long tail 1","long tail 2","long tail 3"],
+    "missingQuestions": ["question gap 1?","question gap 2?","question gap 3?"]
+  },
+  "winningStrategy": {
+    "uniqueAngle": "The specific angle to beat competitors",
+    "differentiator": "What to do differently",
+    "wordCountTarget": "Recommended word count to outrank",
+    "mustInclude": ["must-have element 1","must-have element 2","must-have element 3","must-have element 4"]
+  },
+  "quickWins": ["quick win action 1","quick win action 2","quick win action 3","quick win action 4"]
+}`;
+  }
+
+  if(mode === 'brief'){
+    return `You are a senior content strategist. Create a detailed content brief for:
+Keyword: "${kw}"
+Focus Keyword: "${focus}"
+Language: "${lang}"${audience}${tone}${type}${wc}
+
+Return ONLY this JSON:
+{
+  "keyword": "${kw}",
+  "focusKeyword": "${focus}",
+  "contentGoal": "One sentence: what this content must achieve",
+  "audiencePersona": {
+    "who": "Description of the ideal reader",
+    "painPoints": ["pain point 1","pain point 2","pain point 3"],
+    "desiredOutcome": "What they want to achieve after reading"
+  },
+  "contentAngle": "The unique angle or hook for this article",
+  "suggestedTitle": "Best title for this brief",
+  "outline": [
+    {"section":"Introduction","keyPoints":["point 1","point 2"],"notes":"Hook with pain point, promise solution"},
+    {"section":"H2 section 1","keyPoints":["point 1","point 2","point 3"],"notes":"editorial note"},
+    {"section":"H2 section 2","keyPoints":["point 1","point 2"],"notes":"editorial note"},
+    {"section":"H2 section 3","keyPoints":["point 1","point 2","point 3"],"notes":"editorial note"},
+    {"section":"H2 section 4","keyPoints":["point 1","point 2"],"notes":"editorial note"},
+    {"section":"FAQ Section","keyPoints":["Q1?","Q2?","Q3?"],"notes":"Answer directly, 40-60 words each"},
+    {"section":"Conclusion","keyPoints":["summarize","restate keyword","CTA"],"notes":""}
+  ],
+  "researchRequired": ["stat or study to find 1","stat 2","example or case study 3","tool or resource 4"],
+  "mediaRequired": ["image type 1","image type 2","infographic idea","video embed suggestion"],
+  "internalLinkOpportunities": ["page type to link to 1","page type 2","page type 3"],
+  "primaryCTA": "What action the reader should take",
+  "editorialNotes": {
+    "tone": "Exact tone guidance",
+    "formatting": "Paragraph length, use of bullets, etc.",
+    "avoid": ["thing to avoid 1","thing to avoid 2"],
+    "mustMention": ["must mention 1","must mention 2","must mention 3"]
+  },
+  "estimatedWordCount": "Recommended range",
+  "deadline": "Suggested turnaround",
+  "successMetric": "How to measure if this content worked"
+}`;
+  }
+
+  if(mode === 'wordpress'){
+    return `You are a WordPress SEO expert. Create a complete WordPress SEO publish checklist for:
+Keyword: "${kw}"
+Focus Keyword: "${focus}"
+Language: "${lang}"
+
+Return ONLY this JSON:
+{
+  "keyword": "${kw}",
+  "focusKeyword": "${focus}",
+  "preWriting": [
+    {"task":"Set focus keyword in Rank Math before writing","how":"Rank Math sidebar → Focus Keyword field","priority":"critical"},
+    {"task":"Set content type in Rank Math","how":"Rank Math → Advanced → Robots → set to Article","priority":"high"},
+    {"task":"Configure permalink structure","how":"Settings → Permalinks → Post name","priority":"critical"}
+  ],
+  "whileWriting": [
+    {"task":"Add focus keyword in first paragraph","how":"Within first 100 words naturally","priority":"critical"},
+    {"task":"Use focus keyword in at least one H2","how":"Main section heading should contain keyword","priority":"critical"},
+    {"task":"Add keyword to image alt text","how":"Upload image → edit alt text field","priority":"critical"},
+    {"task":"Write 1500+ words","how":"Rank Math gives full score at 2500+ words","priority":"high"},
+    {"task":"Add Table of Contents","how":"Use TOC block or Easy Table of Contents plugin","priority":"medium"},
+    {"task":"Add internal links to 3 related posts","how":"Link with keyword-rich anchor text","priority":"high"},
+    {"task":"Add 1-2 external dofollow links","how":"Link to Wikipedia, official docs, authority sites","priority":"medium"},
+    {"task":"Keep paragraphs under 3 lines","how":"Break long paragraphs for readability score","priority":"medium"}
+  ],
+  "rankMathSettings": [
+    {"setting":"SEO Title","value":"focus keyword + power word + number | sitename","where":"Rank Math → Edit Snippet → Title field"},
+    {"setting":"Meta Description","value":"150-158 char description with focus keyword + CTA","where":"Rank Math → Edit Snippet → Description"},
+    {"setting":"Permalink","value":"short-focus-keyword-slug","where":"Post editor → Permalink (top of editor)"},
+    {"setting":"Focus Keyword","value":"exact focus keyword phrase","where":"Rank Math sidebar → Focus Keyword box"},
+    {"setting":"Schema Type","value":"Article (or HowTo / FAQPage if applicable)","where":"Rank Math → Schema → Schema Type"},
+    {"setting":"Canonical URL","value":"Leave blank (auto-set) unless duplicate content","where":"Rank Math → Advanced → Canonical URL"},
+    {"setting":"Robots Meta","value":"Index, Follow","where":"Rank Math → Advanced → Robots Meta"}
+  ],
+  "prePublish": [
+    {"task":"Check Rank Math score — aim for 80+","how":"Green score in top right of post editor","priority":"critical"},
+    {"task":"Preview how post looks in Google Search","how":"Rank Math → Edit Snippet → preview at top","priority":"high"},
+    {"task":"Add Featured Image","how":"Post editor → right sidebar → Featured Image","priority":"critical"},
+    {"task":"Set post category and tags","how":"Post editor → right sidebar → Categories / Tags","priority":"medium"},
+    {"task":"Paste JSON-LD Schema in head","how":"Rank Math → Schema → Custom Schema or Yoast","priority":"high"}
+  ],
+  "postPublish": [
+    {"task":"Submit URL to Google Search Console","how":"GSC → URL Inspection → Request Indexing","priority":"critical"},
+    {"task":"Share on social media","how":"Twitter, LinkedIn, Facebook with keyword hashtags","priority":"high"},
+    {"task":"Build 2-3 backlinks","how":"Guest post, HARO, or resource page outreach","priority":"high"},
+    {"task":"Add internal link from homepage or popular post","how":"Edit existing popular post, link to new post","priority":"high"},
+    {"task":"Monitor in GSC after 7 days","how":"GSC → Performance → check impressions & CTR","priority":"medium"}
+  ]
+}`;
+  }
+
+  // ─── DEFAULT: FULL BLUEPRINT ─────────────────────────────────
+  return `You are a world-class SEO strategist. Generate a complete professional SEO content blueprint for:
+Keyword: "${kw}"
+Focus Keyword: "${focus}"
+Language: "${lang}"${audience}${tone}${type}${wc}
+
+Return ONLY this JSON (no extra text, no code blocks):
+{
+  "keyword": "${kw}",
+  "focusKeyword": "${focus}",
+  "intent": "Informational|Commercial|Transactional|Navigational",
+  "difficulty": "Easy|Medium|Hard",
+  "volumeTier": "Low (<1k)|Medium (1k-10k)|High (10k-100k)|Very High (100k+)",
+  "contentType": "Blog Post|Pillar Page|How-To Guide|Listicle|Product Page",
+  "wordCount": "e.g. 1800-2500 words",
+  "writingTone": "Conversational|Professional|Educational|Technical",
+  "titles": ["Title 1 power word + number + keyword, under 60 chars","Title 2 question format","Title 3 how-to format","Title 4 listicle","Title 5 emotional urgency"],
+  "h1s": ["H1 option 1 with focus keyword","H1 option 2 different angle","H1 option 3 conversational"],
+  "metaDescription": "150-158 char meta with focus keyword + CTA",
+  "metaDescriptionB": "Alternative meta description, 150-158 chars",
+  "slug": "url-friendly-slug-with-focus-keyword",
+  "keywords": {
+    "primary": "${focus}",
+    "secondary": ["kw2","kw3","kw4","kw5","kw6"],
+    "lsi": ["lsi1","lsi2","lsi3","lsi4","lsi5","lsi6"],
+    "longtail": ["long tail phrase 1","long tail phrase 2","long tail phrase 3","long tail phrase 4","long tail phrase 5"],
+    "questions": ["People also ask question 1?","question 2?","question 3?","question 4?","question 5?"],
+    "avoid": ["negative keyword 1","negative keyword 2","negative keyword 3"]
+  },
+  "outline": {
+    "intro": "Full 3-sentence hook intro paragraph. Copy-ready.",
+    "sections": [
+      {"h2":"H2 with secondary keyword","h3s":["H3 subheading","H3 subheading","H3 subheading"],"tip":"What to cover"},
+      {"h2":"H2 heading 2","h3s":["H3","H3"],"tip":"Writing tip"},
+      {"h2":"H2 heading 3","h3s":["H3","H3","H3"],"tip":"Writing tip"},
+      {"h2":"H2 heading 4","h3s":["H3","H3"],"tip":"Writing tip"},
+      {"h2":"FAQ: Common Questions About [topic]","h3s":["H3 faq q1","H3 faq q2","H3 faq q3"],"tip":"Answer each FAQ concisely"}
+    ],
+    "conclusion": "Full 3-sentence conclusion paragraph. Copy-ready.",
+    "cta": "Specific call-to-action recommendation"
+  },
+  "altTexts": ["Feature image alt text with focus keyword","Section image 1 alt text","Infographic alt text","Supporting image alt text","Closing image alt text"],
+  "snippets": {
+    "paragraph": "40-50 word direct-answer paragraph to win featured snippet.",
+    "table": {"caption":"Table title","headers":["Column 1","Column 2","Column 3"],"rows":[["r1c1","r1c2","r1c3"],["r2c1","r2c2","r2c3"],["r3c1","r3c2","r3c3"]]},
+    "faqs": [{"q":"FAQ question 1?","a":"40-word answer."},{"q":"FAQ question 2?","a":"40-word answer."},{"q":"FAQ question 3?","a":"40-word answer."},{"q":"FAQ question 4?","a":"40-word answer."}]
+  },
+  "schema": {
+    "type": "Article|BlogPosting|HowTo|FAQPage",
+    "code": "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"TITLE\",\"description\":\"META\",\"author\":{\"@type\":\"Person\",\"name\":\"Author Name\"},\"datePublished\":\"2025-01-01\"}"
+  },
+  "openGraph": {"title":"OG title","description":"OG description under 200 chars"},
+  "twitter": {"title":"Twitter title","description":"Twitter description"},
+  "internalLinks": {"anchors":["anchor text 1","anchor text 2","anchor text 3","anchor text 4"],"hubTopics":["related topic 1","related topic 2","related topic 3"],"strategy":"One sentence internal linking advice"},
+  "checklist": [
+    {"id":"t1","cat":"Title","task":"Title contains focus keyword in first 3 words","priority":"critical"},
+    {"id":"t2","cat":"Title","task":"Title tag is under 60 characters","priority":"critical"},
+    {"id":"t3","cat":"Title","task":"Title has a power word, number, or emotion trigger","priority":"high"},
+    {"id":"h1","cat":"H1","task":"H1 tag is set and includes focus keyword","priority":"critical"},
+    {"id":"h2","cat":"H1","task":"H1 is different wording from the title tag","priority":"medium"},
+    {"id":"m1","cat":"Meta","task":"Meta description is written (150-158 chars)","priority":"critical"},
+    {"id":"m2","cat":"Meta","task":"Meta description includes focus keyword naturally","priority":"critical"},
+    {"id":"m3","cat":"Meta","task":"Meta description ends with a clear CTA","priority":"high"},
+    {"id":"u1","cat":"URL","task":"Slug uses focus keyword, hyphens, no stop words","priority":"critical"},
+    {"id":"u2","cat":"URL","task":"Slug is under 75 characters total","priority":"medium"},
+    {"id":"k1","cat":"Keywords","task":"Focus keyword appears in first 100 words","priority":"critical"},
+    {"id":"k2","cat":"Keywords","task":"Focus keyword density is 1-2%","priority":"high"},
+    {"id":"k3","cat":"Keywords","task":"At least 3 LSI keywords used naturally","priority":"high"},
+    {"id":"k4","cat":"Keywords","task":"Long-tail keywords used in at least 2 H2/H3 headings","priority":"medium"},
+    {"id":"k5","cat":"Keywords","task":"Questions keywords used in FAQ section","priority":"medium"},
+    {"id":"c1","cat":"Content","task":"Word count meets recommended target for this topic","priority":"high"},
+    {"id":"c2","cat":"Content","task":"Intro hooks the reader within the first 2 sentences","priority":"high"},
+    {"id":"c3","cat":"Content","task":"Every H2 section has at least one keyword variant","priority":"medium"},
+    {"id":"c4","cat":"Content","task":"Conclusion restates focus keyword and has CTA","priority":"high"},
+    {"id":"c5","cat":"Content","task":"Content fully satisfies the search intent","priority":"critical"},
+    {"id":"c6","cat":"Content","task":"Paragraphs are max 3-4 lines","priority":"medium"},
+    {"id":"c7","cat":"Content","task":"Sentences average under 20 words","priority":"medium"},
+    {"id":"i1","cat":"Images","task":"Feature image added with focus keyword in filename","priority":"high"},
+    {"id":"i2","cat":"Images","task":"All images have descriptive alt text with keywords","priority":"critical"},
+    {"id":"i3","cat":"Images","task":"Images compressed to WebP or optimized JPEG","priority":"medium"},
+    {"id":"i4","cat":"Images","task":"At least one image per H2 section","priority":"low"},
+    {"id":"s1","cat":"Snippets","task":"Featured snippet paragraph added (40-50 words)","priority":"high"},
+    {"id":"s2","cat":"Snippets","task":"FAQ section with 4+ questions added to post","priority":"medium"},
+    {"id":"s3","cat":"Snippets","task":"At least one table or bullet list added","priority":"medium"},
+    {"id":"sc1","cat":"Schema","task":"JSON-LD schema markup pasted into page head","priority":"critical"},
+    {"id":"sc2","cat":"Schema","task":"Schema type matches content type","priority":"high"},
+    {"id":"og1","cat":"Social","task":"Open Graph title and description set","priority":"high"},
+    {"id":"og2","cat":"Social","task":"Twitter Card meta tags added","priority":"medium"},
+    {"id":"og3","cat":"Social","task":"Social share image uploaded (1200×630px)","priority":"high"},
+    {"id":"l1","cat":"Links","task":"2-3 internal links added with keyword-rich anchor text","priority":"high"},
+    {"id":"l2","cat":"Links","task":"1-2 external links to authority sources added","priority":"medium"},
+    {"id":"l3","cat":"Links","task":"No broken links anywhere in the post","priority":"critical"},
+    {"id":"te1","cat":"Technical","task":"Canonical tag set to the correct URL","priority":"high"},
+    {"id":"te2","cat":"Technical","task":"Page is set to index, follow","priority":"critical"},
+    {"id":"te3","cat":"Technical","task":"Page loads under 3 seconds on mobile","priority":"high"},
+    {"id":"pub","cat":"Publish","task":"URL submitted to Google Search Console after publishing","priority":"high"}
+  ]
+}`;
 }
 
 // ─── MAIN RUN ────────────────────────────────────────────────────
@@ -431,7 +971,14 @@ async function run(){
   const kw=$('kwInp').value.trim();
   if(!kw){$('kwInp').focus();$('kwInp').style.borderColor='var(--red)';setTimeout(()=>$('kwInp').style.borderColor='',1500);return;}
   const foc=$('focInp').value.trim()||kw;
-  const lang=$('langInp').value.trim()||'English';
+  const lang=$('langInp').value||'English';
+  const opts={
+    audience:$('audienceInp').value.trim(),
+    competitor:$('competitorInp').value.trim(),
+    tone:$('toneInp').value,
+    wordcount:$('wordcountInp').value,
+    type:$('typeInp').value
+  };
 
   $('goBtn').disabled=true;
   $('progArea').classList.add('show');
@@ -439,19 +986,29 @@ async function run(){
   $('results').innerHTML='';
   checkState={}; clData=[]; clFilter='all';
 
-  animateProgress(async ()=>{
+  const steps = STEPS_MAP[currentMode] || STEPS_MAP.blueprint;
+  animateProgress(steps, async ()=>{
     try{
+      const systemPrompt = `You are a world-class SEO strategist and content expert. Always respond with valid JSON only — no markdown fences, no explanation outside the JSON object.`;
+      const userPrompt = buildPrompt(currentMode, kw, foc, lang, opts);
+
       const r=await fetch('/api/analyze',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({keyword:kw,focusKeyword:foc,language:lang})
+        body:JSON.stringify({keyword:kw, focusKeyword:foc, language:lang, mode:currentMode, options:opts, customPrompt:userPrompt, systemPrompt})
       });
       if(!r.ok){const e=await r.json();throw new Error(e.error||'Server error');}
       const data=await r.json();
       clData=data.checklist||[];
       $('progArea').classList.remove('show');
       $('results').style.display='block';
-      render(data);
+
+      if(currentMode==='blueprint') render(data);
+      else if(currentMode==='rankmath') renderRankMath(data);
+      else if(currentMode==='competitor') renderCompetitor(data);
+      else if(currentMode==='brief') renderBrief(data);
+      else if(currentMode==='wordpress') renderWordPress(data);
+
       setTimeout(()=>$('results').scrollIntoView({behavior:'smooth',block:'start'}),100);
     }catch(e){
       $('progArea').classList.remove('show');
@@ -468,7 +1025,30 @@ async function run(){
 
 $('kwInp').addEventListener('keydown',e=>e.key==='Enter'&&run());
 
-// ─── RENDER ALL SECTIONS ─────────────────────────────────────────
+// ─── EXPORT ──────────────────────────────────────────────────────
+function exportText(data){
+  let text = `SEOPro Blueprint — ${data.keyword}\n${'='.repeat(50)}\n\n`;
+  if(data.titles) text += `TITLES:\n${(data.titles||[]).map((t,i)=>`${i+1}. ${t}`).join('\n')}\n\n`;
+  if(data.metaDescription) text += `META DESCRIPTION:\n${data.metaDescription}\n\n`;
+  if(data.slug) text += `URL SLUG: /${data.slug}\n\n`;
+  if(data.keywords) text += `KEYWORDS:\nPrimary: ${data.keywords.primary}\nSecondary: ${(data.keywords.secondary||[]).join(', ')}\nLSI: ${(data.keywords.lsi||[]).join(', ')}\n\n`;
+  if(data.outline) text += `OUTLINE:\nIntro: ${data.outline.intro}\n\n${(data.outline.sections||[]).map(s=>`## ${s.h2}\n${(s.h3s||[]).map(h=>`### ${h}`).join('\n')}`).join('\n\n')}\n\nConclusion: ${data.outline.conclusion}\n\n`;
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href=url; a.download=`seo-blueprint-${(data.keyword||'export').replace(/\s+/g,'-')}.txt`;
+  a.click(); URL.revokeObjectURL(url);
+}
+
+function exportJSON(data){
+  const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href=url; a.download=`seo-blueprint-${(data.keyword||'export').replace(/\s+/g,'-')}.json`;
+  a.click(); URL.revokeObjectURL(url);
+}
+
+// ─── RENDER: FULL BLUEPRINT ───────────────────────────────────────
 function render(d){
   const out=$('results');
   const parts=[];
@@ -478,10 +1058,18 @@ function render(d){
     return `<div class="block" style="animation-delay:${del}s">${content}</div>`;
   }
 
-  // ── 1. OVERVIEW ──
+  // Export bar
+  parts.push(`<div class="export-bar">
+    <button class="exp-btn" onclick="exportText(window.__lastData)">📄 Export .txt</button>
+    <button class="exp-btn" onclick="exportJSON(window.__lastData)">📦 Export JSON</button>
+    <button class="exp-btn" onclick="navigator.clipboard.writeText(JSON.stringify(window.__lastData,null,2))">📋 Copy All JSON</button>
+  </div>`);
+  window.__lastData = d;
+
+  // ── OVERVIEW ──
   const score=Math.min(98,60+Math.min(20,(d.keywords?.lsi?.length||0)*2)+Math.min(18,(d.outline?.sections?.length||0)*3));
   const grade=score>=90?'A+':score>=82?'A':score>=74?'B+':score>=65?'B':score>=55?'C+':'C';
-  const scoreColor=score>=75?'#22c55e':score>=55?'#f59e0b':'#ef4444';
+  const scoreColor=score>=75?'var(--green)':score>=55?'var(--amber)':'var(--red)';
   const circ=2*Math.PI*38;
   const off=circ-(score/100)*circ;
   parts.push(block(`
@@ -494,8 +1082,7 @@ function render(d){
       <div class="ring-cont">
         <svg class="ring-svg" viewBox="0 0 90 90">
           <circle class="ring-bg" cx="45" cy="45" r="38"/>
-          <circle class="ring-fg" cx="45" cy="45" r="38"
-            style="stroke:${scoreColor};stroke-dasharray:${circ};stroke-dashoffset:${off}"/>
+          <circle class="ring-fg" cx="45" cy="45" r="38" style="stroke:${scoreColor};stroke-dasharray:${circ};stroke-dashoffset:${off}"/>
         </svg>
         <div class="ring-inner"><div class="ring-n" style="color:${scoreColor}">${score}</div><div class="ring-of">/100</div></div>
       </div>
@@ -509,12 +1096,12 @@ function render(d){
         <div class="ov-card"><div class="ov-label">${l}</div><div class="ov-val${c?' '+c:''}">${esc(v||'—')}</div></div>`).join('')}
     </div>`,delay+=0));
 
-  // ── 2. TITLES ──
+  // ── TITLES ──
   const titleOpts=(d.titles||[]).map((t,i)=>`
     <div class="opt" onclick="selOpt(this,'title',\`${escQ(t)}\`)">
       <div class="opt-n">${i+1}</div>
       <div class="opt-txt">${esc(t)}</div>
-      <button class="cbtn opt-copy" onclick="event.stopPropagation();copy(\`${escQ(t)}\`,this)">Copy</button>
+      <button class="cbtn" onclick="event.stopPropagation();copy(\`${escQ(t)}\`,this)">Copy</button>
     </div>`).join('');
   parts.push(block(`
     <div class="bh">
@@ -531,12 +1118,12 @@ function render(d){
       </div>
     </div>`,delay+=.05));
 
-  // ── 3. H1 TAGS ──
+  // ── H1 ──
   const h1Opts=(d.h1s||[]).map((h,i)=>`
     <div class="opt" onclick="selOpt(this,'h1',\`${escQ(h)}\`)">
       <div class="opt-n">${i+1}</div>
       <div class="opt-txt">${esc(h)}</div>
-      <button class="cbtn opt-copy" onclick="event.stopPropagation();copy(\`${escQ(h)}\`,this)">Copy</button>
+      <button class="cbtn" onclick="event.stopPropagation();copy(\`${escQ(h)}\`,this)">Copy</button>
     </div>`).join('');
   parts.push(block(`
     <div class="bh">
@@ -546,7 +1133,7 @@ function render(d){
     <div class="tip-box"><span>💡</span><span>H1 is what users see on the page. It can be longer than your title tag. Must include your focus keyword. Only one H1 per page.</span></div>
     <div class="opts">${h1Opts}</div>`,delay+=.05));
 
-  // ── 4. META & SLUG ──
+  // ── META & SLUG ──
   const meta=d.metaDescription||'';
   const metaB=d.metaDescriptionB||'';
   const slug=d.slug||'';
@@ -567,10 +1154,10 @@ function render(d){
     </div>
     <div class="obox">
       <div class="obox-top"><span class="obox-lbl">URL Slug</span><button class="cbtn" onclick="copy('${esc(slug)}',this)">Copy</button></div>
-      <div class="obox-val" style="font-family:'Courier New',monospace;font-size:13px;color:#7dd3fc">/${esc(slug)}</div>
+      <div class="obox-val" style="font-family:'Courier New',monospace;font-size:13px;color:var(--code-text)">/${esc(slug)}</div>
     </div>`,delay+=.05));
 
-  // ── 5. KEYWORDS ──
+  // ── KEYWORDS ──
   const kw=d.keywords||{};
   function chips(arr,type){
     return (arr||[]).map(k=>`<div class="chip ${type}" onclick="navigator.clipboard.writeText('${esc(k)}')" title="Click to copy">${esc(k)}<span class="tag">${type.toUpperCase()}</span></div>`).join('');
@@ -594,7 +1181,7 @@ function render(d){
       <div class="chip-wrap">${chips(kw.avoid,'avoid')}</div>
     </div>`,delay+=.05));
 
-  // ── 6. CONTENT OUTLINE ──
+  // ── CONTENT OUTLINE ──
   const ol=d.outline||{};
   const sectionsHtml=(ol.sections||[]).map((s,i)=>`
     <div class="h2-block">
@@ -630,7 +1217,7 @@ function render(d){
       <div class="obox-val">${esc(ol.cta||'')}</div>
     </div>`,delay+=.07));
 
-  // ── 7. IMAGE ALT TEXTS ──
+  // ── IMAGE ALT TEXTS ──
   parts.push(block(`
     <div class="bh">
       <div class="bh-icon green">🖼️</div>
@@ -646,7 +1233,7 @@ function render(d){
         </div>`).join('')}
     </div>`,delay+=.07));
 
-  // ── 8. FEATURED SNIPPETS ──
+  // ── FEATURED SNIPPETS ──
   const sn=d.snippets||{};
   const tbl=sn.table||{};
   const tblHtml=tbl.headers?`
@@ -683,7 +1270,7 @@ function render(d){
       </div>
     </div>`,delay+=.07));
 
-  // ── 9. SCHEMA ──
+  // ── SCHEMA ──
   let schemaStr='{}';
   try{schemaStr=JSON.stringify(JSON.parse(d.schema?.code||'{}'),null,2);}catch{schemaStr=d.schema?.code||'';}
   parts.push(block(`
@@ -691,13 +1278,13 @@ function render(d){
       <div class="bh-icon purple">⚙️</div>
       <div><div class="bh-title">Schema Markup (JSON-LD)</div><div class="bh-sub">${esc(d.schema?.type||'Article')} — paste in your page &lt;head&gt;</div></div>
     </div>
-    <div class="tip-box"><span>💡</span><span>In WordPress: use Rank Math / Yoast, or paste in a Custom HTML block. In custom sites: add inside <code>&lt;script type="application/ld+json"&gt;&lt;/script&gt;</code> in your &lt;head&gt;.</span></div>
+    <div class="tip-box"><span>💡</span><span>In WordPress: use Rank Math → Schema → Custom Schema, or paste in a Custom HTML block inside <code>&lt;script type="application/ld+json"&gt;</code>.</span></div>
     <div style="position:relative">
       <button class="cbtn" style="position:absolute;top:10px;right:10px;z-index:2" onclick="copy(\`${escQ(schemaStr)}\`,this)">Copy Schema</button>
       <div class="code-box">${esc(schemaStr)}</div>
     </div>`,delay+=.07));
 
-  // ── 10. SOCIAL & OG ──
+  // ── SOCIAL & OG ──
   const og=d.openGraph||{};
   const tw=d.twitter||{};
   const urlSlug=`yoursite.com/blog/${d.slug||''}`;
@@ -712,15 +1299,15 @@ function render(d){
     <div class="obox">
       <div class="obox-top"><span class="obox-lbl">Google Search Preview</span></div>
       <div class="g-prev">
-        <div class="g-url">🔒 <span class="g-url-text">${esc(urlSlug)}</span></div>
+        <div class="g-url">🔒 <span>${esc(urlSlug)}</span></div>
         <div class="g-title">${esc(d.titles?.[0]||d.keyword)}</div>
         <div class="g-desc">${esc(d.metaDescription||'')}</div>
       </div>
     </div>
     <div class="obox">
-      <div class="obox-top"><span class="obox-lbl">Facebook / LinkedIn (Open Graph)</span><button class="cbtn" onclick="copy(\`${escQ(ogCode)}\`,this)">Copy Tags</button></div>
+      <div class="obox-top"><span class="obox-lbl">Open Graph Tags</span><button class="cbtn" onclick="copy(\`${escQ(ogCode)}\`,this)">Copy Tags</button></div>
       <div class="fb-prev">
-        <div class="fb-img">📷 1200 × 630 social image (upload in your CMS)</div>
+        <div class="fb-img">📷 1200 × 630 social image</div>
         <div class="fb-body">
           <div class="fb-domain">yoursite.com</div>
           <div class="fb-title">${esc(og.title||'')}</div>
@@ -736,11 +1323,10 @@ function render(d){
     <div class="obox">
       <div class="obox-top"><span class="obox-lbl">Internal Linking Strategy</span></div>
       <div class="obox-val" style="margin-bottom:10px">${esc(il.strategy||'')}</div>
-      <div class="chip-wrap">${(il.anchors||[]).map(a=>`<div class="chip q" onclick="navigator.clipboard.writeText('${esc(a)}')" title="Click to copy">${esc(a)}<span class="tag">ANCHOR</span></div>`).join('')}</div>
-      ${il.hubTopics&&il.hubTopics.length?`<div style="margin-top:10px"><div style="font-size:11px;color:var(--t3);font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:6px">Related Hub Topics to Link To</div><div class="chip-wrap">${(il.hubTopics||[]).map(t=>`<div class="chip lsi" onclick="navigator.clipboard.writeText('${esc(t)}')" title="Click to copy">${esc(t)}<span class="tag">HUB</span></div>`).join('')}</div></div>`:''}
+      <div class="chip-wrap">${(il.anchors||[]).map(a=>`<div class="chip q" onclick="navigator.clipboard.writeText('${esc(a)}')">${esc(a)}<span class="tag">ANCHOR</span></div>`).join('')}</div>
     </div>`,delay+=.07));
 
-  // ── 11. CHECKLIST ──
+  // ── CHECKLIST ──
   parts.push(block(`
     <div class="bh">
       <div class="bh-icon green">✅</div>
@@ -748,12 +1334,10 @@ function render(d){
     </div>
     <div class="cl-stats">
       <div><div class="cl-pct" id="clPct">0%</div><div class="cl-of" id="clOf">0 / 40 complete</div></div>
-      <div style="text-align:right">
-        <div class="pr-legend">
-          <div class="pr-leg-item"><div class="pr-dot critical"></div>Critical</div>
-          <div class="pr-leg-item"><div class="pr-dot high"></div>High</div>
-          <div class="pr-leg-item"><div class="pr-dot medium"></div>Medium</div>
-        </div>
+      <div class="pr-legend">
+        <div class="pr-leg-item"><div class="pr-dot critical"></div>Critical</div>
+        <div class="pr-leg-item"><div class="pr-dot high"></div>High</div>
+        <div class="pr-leg-item"><div class="pr-dot medium"></div>Medium</div>
       </div>
     </div>
     <div class="cl-bar-wrap"><div class="cl-bar" id="clBar" style="width:0%"></div></div>
@@ -764,8 +1348,268 @@ function render(d){
   buildChecklist();
 }
 
-// ─── INTERACTIVE HELPERS ─────────────────────────────────────────
+// ─── RENDER: RANK MATH ───────────────────────────────────────────
+function renderRankMath(d){
+  const out=$('results');
+  const rm = d.rankMathGuide || {};
 
+  function rmSection(title, items, color){
+    if(!items||!items.length) return '';
+    return `<div class="obox" style="margin-bottom:12px">
+      <div class="obox-top" style="margin-bottom:12px"><span class="obox-lbl" style="color:${color||'var(--t3)'}">${title}</span></div>
+      ${items.map(item=>`
+        <div class="rm-item">
+          <div class="rm-dot ${item.status==='required'?'err':'warn'}"></div>
+          <div class="rm-text">
+            <div style="font-size:13px;font-weight:600;color:var(--t1);margin-bottom:2px">${esc(item.item)}</div>
+            ${item.value?`<div style="font-size:12px;color:var(--accent-light);background:var(--card3);border-radius:5px;padding:6px 10px;margin:4px 0;font-family:'Courier New',monospace;word-break:break-all">${esc(item.value)}</div>`:''}
+            ${item.tip?`<div style="font-size:12px;color:var(--t3)">${esc(item.tip)}</div>`:''}
+          </div>
+          ${item.value?`<button class="cbtn rm-copy" onclick="copy(\`${escQ(item.value)}\`,this)">Copy</button>`:''}
+        </div>`).join('')}
+    </div>`;
+  }
+
+  const titlesHtml = (rm.titleOptions||[]).map((t,i)=>{
+    const len = t.title ? t.title.length : 0;
+    return `<div class="opt" onclick="selOpt(this,'title',\`${escQ(t.title||'')}\`)">
+      <div class="opt-n">${i+1}</div>
+      <div style="flex:1">
+        <div class="opt-txt">${esc(t.title||'')}</div>
+        <div style="font-size:11px;color:var(--t3);margin-top:3px">${len} chars · Sentiment: ${esc(t.sentiment||'')} · Power: ${esc(t.powerWord||'none')}</div>
+      </div>
+      <button class="cbtn" onclick="event.stopPropagation();copy(\`${escQ(t.title||'')}\`,this)">Copy</button>
+    </div>`;
+  }).join('');
+
+  out.innerHTML = `
+    <div class="block">
+      <div class="bh">
+        <div class="bh-icon blue">📊</div>
+        <div><div class="bh-title">Rank Math Optimization Guide</div><div class="bh-sub">For keyword: "${esc(d.keyword)}" · Focus: "${esc(d.focusKeyword)}"</div></div>
+        <div class="bh-badge">${esc(d.intent||'')} · ${esc(d.difficulty||'')}</div>
+      </div>
+      <div class="tip-box"><span>📌</span><span>Copy each value directly into Rank Math's corresponding field. Aim for <strong>80+ Rank Math score</strong> before publishing.</span></div>
+      ${rmSection('🔴 Basic SEO — 6 Required Checks', rm.basicSEO, 'var(--red)')}
+      <div class="sdiv">Title Tag Options</div>
+      <div class="opts" style="margin-bottom:16px">${titlesHtml}</div>
+      <div class="obox" style="margin-bottom:12px">
+        <div class="obox-top"><span class="obox-lbl">Meta Description</span><button class="cbtn" onclick="copy(\`${escQ(rm.metaDescription||'')}\`,this)">Copy</button></div>
+        <div class="obox-val">${esc(rm.metaDescription||'')}</div>
+        ${charBar((rm.metaDescription||'').length,140,158)}
+      </div>
+      <div class="obox" style="margin-bottom:12px">
+        <div class="obox-top"><span class="obox-lbl">URL Permalink / Slug</span><button class="cbtn" onclick="copy(\`${escQ(rm.urlSlug||'')}\`,this)">Copy</button></div>
+        <div class="obox-val" style="font-family:'Courier New',monospace;color:var(--code-text)">/${esc(rm.urlSlug||'')}</div>
+      </div>
+      <div class="obox" style="margin-bottom:12px">
+        <div class="obox-top"><span class="obox-lbl">H1 Tag</span><button class="cbtn" onclick="copy(\`${escQ(rm.h1||'')}\`,this)">Copy</button></div>
+        <div class="obox-val large">${esc(rm.h1||'')}</div>
+      </div>
+      <div class="obox" style="margin-bottom:12px">
+        <div class="obox-top"><span class="obox-lbl">H2 Headings with Keywords</span></div>
+        ${(rm.h2WithKeywords||[]).map((h,i)=>`
+          <div class="alt-row">
+            <div class="alt-num">H2</div>
+            <div class="alt-txt">${esc(h)}</div>
+            <button class="cbtn" style="flex-shrink:0;margin-left:8px" onclick="copy(\`${escQ(h)}\`,this)">Copy</button>
+          </div>`).join('')}
+      </div>
+      ${rmSection('🟡 Additional SEO Checks', rm.additionalChecks, 'var(--amber)')}
+      ${rmSection('📝 Title Readability Checks', rm.titleReadability, 'var(--purple)')}
+      ${rmSection('📖 Content Readability', rm.contentReadability, 'var(--cyan)')}
+      <div class="sdiv">Schema for Rank Math</div>
+      <div class="obox">
+        <div class="obox-top"><span class="obox-lbl">JSON-LD Schema — paste in Rank Math → Schema → Custom</span><button class="cbtn" onclick="copy(\`${escQ(d.schemaForRankMath||'')}\`,this)">Copy</button></div>
+        <div class="code-box">${esc(d.schemaForRankMath||'')}</div>
+      </div>
+      <div class="obox" style="margin-top:12px">
+        <div class="obox-top"><span class="obox-lbl">FAQ Items for Rank Math FAQPage Schema</span></div>
+        ${(d.faqSchema||[]).map(f=>`
+          <div class="faq-item">
+            <div class="faq-q">${esc(f.q)}</div>
+            <div class="faq-a">${esc(f.a)}</div>
+          </div>`).join('')}
+      </div>
+    </div>`;
+}
+
+// ─── RENDER: COMPETITOR ───────────────────────────────────────────
+function renderCompetitor(d){
+  const out=$('results');
+  const ci = d.competitorInsights || {};
+  const gaps = d.contentGaps || [];
+  const kg = d.keywordGaps || {};
+  const ws = d.winningStrategy || {};
+
+  out.innerHTML = `
+    <div class="block">
+      <div class="bh">
+        <div class="bh-icon red">🔍</div>
+        <div><div class="bh-title">Competitor Content Gap Analysis</div><div class="bh-sub">For keyword: "${esc(d.keyword)}"</div></div>
+      </div>
+      <div class="ov-grid" style="margin-bottom:16px">
+        <div class="ov-card"><div class="ov-label">Avg Word Count</div><div class="ov-val amber">${esc(ci.avgWordCount||'—')}</div></div>
+        <div class="ov-card"><div class="ov-label">Common Schema</div><div class="ov-val">${(ci.commonSchemaUsed||[]).join(', ')||'—'}</div></div>
+        <div class="ov-card"><div class="ov-label">Content Types</div><div class="ov-val">${(ci.commonContentTypes||[]).join(', ')||'—'}</div></div>
+        <div class="ov-card"><div class="ov-label">Total Gaps Found</div><div class="ov-val green">${gaps.length}</div></div>
+      </div>
+
+      <div class="sdiv">Content Gaps to Exploit</div>
+      <div class="comp-grid">
+        ${gaps.map((g,i)=>`
+          <div class="comp-item">
+            <div class="comp-rank">${i+1}</div>
+            <div class="comp-info">
+              <div class="comp-gap-title">${esc(g.gap)}</div>
+              <div class="comp-gap-desc">${esc(g.opportunity)}</div>
+              <div style="margin-top:6px;font-size:12px;color:var(--accent-light);font-style:italic">Angle: ${esc(g.angle)}</div>
+            </div>
+            <div class="comp-tag ${g.priority==='High'?'gap':'win'}">${esc(g.priority)}</div>
+          </div>`).join('')}
+      </div>
+
+      <div class="sdiv">Keyword Gaps</div>
+      <div class="obox"><div class="obox-top"><span class="obox-lbl">Missing LSI Keywords</span></div>
+        <div class="chip-wrap">${(kg.missingLSI||[]).map(k=>`<div class="chip lsi" onclick="navigator.clipboard.writeText('${esc(k)}')">${esc(k)}<span class="tag">LSI</span></div>`).join('')}</div>
+      </div>
+      <div class="obox"><div class="obox-top"><span class="obox-lbl">Missing Long-Tail Phrases</span></div>
+        <div class="chip-wrap">${(kg.missingLongTail||[]).map(k=>`<div class="chip lt" onclick="navigator.clipboard.writeText('${esc(k)}')">${esc(k)}<span class="tag">LONGTAIL</span></div>`).join('')}</div>
+      </div>
+      <div class="obox"><div class="obox-top"><span class="obox-lbl">Unanswered Questions</span></div>
+        <div class="chip-wrap">${(kg.missingQuestions||[]).map(k=>`<div class="chip q" onclick="navigator.clipboard.writeText('${esc(k)}')">${esc(k)}<span class="tag">Q</span></div>`).join('')}</div>
+      </div>
+
+      <div class="sdiv">Your Winning Strategy</div>
+      <div class="obox" style="border-color:rgba(34,197,94,.25)">
+        <div style="font-size:15px;font-weight:700;color:var(--green);margin-bottom:10px">🏆 How to Outrank</div>
+        <div style="margin-bottom:8px"><span style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.8px">Unique Angle</span><div style="font-size:14px;margin-top:3px">${esc(ws.uniqueAngle||'')}</div></div>
+        <div style="margin-bottom:8px"><span style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.8px">Differentiator</span><div style="font-size:14px;margin-top:3px">${esc(ws.differentiator||'')}</div></div>
+        <div style="margin-bottom:10px"><span style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.8px">Target Word Count</span><div style="font-size:18px;font-weight:700;color:var(--amber);margin-top:3px">${esc(ws.wordCountTarget||'')}</div></div>
+        <div class="brief-title">Must Include</div>
+        ${(ws.mustInclude||[]).map((m,i)=>`<div class="brief-item"><div class="brief-num">${i+1}</div>${esc(m)}</div>`).join('')}
+      </div>
+      <div class="obox" style="margin-top:10px">
+        <div class="obox-top"><span class="obox-lbl">⚡ Quick Wins</span></div>
+        ${(d.quickWins||[]).map((q,i)=>`<div class="brief-item"><div class="brief-num">${i+1}</div>${esc(q)}</div>`).join('')}
+      </div>
+    </div>`;
+}
+
+// ─── RENDER: CONTENT BRIEF ────────────────────────────────────────
+function renderBrief(d){
+  const out=$('results');
+  const ap = d.audiencePersona || {};
+  const eo = d.editorialNotes || {};
+
+  out.innerHTML = `
+    <div class="block">
+      <div class="bh">
+        <div class="bh-icon purple">📝</div>
+        <div><div class="bh-title">Content Brief</div><div class="bh-sub">${esc(d.keyword)} · ${esc(d.estimatedWordCount||'')}</div></div>
+      </div>
+      <div class="obox" style="margin-bottom:12px">
+        <div class="obox-top"><span class="obox-lbl">Content Goal</span></div>
+        <div class="obox-val large">${esc(d.contentGoal||'')}</div>
+      </div>
+      <div class="obox" style="margin-bottom:12px">
+        <div class="obox-top"><span class="obox-lbl">Suggested Title</span><button class="cbtn" onclick="copy(\`${escQ(d.suggestedTitle||'')}\`,this)">Copy</button></div>
+        <div class="obox-val large">${esc(d.suggestedTitle||'')}</div>
+      </div>
+      <div class="obox" style="margin-bottom:12px">
+        <div class="obox-top"><span class="obox-lbl">Content Angle</span></div>
+        <div class="obox-val" style="color:var(--accent-light);font-weight:600">${esc(d.contentAngle||'')}</div>
+      </div>
+
+      <div class="sdiv">Target Audience Persona</div>
+      <div class="obox" style="margin-bottom:12px">
+        <div class="obox-top"><span class="obox-lbl">Who Is This For?</span></div>
+        <div class="obox-val" style="margin-bottom:8px">${esc(ap.who||'')}</div>
+        <div class="brief-title">Pain Points</div>
+        ${(ap.painPoints||[]).map(p=>`<div class="brief-item"><div class="brief-num">→</div>${esc(p)}</div>`).join('')}
+        <div class="brief-title" style="margin-top:8px">Desired Outcome</div>
+        <div style="font-size:13px;color:var(--green);padding:6px 0">${esc(ap.desiredOutcome||'')}</div>
+      </div>
+
+      <div class="sdiv">Section-by-Section Outline</div>
+      <div class="obox" style="margin-bottom:12px">
+        ${(d.outline||[]).map((s,i)=>`
+          <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border)">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+              <span style="font-size:10px;font-weight:700;color:var(--accent-light);background:var(--accent-dim);padding:2px 8px;border-radius:4px">${i===0?'INTRO':i===(d.outline.length-1)?'CONCLUSION':'H2'}</span>
+              <span style="font-size:14px;font-weight:600">${esc(s.section)}</span>
+            </div>
+            ${(s.keyPoints||[]).map(p=>`<div class="brief-item"><div class="brief-num">•</div>${esc(p)}</div>`).join('')}
+            ${s.notes?`<div style="margin-top:6px;font-size:12px;color:var(--amber);padding:5px 10px;background:rgba(245,158,11,.06);border-radius:5px">📝 ${esc(s.notes)}</div>`:''}
+          </div>`).join('')}
+      </div>
+
+      <div class="sdiv">Research & Resources Needed</div>
+      <div class="obox" style="margin-bottom:12px">
+        ${(d.researchRequired||[]).map((r,i)=>`<div class="brief-item"><div class="brief-num">${i+1}</div>${esc(r)}</div>`).join('')}
+      </div>
+
+      <div class="sdiv">Editorial Guidelines</div>
+      <div class="obox" style="margin-bottom:12px">
+        <div style="margin-bottom:8px"><span style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.8px">Tone</span><div style="font-size:14px;margin-top:3px">${esc(eo.tone||'')}</div></div>
+        <div style="margin-bottom:8px"><span style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.8px">Formatting</span><div style="font-size:14px;margin-top:3px">${esc(eo.formatting||'')}</div></div>
+        <div style="margin-bottom:8px"><span style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.8px">Avoid</span>
+          ${(eo.avoid||[]).map(a=>`<div class="brief-item"><div class="brief-num" style="color:var(--red)">✗</div>${esc(a)}</div>`).join('')}
+        </div>
+        <div><span style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.8px">Must Mention</span>
+          ${(eo.mustMention||[]).map(m=>`<div class="brief-item"><div class="brief-num" style="color:var(--green)">✓</div>${esc(m)}</div>`).join('')}
+        </div>
+      </div>
+      <div class="ov-grid">
+        <div class="ov-card"><div class="ov-label">Word Count</div><div class="ov-val amber">${esc(d.estimatedWordCount||'—')}</div></div>
+        <div class="ov-card"><div class="ov-label">Primary CTA</div><div class="ov-val">${esc(d.primaryCTA||'—')}</div></div>
+        <div class="ov-card"><div class="ov-label">Success Metric</div><div class="ov-val">${esc(d.successMetric||'—')}</div></div>
+        <div class="ov-card"><div class="ov-label">Turnaround</div><div class="ov-val">${esc(d.deadline||'—')}</div></div>
+      </div>
+    </div>`;
+}
+
+// ─── RENDER: WORDPRESS ────────────────────────────────────────────
+function renderWordPress(d){
+  const out=$('results');
+  function wpSection(title, icon, items, color){
+    if(!items||!items.length) return '';
+    return `<div class="obox" style="margin-bottom:14px">
+      <div class="obox-top" style="margin-bottom:12px"><span class="obox-lbl" style="color:${color||'var(--t3)'}">${icon} ${title}</span></div>
+      ${items.map(item=>`
+        <div style="display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)">
+          <div class="pr-dot ${item.priority==='critical'?'critical':item.priority==='high'?'high':'medium'}" style="margin-top:5px;flex-shrink:0"></div>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600;color:var(--t1);margin-bottom:2px">${esc(item.task||item.setting||'')}</div>
+            ${item.value?`<div style="font-size:12px;color:var(--accent-light);background:var(--accent-dim);border-radius:5px;padding:5px 10px;margin:4px 0;font-family:'Courier New',monospace;word-break:break-all">${esc(item.value)}</div>`:''}
+            <div style="font-size:12px;color:var(--t3)">${esc(item.how||item.where||'')}</div>
+          </div>
+          ${item.value||item.setting?`<button class="cbtn" onclick="copy(\`${escQ(item.value||item.setting||'')}\`,this)">Copy</button>`:''}
+        </div>`).join('')}
+    </div>`;
+  }
+
+  out.innerHTML = `
+    <div class="block">
+      <div class="bh">
+        <div class="bh-icon blue">🔧</div>
+        <div><div class="bh-title">WordPress SEO Publish Checklist</div><div class="bh-sub">For: "${esc(d.keyword)}" · Focus: "${esc(d.focusKeyword)}"</div></div>
+      </div>
+      <div class="tip-box"><span>🎯</span><span>Follow this checklist in order. Complete every <span style="color:var(--red)">Critical</span> item before publishing. Aim for <strong>Rank Math score 80+</strong>.</span></div>
+      <div class="pr-legend" style="margin-bottom:16px">
+        <div class="pr-leg-item"><div class="pr-dot critical"></div>Critical (must do)</div>
+        <div class="pr-leg-item"><div class="pr-dot high"></div>High (should do)</div>
+        <div class="pr-leg-item"><div class="pr-dot medium"></div>Medium (nice to have)</div>
+      </div>
+      ${wpSection('Pre-Writing Setup','⚙️', d.preWriting, 'var(--cyan)')}
+      ${wpSection('While Writing','✍️', d.whileWriting, 'var(--accent-light)')}
+      ${wpSection('Rank Math Settings to Configure','📊', d.rankMathSettings, 'var(--purple)')}
+      ${wpSection('Pre-Publish Checks','🔍', d.prePublish, 'var(--amber)')}
+      ${wpSection('Post-Publish Actions','🚀', d.postPublish, 'var(--green)')}
+    </div>`;
+}
+
+// ─── INTERACTIVE HELPERS ─────────────────────────────────────────
 function toggleH2(el){
   const ch=el.nextElementSibling;
   const tog=el.querySelector('.h2-toggle');
@@ -778,10 +1622,12 @@ function selOpt(el,type,val){
   el.classList.add('sel');
   if(type==='title'){
     const out=$('selTitleOut');
-    out.style.display='block';
-    $('selTitleVal').textContent=val;
-    $('selTitleChars').innerHTML=charBar(val.length,40,60);
-    $('selTitleCopy').onclick=function(){copy(val,this);};
+    if(out){
+      out.style.display='block';
+      $('selTitleVal').textContent=val;
+      $('selTitleChars').innerHTML=charBar(val.length,40,60);
+      $('selTitleCopy').onclick=function(){copy(val,this);};
+    }
   }
 }
 
