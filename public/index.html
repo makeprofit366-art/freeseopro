@@ -986,7 +986,7 @@ footer{
         <a href="#">Contact</a>
       </div>
     </div>
-    <div class="footer-copy">Built by developers, for content creators. Open source, free forever. © 2026 SEOPro.</div>
+    <div class="footer-copy">Built by developers, for content creators. Open source, free forever. © 2025 SEOPro.</div>
   </div>
 </footer>
 
@@ -1049,30 +1049,79 @@ function estimateComp(kw){
 
 // ══ DOMAIN CHECKER ══════════════════════════════════
 async function checkDomain(){
-  const d = document.getElementById('domainInp').value.trim();
-  if(!d) return;
-  const res = document.getElementById('domainResult');
-  const grid = document.getElementById('drGrid');
-  const verdict = document.getElementById('drVerdict');
-  res.classList.add('show');
-  grid.innerHTML = '<div style="color:var(--t3);font-size:13px">Analyzing…</div>';
+  const raw = document.getElementById('domainInp').value.trim();
+  if(!raw){ document.getElementById('domainInp').focus(); return; }
+
+  // Clean: strip https://, www., paths
+  const domain = raw.replace(/^https?:\/\//i,'').replace(/^www\./i,'').replace(/\/.*$/,'').trim().toLowerCase();
+
+  const resEl  = document.getElementById('domainResult');
+  const grid   = document.getElementById('drGrid');
+  const verdict= document.getElementById('drVerdict');
+
+  resEl.classList.add('show');
+  grid.innerHTML = `<div style="color:var(--t3);font-size:13px;padding:6px;display:flex;align-items:center;gap:8px">
+    <div class="prog-spinner"></div> Fetching real data for <strong style="color:var(--t1)">${domain}</strong>…
+  </div>`;
   verdict.innerHTML = '';
 
-  // Simulated analysis (replace with real API call if desired)
-  await new Promise(r => setTimeout(r, 800));
-  const age = Math.floor(Math.random()*12)+1;
-  const da = Math.floor(Math.random()*60)+5;
-  const comp = da > 50 ? 'High' : da > 25 ? 'Medium' : 'Low';
-  const compCol = da > 50 ? 'red' : da > 25 ? 'amber' : 'green';
-  const worth = da < 40 ? '✅ Worth it — Lower authority in this niche means you can compete with quality content.' :
-                '⚠️ Competitive niche. You\'ll need consistent, high-quality content and backlink building to compete.';
+  try {
+    const r = await fetch(`/api/analyze?action=domain&domain=${encodeURIComponent(domain)}`);
+    if(!r.ok) throw new Error(`Server error ${r.status}`);
+    const d = await r.json();
+    if(d.error) throw new Error(d.error);
 
-  grid.innerHTML = `
-    <div class="dr-card"><div class="dr-label">Est. Domain Age</div><div class="dr-val green">${age}+ yrs</div><div class="dr-sub">avg in this niche</div></div>
-    <div class="dr-card"><div class="dr-label">Niche Authority</div><div class="dr-val ${compCol}">${da}/100</div><div class="dr-sub">avg competitor DA</div></div>
-    <div class="dr-card"><div class="dr-label">Competition</div><div class="dr-val ${compCol}">${comp}</div><div class="dr-sub">to rank</div></div>
-    <div class="dr-card"><div class="dr-label">Your Chance</div><div class="dr-val ${da<40?'green':'amber'}">${da<40?'High':'Medium'}</div><div class="dr-sub">with good content</div></div>`;
-  verdict.innerHTML = `<strong style="color:var(--t1)">Verdict:</strong> ${worth}`;
+    // Color helpers
+    const ageCol  = !d.domainAgeDays ? 'amber' : d.domainAgeDays < 365 ? 'amber' : 'green';
+    const da      = typeof d.domainAuthority === 'number' ? d.domainAuthority : 0;
+    const daCol   = da <= 20 ? 'green' : da <= 45 ? 'amber' : 'red';
+    const compCol = (d.competition||'').toLowerCase().includes('low') ? 'green'
+                  : (d.competition||'').toLowerCase().includes('med') ? 'amber' : 'red';
+    const chCol   = (d.chance||'').toLowerCase().includes('high') || (d.chance||'').toLowerCase().includes('good') ? 'green'
+                  : (d.chance||'').toLowerCase().includes('build') || (d.chance||'').toLowerCase().includes('med') ? 'amber' : 'red';
+
+    const daLabel = d.daEstimated
+      ? `~${da}/100 <span style="font-size:9px;color:var(--t3)">(est)</span>`
+      : `${da}/100`;
+
+    grid.innerHTML = `
+      <div class="dr-card">
+        <div class="dr-label">📅 Domain Age</div>
+        <div class="dr-val ${ageCol}">${d.domainAgeText || 'Unknown'}</div>
+        <div class="dr-sub">Registered: ${d.registeredDate || 'Not found'}</div>
+      </div>
+      <div class="dr-card">
+        <div class="dr-label">💪 Domain Authority</div>
+        <div class="dr-val ${daCol}">${daLabel}</div>
+        <div class="dr-sub">${d.daEstimated ? 'Age-based estimate' : d.dataSource}</div>
+      </div>
+      <div class="dr-card">
+        <div class="dr-label">⚔️ Competition</div>
+        <div class="dr-val ${compCol}">${d.competition || '—'}</div>
+        <div class="dr-sub">to rank in niche</div>
+      </div>
+      <div class="dr-card">
+        <div class="dr-label">🎯 Your Chance</div>
+        <div class="dr-val ${chCol}">${d.chance || '—'}</div>
+        <div class="dr-sub">${d.worthIt || 'with quality content'}</div>
+      </div>`;
+
+    verdict.innerHTML = `
+      <div style="margin-bottom:8px">
+        <strong style="color:var(--t1)">Verdict for ${domain}:</strong>
+      </div>
+      <div style="font-size:13px;color:var(--t2);line-height:1.7">${d.verdict || ''}</div>
+      <div style="margin-top:10px;font-size:11px;color:var(--t3)">
+        Data source: ${d.dataSource || 'RDAP registry'}
+        ${d.daEstimated ? ' · <span style="color:var(--amber)">Add OPENPAGERANK_API_KEY in Vercel for real DA</span>' : ''}
+      </div>`;
+
+  } catch(e) {
+    grid.innerHTML = `<div style="color:var(--red);font-size:13px;padding:6px">
+      ⚠️ Could not fetch data for <strong>${domain}</strong>. ${e.message}<br>
+      <span style="color:var(--t3);font-size:11px">Try entering just the domain: example.com (no https://)</span>
+    </div>`;
+  }
 }
 
 // ══ MODE ════════════════════════════════════════════
