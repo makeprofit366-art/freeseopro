@@ -3,659 +3,742 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "30SecSEO",
-  "url": "https://www.30secseo.online",
-  "description": "Free AI SEO blueprint generator. Get titles, keywords, meta tags in 30 seconds.",
-  "applicationCategory": "SEO Tool",
-  "offers": {"@type": "Offer","price": "0","priceCurrency": "USD"}
-}
-</script>
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "wxfl5max7g");
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6RXQX6MRDZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6RXQX6MRDZ');
-</script>
-<meta name="google-site-verification" content="RBBLVlvNffHOR6HLu3bzsKt15EaMD1SM9xLEz-BMuW0" />
-<title>30SecSEO - Free AI SEO Blueprint Generator in 30 Seconds</title>
+<title>30SecSEO — Free AI SEO Blueprint Generator</title>
 <meta name="description" content="Generate complete SEO blueprints in 30 seconds. Free AI tool for titles, keywords, meta tags, schema markup and 40-point SEO checklist." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://www.30secseo.online/" />
-<meta property="og:title" content="30SecSEO - Free AI SEO Blueprint Generator" />
+<meta property="og:title" content="30SecSEO — Free AI SEO Blueprint Generator" />
 <meta property="og:description" content="Generate complete SEO blueprints in 30 seconds. 100% Free." />
-<meta property="og:url" content="https://www.30secseo.online/" />
 <meta property="og:type" content="website" />
+
+<!-- Distinctive Font Stack: Fraunces (editorial serif display) + Instrument Sans (refined body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Martian+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px;-webkit-tap-highlight-color:transparent}
-body{font-family:'DM Sans',sans-serif;min-height:100vh;line-height:1.6;overflow-x:hidden;transition:background .35s,color .35s}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent;font-size:16px}
+body{font-family:'Instrument Sans',sans-serif;min-height:100vh;line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
 
+/* ── THEME TOKENS ── */
 [data-theme="dark"]{
-  --bg:#07080f;--bg2:#0b0d18;--card:#0f1120;--card2:#141728;--card3:#1a1e35;
-  --border:#1f2440;--border2:#2a3060;--accent:#4f6ef7;--accent2:#7b93ff;
-  --accent-glow:rgba(79,110,247,0.18);--green:#0fcf6f;--amber:#f5a623;
-  --red:#f04060;--purple:#9b6dff;--cyan:#00d4ff;--gold:#f0c040;
-  --t1:#eceeff;--t2:#7a82a8;--t3:#3a4060;
-  --shadow:0 8px 40px rgba(0,0,0,0.6);--glow:0 0 60px rgba(79,110,247,0.15);
+  --bg:#080a10;
+  --bg2:#0c0e17;
+  --surface:#111420;
+  --surface2:#161928;
+  --surface3:#1c2035;
+  --border:#1e2240;
+  --border2:#2a3060;
+  --accent:#5b7aff;
+  --accent-dim:rgba(91,122,255,0.12);
+  --accent-glow:rgba(91,122,255,0.25);
+  --green:#00c46e;
+  --green-dim:rgba(0,196,110,0.1);
+  --amber:#f0a030;
+  --amber-dim:rgba(240,160,48,0.1);
+  --red:#f03060;
+  --red-dim:rgba(240,48,96,0.1);
+  --ink:#e8eaf8;
+  --ink2:#8892b8;
+  --ink3:#3a4268;
+  --ink4:#252a48;
+  --mono-bg:#050710;
+  --shadow:0 4px 32px rgba(0,0,0,0.5);
 }
 [data-theme="light"]{
-  --bg:#f4f5fb;--bg2:#ebedf8;--card:#ffffff;--card2:#f8f9ff;--card3:#eef0fa;
-  --border:#d8dcf0;--border2:#b8c0e0;--accent:#3a56e8;--accent2:#2540c0;
-  --accent-glow:rgba(58,86,232,0.1);--green:#0aaa58;--amber:#d4890a;
-  --red:#e02040;--purple:#7040d0;--cyan:#0088cc;--gold:#c0940a;
-  --t1:#0a0c20;--t2:#4a5080;--t3:#9098c0;
-  --shadow:0 8px 40px rgba(0,0,0,0.1);--glow:0 0 60px rgba(58,86,232,0.08);
+  --bg:#f7f8fc;
+  --bg2:#eef0f8;
+  --surface:#ffffff;
+  --surface2:#f3f4fb;
+  --surface3:#eaecf8;
+  --border:#d4d8f0;
+  --border2:#b8c0e8;
+  --accent:#3355ee;
+  --accent-dim:rgba(51,85,238,0.08);
+  --accent-glow:rgba(51,85,238,0.2);
+  --green:#009952;
+  --green-dim:rgba(0,153,82,0.08);
+  --amber:#c07800;
+  --amber-dim:rgba(192,120,0,0.08);
+  --red:#d02050;
+  --red-dim:rgba(208,32,80,0.08);
+  --ink:#0a0c1e;
+  --ink2:#4a5280;
+  --ink3:#9098c0;
+  --ink4:#d0d4ee;
+  --mono-bg:#0a0c1e;
+  --shadow:0 4px 24px rgba(0,0,0,0.08);
 }
-body{background:var(--bg);color:var(--t1)}
 
-body::after{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.018;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+body{background:var(--bg);color:var(--ink)}
+
+/* Grain overlay */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+  opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-.wrap{max-width:900px;margin:0 auto;padding:0 20px;width:100%}
-.wrap-wide{max-width:1100px;margin:0 auto;padding:0 20px;width:100%}
+/* ── LAYOUT ── */
+.container{max-width:860px;margin:0 auto;padding:0 24px}
+.container-wide{max-width:1160px;margin:0 auto;padding:0 24px}
 
-/* NAV */
+/* ── NAV ── */
 nav{
-  position:sticky;top:0;z-index:100;
-  backdrop-filter:blur(20px) saturate(180%);
-  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  position:sticky;top:0;z-index:200;
+  background:rgba(8,10,16,0.88);
+  backdrop-filter:blur(24px) saturate(160%);
+  -webkit-backdrop-filter:blur(24px) saturate(160%);
   border-bottom:1px solid var(--border);
-  background:rgba(7,8,15,0.85);
-  transition:background .3s;
 }
-[data-theme="light"] nav{background:rgba(244,245,251,0.92)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nav-wordmark{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.5px;color:var(--t1);line-height:1}
-.nav-wordmark span{color:var(--accent)}
-.nav-badge{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;background:var(--accent-glow);border:1px solid rgba(79,110,247,0.3);border-radius:4px;color:var(--accent2)}
-.theme-btn{
-  display:flex;align-items:center;gap:7px;
-  background:var(--card2);border:1px solid var(--border);
-  border-radius:100px;padding:7px 14px;
-  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
-  color:var(--t2);cursor:pointer;transition:all .2s;
+[data-theme="light"] nav{background:rgba(247,248,252,0.92)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav-brand{display:flex;align-items:baseline;gap:8px;text-decoration:none}
+.nav-name{
+  font-family:'Fraunces',serif;font-size:21px;font-weight:700;
+  font-style:italic;letter-spacing:-0.5px;color:var(--ink)
 }
-.theme-btn:hover{border-color:var(--accent);color:var(--t1)}
-
-/* HERO */
-.hero{
-  padding:80px 0 60px;text-align:center;position:relative;
-  background:radial-gradient(ellipse 1000px 600px at 50% -100px,var(--accent-glow),transparent 65%);
+.nav-name em{font-style:normal;color:var(--accent)}
+.nav-tag{
+  font-family:'Instrument Sans',sans-serif;
+  font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  color:var(--ink3);border:1px solid var(--border2);border-radius:3px;
+  padding:2px 7px;
 }
-.hero-tag{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--card2);border:1px solid var(--border2);
-  border-radius:100px;padding:6px 16px;
-  font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
-  color:var(--accent2);margin-bottom:24px;
-  animation:fadeUp .5s ease both
-}
-.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite;flex-shrink:0}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-
-.hero h1{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(42px,9vw,110px);
-  font-weight:800;
-  line-height:.92;letter-spacing:-1px;
-  color:var(--t1);
-  margin-bottom:10px;
-  animation:fadeUp .5s .1s ease both
-}
-.hero h1 .accent{color:var(--accent)}
-.hero h1 .stroke{-webkit-text-stroke:2px var(--accent);color:transparent;}
-
-.hero-sub{
-  font-family:'DM Sans',sans-serif;
-  font-size:clamp(15px,2.2vw,18px);font-weight:400;
-  color:var(--t2);max-width:500px;margin:16px auto 28px;
-  line-height:1.7;
-  animation:fadeUp .5s .2s ease both
-}
-.hero-sub strong{color:var(--t1);font-weight:600}
-
-.hero-pills{
-  display:flex;justify-content:center;gap:7px;flex-wrap:wrap;
-  margin-bottom:40px;
-  animation:fadeUp .5s .3s ease both
-}
-.pill{
-  background:var(--card2);border:1px solid var(--border);
-  border-radius:100px;padding:5px 13px;
-  font-size:11px;font-weight:500;color:var(--t2);
+.nav-right{display:flex;align-items:center;gap:10px}
+.theme-toggle{
+  display:flex;align-items:center;gap:6px;
+  background:var(--surface2);border:1px solid var(--border);
+  border-radius:6px;padding:7px 12px;cursor:pointer;
+  font-family:'Instrument Sans',sans-serif;font-size:12px;font-weight:500;color:var(--ink2);
   transition:border-color .2s,color .2s;
-  font-family:'DM Sans',sans-serif;
 }
-.pill:hover{border-color:var(--accent);color:var(--t1)}
-.pill.hi{border-color:rgba(79,110,247,.35);color:var(--accent2)}
+.theme-toggle:hover{border-color:var(--accent);color:var(--ink)}
+.theme-toggle svg{width:14px;height:14px;flex-shrink:0}
+
+/* ── HERO ── */
+.hero{
+  padding:96px 0 64px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 700px 500px at 50% -80px, rgba(91,122,255,0.1) 0%, transparent 65%),
+    radial-gradient(ellipse 400px 300px at 20% 50%, rgba(0,196,110,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 350px 250px at 85% 60%, rgba(240,160,48,0.04) 0%, transparent 60%);
+}
+/* Decorative grid lines */
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:60px 60px;
+  opacity:.25;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black,transparent);
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black,transparent);
+}
+.hero-inner{position:relative;text-align:center}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--surface);border:1px solid var(--border2);
+  border-radius:4px;padding:6px 14px;margin-bottom:32px;
+  font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--ink2);
+  animation:up .5s ease both;
+}
+.eyebrow-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 8px var(--green);
+  animation:pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(52px,10vw,120px);
+  font-weight:900;
+  line-height:.88;
+  letter-spacing:-2px;
+  color:var(--ink);
+  margin-bottom:8px;
+  animation:up .5s .08s ease both;
+}
+.hero h1 .italic{font-style:italic;color:var(--accent)}
+.hero h1 .outline{
+  -webkit-text-stroke:2px var(--accent);
+  color:transparent;
+}
+.hero-sub{
+  font-size:clamp(15px,2vw,17px);font-weight:400;
+  color:var(--ink2);max-width:480px;margin:20px auto 32px;
+  line-height:1.75;
+  animation:up .5s .16s ease both;
+}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.hero-tags{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:6px;
+  margin-bottom:44px;
+  animation:up .5s .22s ease both;
+}
+.htag{
+  background:var(--surface2);border:1px solid var(--border);
+  border-radius:3px;padding:5px 12px;
+  font-size:11px;font-weight:500;letter-spacing:.3px;color:var(--ink2);
+}
+.htag.on{border-color:rgba(91,122,255,.4);color:var(--accent)}
 
 /* Competition meter */
-.comp-meter{
-  display:inline-flex;align-items:center;gap:16px;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:12px 20px;
-  margin-bottom:40px;
-  animation:fadeUp .5s .35s ease both;
-  flex-wrap:wrap;justify-content:center;
+.comp-strip{
+  display:inline-flex;align-items:center;gap:20px;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:8px;padding:12px 20px;
+  animation:up .5s .28s ease both;
+  flex-wrap:wrap;justify-content:center;gap:14px;
 }
-.comp-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--t3);font-family:'DM Sans',sans-serif;}
-.comp-bar{width:140px;height:7px;background:var(--card3);border-radius:4px;overflow:hidden;position:relative}
-.comp-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--amber),var(--red));transition:width 1s ease}
-.comp-indicator{position:absolute;top:-3.5px;width:14px;height:14px;border-radius:50%;background:var(--t1);border:2px solid var(--bg);box-shadow:0 0 8px rgba(0,0,0,.4);transition:left 1s ease}
-.comp-val{font-size:13px;font-weight:700;color:var(--t1);font-family:'Syne Mono',monospace}
-.comp-info{font-size:10px;color:var(--t3);font-family:'DM Sans',sans-serif;}
+.comp-l{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink3)}
+.comp-bar-track{width:130px;height:5px;background:var(--surface3);border-radius:3px;overflow:hidden;position:relative}
+.comp-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--green),var(--amber) 55%,var(--red));transition:width 1s ease}
+.comp-val{font-family:'Martian Mono',monospace;font-size:13px;font-weight:500;color:var(--ink)}
+.comp-label{font-size:11px;color:var(--ink3);min-width:140px;text-align:center}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
-/* TOOL SECTION */
-.tool-section{padding:0 0 70px}
+/* ── TOOL ── */
+.tool-section{padding:0 0 80px}
 
-.tab-bar{
-  display:flex;gap:4px;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:5px;margin-bottom:14px;
-  overflow-x:auto;scrollbar-width:none;
+/* Tabs */
+.mode-tabs{
+  display:flex;gap:0;overflow-x:auto;scrollbar-width:none;
+  border:1px solid var(--border);border-radius:8px;
+  background:var(--surface);margin-bottom:12px;padding:4px;
   -webkit-overflow-scrolling:touch;
 }
-.tab-bar::-webkit-scrollbar{display:none}
-.tab-btn{
-  flex:1;min-width:max-content;padding:9px 14px;
-  border-radius:10px;border:none;
-  background:transparent;color:var(--t2);
-  font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;
+.mode-tabs::-webkit-scrollbar{display:none}
+.mode-tab{
+  flex:1;min-width:max-content;
+  padding:9px 16px;border-radius:5px;border:none;
+  background:transparent;color:var(--ink2);
+  font-family:'Instrument Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.2px;
   cursor:pointer;transition:all .18s;white-space:nowrap;
 }
-.tab-btn:hover{color:var(--t1);background:var(--card2)}
-.tab-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 16px rgba(79,110,247,.35)}
+.mode-tab:hover{color:var(--ink)}
+.mode-tab.active{background:var(--accent);color:#fff}
 
+/* Input card */
 .input-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:16px;padding:24px;margin-bottom:14px;
-  box-shadow:var(--shadow);
-  transition:border-color .2s,box-shadow .2s
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:24px;margin-bottom:12px;
+  transition:border-color .2s;
 }
-.input-card:focus-within{border-color:rgba(79,110,247,.45);box-shadow:var(--glow)}
-.field-lbl{
-  font-size:10px;font-weight:600;letter-spacing:1.5px;
-  text-transform:uppercase;color:var(--t3);
-  margin-bottom:8px;display:flex;align-items:center;gap:5px;
-  font-family:'DM Sans',sans-serif;
+.input-card:focus-within{border-color:rgba(91,122,255,.4)}
+.field-label{
+  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--ink3);margin-bottom:8px;display:flex;align-items:center;gap:6px;
 }
-.req{color:var(--red);font-size:14px}
-.main-row{display:flex;gap:10px;align-items:stretch}
-.kw-inp{
-  flex:1;background:var(--card3);
-  border:1.5px solid var(--border2);border-radius:10px;
-  color:var(--t1);font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;
+.req{color:var(--red);line-height:1}
+.main-row{display:flex;gap:8px;align-items:stretch}
+.kw-input{
+  flex:1;min-width:0;
+  background:var(--surface2);border:1.5px solid var(--border2);border-radius:7px;
+  color:var(--ink);font-family:'Instrument Sans',sans-serif;font-size:15px;
   padding:13px 16px;outline:none;
-  transition:border-color .2s,background .2s;
-  min-width:0;
+  transition:border-color .2s;
 }
-.kw-inp:focus{border-color:var(--accent);background:var(--card2)}
-.kw-inp::placeholder{color:var(--t3)}
+.kw-input:focus{border-color:var(--accent)}
+.kw-input::placeholder{color:var(--ink3)}
 .go-btn{
-  background:var(--accent);color:#fff;border:none;
-  border-radius:10px;padding:13px 22px;
-  font-family:'Syne',sans-serif;font-size:14px;font-weight:700;
-  cursor:pointer;white-space:nowrap;
-  transition:all .15s;
-  box-shadow:0 4px 24px rgba(79,110,247,.4);
-  display:flex;align-items:center;gap:7px;
   flex-shrink:0;
+  display:flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;border:none;
+  border-radius:7px;padding:13px 24px;
+  font-family:'Fraunces',serif;font-size:14px;font-weight:700;font-style:italic;
+  cursor:pointer;white-space:nowrap;
+  box-shadow:0 4px 20px var(--accent-glow);
+  transition:all .15s;
 }
-.go-btn:hover:not(:disabled){background:#3a56e8;transform:translateY(-1px)}
+.go-btn:hover:not(:disabled){filter:brightness(1.1);transform:translateY(-1px)}
 .go-btn:active:not(:disabled){transform:scale(.97)}
-.go-btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;transform:none}
+.go-btn:disabled{opacity:.35;cursor:not-allowed;box-shadow:none;transform:none}
+.go-icon{font-size:15px}
 
-.opt-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
-.sub-inp{
-  width:100%;background:var(--card3);border:1.5px solid var(--border);
-  border-radius:8px;color:var(--t1);
-  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:400;
-  padding:9px 12px;outline:none;transition:border-color .2s
+.opts-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:14px}
+.sub-input{
+  width:100%;background:var(--surface2);border:1.5px solid var(--border);
+  border-radius:6px;color:var(--ink);
+  font-family:'Instrument Sans',sans-serif;font-size:13px;
+  padding:8px 11px;outline:none;transition:border-color .2s;
 }
-.sub-inp:focus{border-color:var(--accent)}
-.sub-inp::placeholder{color:var(--t3)}
-select.sub-inp{cursor:pointer;appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 10px center;padding-right:30px
+.sub-input:focus{border-color:var(--accent)}
+.sub-input::placeholder{color:var(--ink3)}
+select.sub-input{
+  cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235b7aff' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 10px center;padding-right:28px;
 }
-.adv-toggle{
-  width:100%;background:none;border:1.5px dashed var(--border2);
-  border-radius:8px;color:var(--t3);font-size:11px;font-weight:600;
-  padding:8px 14px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;gap:7px;
-  margin-top:12px;font-family:'DM Sans',sans-serif;
-  transition:all .15s;letter-spacing:.5px
+.adv-btn{
+  width:100%;margin-top:12px;
+  background:none;border:1.5px dashed var(--border2);border-radius:6px;
+  color:var(--ink3);font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+  padding:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;
+  font-family:'Instrument Sans',sans-serif;
+  transition:border-color .15s,color .15s;
 }
-.adv-toggle:hover{color:var(--t2);border-color:var(--accent)}
+.adv-btn:hover{border-color:var(--accent);color:var(--ink2)}
 .adv-panel{display:none;margin-top:12px}
 .adv-panel.open{display:block}
-.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 
-/* PROGRESS */
-.progress-area{
-  display:none;background:var(--card);border:1px solid var(--border);
-  border-radius:16px;padding:22px;margin-bottom:14px;box-shadow:var(--shadow)
+/* ── PROGRESS ── */
+.progress-card{
+  display:none;background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:20px;margin-bottom:12px;
 }
-.progress-area.show{display:block}
-.prog-title{font-size:13px;font-weight:500;color:var(--t2);margin-bottom:14px;display:flex;align-items:center;gap:10px;font-family:'DM Sans',sans-serif;}
-.prog-spinner{width:18px;height:18px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0}
+.progress-card.show{display:block}
+.prog-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.prog-spinner{
+  width:16px;height:16px;border:2px solid var(--border2);
+  border-top-color:var(--accent);border-radius:50%;
+  animation:spin .65s linear infinite;flex-shrink:0;
+}
 @keyframes spin{to{transform:rotate(360deg)}}
-.step-grid{display:flex;flex-direction:column;gap:6px}
-.step{display:flex;align-items:center;gap:12px;padding:9px 13px;border-radius:9px;transition:background .2s;border:1px solid transparent}
-.step.active{background:var(--card2);border-color:var(--border2)}
-.step.done{opacity:.4}
-.step.pending{opacity:.15}
-.step-dot{width:24px;height:24px;border-radius:50%;border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;color:var(--t3);transition:all .25s}
-.step.active .step-dot{border-color:var(--accent);color:var(--accent);animation:pulse 1.5s infinite}
+.prog-lbl{font-size:13px;color:var(--ink2)}
+.step-list{display:flex;flex-direction:column;gap:4px}
+.step{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;border:1px solid transparent;transition:background .2s}
+.step.active{background:var(--surface2);border-color:var(--border)}
+.step.done{opacity:.35}
+.step.pending{opacity:.12}
+.step-dot{
+  width:22px;height:22px;border-radius:50%;
+  border:1.5px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;color:var(--ink3);flex-shrink:0;
+  transition:all .2s;font-family:'Martian Mono',monospace;
+}
+.step.active .step-dot{border-color:var(--accent);color:var(--accent);animation:step-pulse 1.5s infinite}
 .step.done .step-dot{background:var(--accent);border-color:var(--accent);color:#fff}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(79,110,247,.3)}60%{box-shadow:0 0 0 6px rgba(79,110,247,0)}}
-.step-text{font-size:13px;font-weight:500;color:var(--t1);font-family:'DM Sans',sans-serif;}
-.step-sub{font-size:11px;color:var(--t3);margin-top:1px;font-family:'DM Sans',sans-serif;}
+@keyframes step-pulse{0%,100%{box-shadow:0 0 0 0 var(--accent-glow)}60%{box-shadow:0 0 0 5px transparent}}
+.step-text{font-size:12px;font-weight:500;color:var(--ink)}
+.step-sub{font-size:11px;color:var(--ink3);margin-top:1px}
 
-/* RESULTS */
+/* ── RESULTS ── */
 #results{display:none}
 .block{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:16px;padding:22px;margin-bottom:14px;
-  box-shadow:var(--shadow);
-  animation:fadeUp .35s ease both
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:22px;margin-bottom:12px;
+  animation:up .3s ease both;
 }
+
+/* Block header */
 .bh{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)}
-.bh-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-.bh-icon.blue{background:rgba(79,110,247,.12);border:1px solid rgba(79,110,247,.2)}
-.bh-icon.green{background:rgba(15,207,111,.1);border:1px solid rgba(15,207,111,.2)}
-.bh-icon.amber{background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.2)}
-.bh-icon.purple{background:rgba(155,109,255,.1);border:1px solid rgba(155,109,255,.2)}
-.bh-icon.cyan{background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2)}
-.bh-icon.red{background:rgba(240,64,96,.1);border:1px solid rgba(240,64,96,.2)}
-.bh-title{font-family:'Syne',sans-serif;font-size:19px;font-weight:700;letter-spacing:-0.3px;color:var(--t1);line-height:1}
-.bh-sub{font-size:11px;color:var(--t3);margin-top:3px;font-family:'DM Sans',sans-serif;}
-.bh-badge{margin-left:auto;flex-shrink:0;background:var(--card3);border:1px solid var(--border2);border-radius:100px;padding:4px 11px;font-size:11px;font-weight:500;color:var(--t3);font-family:'DM Sans',sans-serif;}
+.bh-label{
+  font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;flex-shrink:0;
+}
+.bh-label.blue{background:var(--accent-dim);color:var(--accent);border:1px solid rgba(91,122,255,.2)}
+.bh-label.green{background:var(--green-dim);color:var(--green);border:1px solid rgba(0,196,110,.2)}
+.bh-label.amber{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(240,160,48,.2)}
+.bh-label.purple{background:rgba(160,100,255,.08);color:#b080ff;border:1px solid rgba(160,100,255,.2)}
+.bh-label.cyan{background:rgba(0,200,220,.08);color:#00c8dc;border:1px solid rgba(0,200,220,.2)}
+.bh-title{font-family:'Fraunces',serif;font-size:18px;font-weight:700;letter-spacing:-.3px;line-height:1;color:var(--ink)}
+.bh-sub{font-size:11px;color:var(--ink3);margin-top:2px}
+.bh-count{margin-left:auto;font-family:'Martian Mono',monospace;font-size:11px;color:var(--ink3);border:1px solid var(--border);border-radius:4px;padding:3px 8px;flex-shrink:0}
 
-.obox{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+/* Output boxes */
+.obox{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:13px 15px;margin-bottom:8px}
 .obox:last-child{margin-bottom:0}
-.obox-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;gap:8px;flex-wrap:wrap}
-.obox-lbl{font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--t3);font-family:'DM Sans',sans-serif;}
-.obox-val{font-size:14px;line-height:1.65;color:var(--t1);word-break:break-word;font-family:'DM Sans',sans-serif;}
-.obox-val.large{font-family:'Syne',sans-serif;font-size:17px;font-weight:600;color:var(--t1)}
-.obox-val.mono{font-family:'Syne Mono',monospace;font-size:12px;color:var(--cyan);line-height:1.9;white-space:pre-wrap;overflow-x:auto;max-height:220px;overflow-y:auto}
+.obox-header{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.obox-lbl{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink3)}
+.obox-val{font-size:14px;line-height:1.65;color:var(--ink);word-break:break-word}
+.obox-val.large{font-family:'Fraunces',serif;font-size:17px;font-weight:600;line-height:1.3}
+.obox-val.mono{font-family:'Martian Mono',monospace;font-size:11.5px;color:#5af;line-height:2;white-space:pre-wrap;overflow-x:auto;max-height:220px;overflow-y:auto}
 
-.char-hint{font-size:11px;margin-top:7px;display:flex;align-items:center;gap:5px;font-family:'DM Sans',sans-serif;}
+/* Char hint */
+.char-bar-wrap{display:flex;align-items:center;gap:8px;margin-top:7px}
+.char-hint{font-size:11px;font-family:'Martian Mono',monospace}
 .char-hint.ok{color:var(--green)}
 .char-hint.warn{color:var(--amber)}
 .char-hint.bad{color:var(--red)}
-.char-bar{flex:1;height:3px;background:var(--card3);border-radius:2px;overflow:hidden;max-width:120px}
-.char-fill{height:100%;border-radius:2px}
+.char-track{flex:1;height:3px;background:var(--surface3);border-radius:2px;overflow:hidden;max-width:100px}
+.char-fill{height:100%;border-radius:2px;transition:width .3s}
 
+/* Copy button */
 .cbtn{
-  background:transparent;border:1px solid var(--border2);border-radius:6px;
-  color:var(--t2);cursor:pointer;font-size:11px;font-weight:500;
-  padding:4px 10px;transition:all .15s;font-family:'DM Sans',sans-serif;
+  background:transparent;border:1px solid var(--border2);border-radius:5px;
+  color:var(--ink2);cursor:pointer;font-size:11px;font-weight:500;
+  padding:4px 9px;transition:all .15s;font-family:'Instrument Sans',sans-serif;
   white-space:nowrap;flex-shrink:0;
 }
-.cbtn:hover{color:var(--t1);border-color:var(--accent)}
+.cbtn:hover{color:var(--ink);border-color:var(--accent)}
 .cbtn.ok{color:var(--green);border-color:var(--green)}
 
-.chip-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+/* Keyword chips */
+.chip-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
 .chip{
   display:inline-flex;align-items:center;gap:5px;
-  padding:4px 12px;background:var(--card2);border:1px solid var(--border);
-  border-radius:100px;font-size:12px;font-weight:400;cursor:pointer;
-  transition:border-color .15s;max-width:100%;word-break:break-all;
-  font-family:'DM Sans',sans-serif;
+  padding:4px 11px;background:var(--surface);border:1px solid var(--border);
+  border-radius:4px;font-size:12px;cursor:pointer;
+  transition:border-color .15s;word-break:break-all;
+  font-family:'Instrument Sans',sans-serif;
 }
 .chip:hover{border-color:var(--accent)}
-.chip .tag{font-size:9px;font-weight:600;letter-spacing:.5px;padding:2px 5px;border-radius:3px;white-space:nowrap}
-.chip.pri{border-color:rgba(79,110,247,.5);color:var(--accent2)}
-.chip.pri .tag{background:rgba(79,110,247,.2);color:var(--accent2)}
-.chip.sec .tag{background:rgba(15,207,111,.15);color:var(--green)}
-.chip.lsi .tag{background:rgba(245,166,35,.15);color:var(--amber)}
-.chip.lt .tag{background:rgba(155,109,255,.15);color:var(--purple)}
-.chip.q .tag{background:rgba(0,212,255,.15);color:var(--cyan)}
-.chip.avoid{border-color:rgba(240,64,96,.25)}
-.chip.avoid .tag{background:rgba(240,64,96,.15);color:var(--red)}
+.chip .ct{font-size:9px;font-weight:700;letter-spacing:.5px;padding:1px 5px;border-radius:2px}
+.chip.pri{border-color:rgba(91,122,255,.4);color:#8ca4ff}
+.chip.pri .ct{background:var(--accent-dim);color:var(--accent)}
+.chip.sec .ct{background:var(--green-dim);color:var(--green)}
+.chip.lsi .ct{background:var(--amber-dim);color:var(--amber)}
+.chip.lt .ct{background:rgba(160,100,255,.08);color:#b080ff}
+.chip.q .ct{background:rgba(0,200,220,.08);color:#00c8dc}
+.chip.avoid{border-color:rgba(240,48,96,.25);color:var(--red)}
+.chip.avoid .ct{background:var(--red-dim);color:var(--red)}
 
-.opts{display:flex;flex-direction:column;gap:7px}
-.opt{
-  display:flex;align-items:flex-start;gap:12px;
-  padding:12px 14px;background:var(--card2);border:1.5px solid var(--border);
-  border-radius:10px;cursor:pointer;transition:all .15s;user-select:none
+/* Option picker */
+.opt-list{display:flex;flex-direction:column;gap:6px}
+.opt-item{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:11px 13px;background:var(--surface2);
+  border:1.5px solid var(--border);border-radius:7px;
+  cursor:pointer;transition:all .15s;
 }
-.opt:hover{border-color:rgba(79,110,247,.4);background:var(--card3)}
-.opt.sel{border-color:var(--accent);background:rgba(79,110,247,.07)}
+.opt-item:hover{border-color:rgba(91,122,255,.35)}
+.opt-item.sel{border-color:var(--accent);background:rgba(91,122,255,.06)}
 .opt-n{
-  width:24px;height:24px;border-radius:50%;background:var(--card3);
-  border:1.5px solid var(--border2);display:flex;align-items:center;
-  justify-content:center;font-size:10px;font-weight:700;color:var(--t3);
-  flex-shrink:0;margin-top:1px;transition:all .2s;font-family:'Syne',sans-serif;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--surface3);border:1.5px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;color:var(--ink3);flex-shrink:0;margin-top:1px;
+  font-family:'Martian Mono',monospace;transition:all .2s;
 }
-.opt.sel .opt-n{background:var(--accent);border-color:var(--accent);color:#fff}
-.opt-txt{font-size:14px;line-height:1.5;font-weight:400;color:var(--t2);transition:color .15s;flex:1;word-break:break-word;font-family:'DM Sans',sans-serif;}
-.opt.sel .opt-txt{color:var(--t1)}
+.opt-item.sel .opt-n{background:var(--accent);border-color:var(--accent);color:#fff}
+.opt-txt{flex:1;font-size:14px;color:var(--ink2);transition:color .15s;line-height:1.5;word-break:break-word}
+.opt-item.sel .opt-txt{color:var(--ink)}
 
-.ov-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
-.ov-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
-.ov-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin-bottom:5px;font-family:'DM Sans',sans-serif;}
-.ov-val{font-size:14px;font-weight:600;color:var(--t1);line-height:1.3;font-family:'Syne',sans-serif;}
-.ov-val.accent{color:var(--accent2)}
-.ov-val.green{color:var(--green)}
-.ov-val.amber{color:var(--amber)}
+/* Metrics grid */
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.metric{background:var(--surface2);border:1px solid var(--border);border-radius:7px;padding:11px 13px}
+.metric-lbl{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink3);margin-bottom:4px}
+.metric-val{font-size:13px;font-weight:700;font-family:'Fraunces',serif;color:var(--ink)}
+.metric-val.accent{color:var(--accent)}
+.metric-val.green{color:var(--green)}
+.metric-val.amber{color:var(--amber)}
 
-.score-wrap{display:flex;align-items:center;gap:22px;padding:16px 0;border-bottom:1px solid var(--border);margin-bottom:18px}
-.ring-cont{position:relative;flex-shrink:0}
-.ring-svg{width:88px;height:88px;transform:rotate(-90deg)}
-.ring-bg{fill:none;stroke:var(--card3);stroke-width:7}
-.ring-fg{fill:none;stroke-width:7;stroke-linecap:round;transition:stroke-dashoffset 1.4s cubic-bezier(.34,1.56,.64,1)}
-.ring-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.ring-n{font-family:'Syne',sans-serif;font-size:24px;line-height:1;font-weight:800}
-.ring-of{font-size:10px;color:var(--t3);margin-top:1px;font-family:'DM Sans',sans-serif;}
-.ring-grade{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--t1);margin-bottom:4px}
-.ring-desc{font-size:13px;color:var(--t2);line-height:1.5;font-family:'DM Sans',sans-serif;}
+/* Score ring */
+.score-wrap{display:flex;align-items:center;gap:22px;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:16px}
+.ring-wrap{position:relative;flex-shrink:0}
+.ring-svg{width:82px;height:82px;transform:rotate(-90deg)}
+.ring-bg{fill:none;stroke:var(--surface3);stroke-width:7}
+.ring-fg{fill:none;stroke-width:7;stroke-linecap:round;transition:stroke-dashoffset 1.5s cubic-bezier(.34,1.56,.64,1)}
+.ring-inside{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-num{font-family:'Fraunces',serif;font-size:22px;font-weight:900;line-height:1}
+.ring-den{font-size:9px;color:var(--ink3);margin-top:1px;font-family:'Martian Mono',monospace}
+.score-meta .grade{font-family:'Fraunces',serif;font-size:22px;font-weight:900;color:var(--ink);margin-bottom:3px;font-style:italic}
+.score-meta .desc{font-size:13px;color:var(--ink2);line-height:1.6}
 
-.h2-block{margin-bottom:10px}
+/* Outline */
+.h2-block{margin-bottom:8px}
 .h2-row{
   display:flex;align-items:center;gap:10px;
-  background:var(--card2);border:1px solid var(--border);
-  border-radius:10px;padding:11px 14px;cursor:pointer;transition:border-color .15s
+  background:var(--surface2);border:1px solid var(--border);
+  border-radius:7px;padding:10px 13px;cursor:pointer;transition:border-color .15s;
 }
 .h2-row:hover{border-color:var(--border2)}
-.h2-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);flex-shrink:0;font-family:'DM Sans',sans-serif;}
-.h2-text{font-size:13px;font-weight:500;flex:1;word-break:break-word;font-family:'DM Sans',sans-serif;}
-.h2-toggle{color:var(--t3);font-size:12px;flex-shrink:0}
-.h2-children{padding:7px 0 0 14px;display:flex;flex-direction:column;gap:5px}
-.h3-row{display:flex;align-items:center;gap:8px;padding:7px 13px;background:var(--card3);border-left:2px solid rgba(79,110,247,.35);border-radius:0 6px 6px 0;font-size:13px;color:var(--t2);font-family:'DM Sans',sans-serif;}
-.tip-row{margin-top:5px;padding:8px 13px;background:rgba(245,166,35,.06);border:1px solid rgba(245,166,35,.15);border-radius:7px;font-size:12px;color:var(--amber);display:flex;gap:6px;font-family:'DM Sans',sans-serif;}
+.h2-badge{font-size:8px;font-weight:700;letter-spacing:1px;font-family:'Martian Mono',monospace;color:var(--accent);flex-shrink:0}
+.h2-text{flex:1;font-size:13px;font-weight:500;word-break:break-word}
+.h2-arrow{color:var(--ink3);font-size:11px;flex-shrink:0;font-family:'Martian Mono',monospace}
+.h2-children{padding:6px 0 2px 12px;display:flex;flex-direction:column;gap:4px}
+.h3-row{display:flex;align-items:center;gap:8px;padding:6px 12px;background:var(--surface3);border-left:2px solid rgba(91,122,255,.3);border-radius:0 5px 5px 0;font-size:12px;color:var(--ink2)}
+.h3-badge{font-size:8px;font-weight:700;font-family:'Martian Mono',monospace;color:var(--ink3);flex-shrink:0}
+.tip-line{margin-top:4px;padding:7px 12px;background:rgba(240,160,48,.05);border:1px solid rgba(240,160,48,.12);border-radius:5px;font-size:12px;color:var(--amber);display:flex;gap:6px}
 
-.alt-row{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)}
-.alt-row:last-child{border-bottom:none}
-.alt-num{width:22px;height:22px;border-radius:50%;background:var(--card3);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--t3);flex-shrink:0;font-family:'Syne',sans-serif;}
-.alt-txt{flex:1;font-size:13px;line-height:1.5;word-break:break-word;font-family:'DM Sans',sans-serif;}
+/* Snippet box */
+.snippet-card{
+  background:var(--surface3);border:1px solid var(--border2);
+  border-radius:8px;padding:14px 16px;font-size:14px;line-height:1.8;
+  margin-top:8px;position:relative;
+}
+.snippet-pill{position:absolute;top:-10px;left:12px;background:var(--accent);color:#fff;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 9px;border-radius:3px;font-family:'Instrument Sans',sans-serif}
 
-.seo-tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;border-radius:8px;overflow:hidden}
-.seo-tbl th{text-align:left;padding:8px 12px;font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--t3);background:var(--card3);border-bottom:1px solid var(--border);font-family:'DM Sans',sans-serif;}
-.seo-tbl td{padding:8px 12px;border-bottom:1px solid var(--border);font-size:13px;font-family:'DM Sans',sans-serif;}
+/* Code block */
+.code-block{
+  background:var(--mono-bg);border:1px solid var(--border);border-radius:8px;
+  padding:14px;font-family:'Martian Mono',monospace;font-size:11px;
+  line-height:2;color:#5af;overflow-x:auto;white-space:pre;
+  max-height:250px;overflow-y:auto;position:relative;
+}
+
+/* Table */
+.seo-tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;border-radius:7px;overflow:hidden}
+.seo-tbl th{text-align:left;padding:7px 11px;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink3);background:var(--surface3);border-bottom:1px solid var(--border)}
+.seo-tbl td{padding:7px 11px;border-bottom:1px solid var(--border);font-size:13px}
 .seo-tbl tr:last-child td{border-bottom:none}
-.seo-tbl tr:hover td{background:var(--card3)}
+.seo-tbl tr:hover td{background:var(--surface3)}
 
-.faq-item{border-bottom:1px solid var(--border);padding:11px 0}
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border);padding:10px 0}
 .faq-item:first-child{padding-top:0}
 .faq-item:last-child{border-bottom:none;padding-bottom:0}
-.faq-q{font-size:13px;font-weight:600;margin-bottom:4px;color:var(--t1);font-family:'DM Sans',sans-serif;}
-.faq-a{font-size:13px;color:var(--t2);line-height:1.6;font-family:'DM Sans',sans-serif;}
+.faq-q{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.faq-a{font-size:13px;color:var(--ink2);line-height:1.65}
 
-.snippet-box{
-  background:var(--card3);border:1px solid var(--border2);border-radius:10px;
-  padding:14px 16px;font-size:14px;line-height:1.75;position:relative;margin-top:8px;
-  font-family:'DM Sans',sans-serif;
+/* Alt text list */
+.alt-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)}
+.alt-row:last-child{border-bottom:none}
+.alt-n{width:20px;height:20px;border-radius:4px;background:var(--surface3);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;font-family:'Martian Mono',monospace;color:var(--ink3);flex-shrink:0;margin-top:1px}
+.alt-text{flex:1;font-size:13px;line-height:1.5;word-break:break-word;color:var(--ink2)}
+
+/* SERP preview */
+.serp-card{background:#fff;border-radius:8px;padding:13px 16px;margin-bottom:10px;border:1px solid var(--border)}
+.serp-url{font-size:12px;color:#3c4043;margin-bottom:2px;font-family:Arial,sans-serif}
+.serp-title{font-size:18px;color:#1a0dab;margin-bottom:3px;line-height:1.3;font-family:Arial,sans-serif}
+.serp-desc{font-size:13px;color:#4d5156;line-height:1.5;font-family:Arial,sans-serif}
+
+/* Divider */
+.divider{display:flex;align-items:center;gap:10px;margin:12px 0;color:var(--ink3);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-family:'Martian Mono',monospace}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* Tip box */
+.tip-banner{background:rgba(91,122,255,.06);border:1px solid rgba(91,122,255,.15);border-radius:7px;padding:10px 14px;font-size:13px;color:var(--ink2);margin-bottom:12px;line-height:1.6;display:flex;gap:8px}
+.tip-banner strong{color:var(--accent)}
+
+/* ── CHECKLIST ── */
+.cl-stats{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px}
+.cl-percent{font-family:'Fraunces',serif;font-size:28px;font-weight:900;color:var(--green);line-height:1;font-style:italic}
+.cl-fraction{font-size:12px;color:var(--ink2);margin-top:2px}
+.cl-bar-track{height:4px;background:var(--surface3);border-radius:2px;margin-bottom:14px;overflow:hidden}
+.cl-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--green));border-radius:2px;transition:width .5s ease}
+.cl-filter{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:10px}
+.cl-filt{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:4px 11px;font-size:11px;font-weight:500;color:var(--ink2);cursor:pointer;transition:all .15s;font-family:'Instrument Sans',sans-serif}
+.cl-filt:hover,.cl-filt.on{background:var(--accent-dim);border-color:rgba(91,122,255,.4);color:var(--accent)}
+.cl-list{display:flex;flex-direction:column;gap:3px}
+.cl-row{display:flex;align-items:flex-start;gap:10px;padding:8px 10px;border-radius:6px;cursor:pointer;transition:background .15s;border:1px solid transparent;user-select:none}
+.cl-row:hover{background:var(--surface2)}
+.cl-row.done{background:rgba(0,196,110,.03);border-color:rgba(0,196,110,.1)}
+.cl-row.done .cl-task{text-decoration:line-through;color:var(--ink3)}
+.cl-check{
+  width:18px;height:18px;border-radius:4px;border:1.5px solid var(--border2);
+  flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;
+  font-size:10px;transition:all .2s;font-family:'Martian Mono',monospace;
 }
-.snippet-tag{position:absolute;top:-10px;left:13px;background:var(--accent);color:#fff;font-size:10px;font-weight:600;letter-spacing:.8px;padding:2px 10px;border-radius:100px;font-family:'DM Sans',sans-serif;}
+.cl-row.done .cl-check{background:var(--green);border-color:var(--green);color:#fff}
+.cl-body{flex:1;min-width:0}
+.cl-cat-lbl{font-size:9px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--ink3);margin-bottom:1px}
+.cl-task{font-size:13px;line-height:1.4;word-break:break-word;color:var(--ink)}
+.pr-pip{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:6px}
+.pr-pip.critical{background:var(--red)}
+.pr-pip.high{background:var(--amber)}
+.pr-pip.medium{background:var(--accent)}
+.pr-pip.low{background:var(--ink3)}
+.priority-legend{display:flex;gap:12px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink2)}
 
-.code-box{
-  background:#03040c;border:1px solid var(--border);border-radius:10px;
-  padding:14px;font-family:'Syne Mono',monospace;font-size:11px;
-  line-height:1.9;color:var(--cyan);overflow-x:auto;white-space:pre;
-  max-height:260px;overflow-y:auto
-}
-[data-theme="light"] .code-box{background:#1a1e35;color:#00d4ff}
-
-.g-prev{background:#fff;border-radius:10px;padding:13px 16px;margin-bottom:12px}
-.g-url{font-size:12px;color:#3c4043;margin-bottom:3px;display:flex;align-items:center;gap:4px;font-family:Arial,sans-serif;}
-.g-title{font-size:18px;color:#1a0dab;margin-bottom:4px;font-weight:400;line-height:1.3;font-family:Arial,sans-serif}
-.g-desc{font-size:13px;color:#4d5156;line-height:1.5;font-family:Arial,sans-serif}
-.fb-prev{background:var(--card2);border-radius:10px;overflow:hidden;margin-bottom:12px;border:1px solid var(--border)}
-.fb-img{height:50px;background:linear-gradient(135deg,var(--card3),var(--card2));display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--t3);font-family:'DM Sans',sans-serif;}
-.fb-body{padding:9px 14px;border-top:3px solid #4267B2}
-.fb-domain{font-size:11px;color:var(--t3);text-transform:uppercase;margin-bottom:3px;font-family:'DM Sans',sans-serif;}
-.fb-title{font-size:14px;font-weight:600;color:var(--t1);margin-bottom:3px;line-height:1.3;font-family:'DM Sans',sans-serif;}
-.fb-desc{font-size:13px;color:var(--t2);line-height:1.4;font-family:'DM Sans',sans-serif;}
-
-.cl-stats{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-.cl-pct{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:var(--green)}
-.cl-of{font-size:12px;color:var(--t2);margin-top:2px;font-family:'DM Sans',sans-serif;}
-.cl-bar-wrap{height:5px;background:var(--card3);border-radius:3px;margin-bottom:16px;overflow:hidden}
-.cl-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--green));border-radius:3px;transition:width .5s ease}
-.cl-cats{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
-.cl-cat{background:var(--card2);border:1px solid var(--border);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:500;color:var(--t2);cursor:pointer;transition:all .15s;font-family:'DM Sans',sans-serif;}
-.cl-cat:hover,.cl-cat.on{background:rgba(79,110,247,.1);border-color:rgba(79,110,247,.4);color:var(--accent2)}
-.cl-list{display:flex;flex-direction:column;gap:4px}
-.cl-row{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border-radius:8px;cursor:pointer;transition:background .15s;border:1px solid transparent;user-select:none}
-.cl-row:hover{background:var(--card2)}
-.cl-row.done{background:rgba(15,207,111,.04);border-color:rgba(15,207,111,.12)}
-.cl-row.done .cl-task{color:var(--t3);text-decoration:line-through}
-.cl-box{width:19px;height:19px;border-radius:5px;border:1.5px solid var(--border2);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:11px;transition:all .2s}
-.cl-row.done .cl-box{background:var(--green);border-color:var(--green);color:#fff}
-.cl-info{flex:1;min-width:0}
-.cl-cat-lbl{font-size:9px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--t3);margin-bottom:2px;font-family:'DM Sans',sans-serif;}
-.cl-task{font-size:13px;font-weight:400;line-height:1.4;word-break:break-word;font-family:'DM Sans',sans-serif;}
-.pr-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:6px}
-.pr-dot.critical{background:var(--red)}
-.pr-dot.high{background:var(--amber)}
-.pr-dot.medium{background:var(--accent)}
-.pr-dot.low{background:var(--t3)}
-.pr-legend{display:flex;gap:12px;flex-wrap:wrap}
-.pr-leg-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--t2);font-family:'DM Sans',sans-serif;}
-
-.sdiv{display:flex;align-items:center;gap:10px;margin:12px 0;color:var(--t3);font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;font-family:'DM Sans',sans-serif;}
-.sdiv::before,.sdiv::after{content:'';flex:1;height:1px;background:var(--border)}
-
-.tip-box{background:rgba(79,110,247,.06);border:1px solid rgba(79,110,247,.15);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--t2);margin-bottom:12px;line-height:1.6;display:flex;gap:8px;font-family:'DM Sans',sans-serif;}
-.tip-box span:first-child{flex-shrink:0}
-
-.export-bar{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+/* Export bar */
+.export-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
 .exp-btn{
-  background:var(--card);border:1px solid var(--border);border-radius:8px;
-  color:var(--t2);font-size:11px;font-weight:500;padding:7px 13px;cursor:pointer;
+  background:var(--surface);border:1px solid var(--border);border-radius:6px;
+  color:var(--ink2);font-size:11px;font-weight:500;padding:6px 12px;cursor:pointer;
   display:flex;align-items:center;gap:5px;transition:all .15s;
-  font-family:'DM Sans',sans-serif;
+  font-family:'Instrument Sans',sans-serif;
 }
-.exp-btn:hover{border-color:var(--accent);color:var(--t1)}
+.exp-btn:hover{border-color:var(--accent);color:var(--ink)}
 
-/* LANDING SECTIONS */
-.section{padding:90px 0;position:relative}
-.section-tag{
-  display:inline-flex;align-items:center;gap:7px;
-  font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
-  color:var(--accent2);margin-bottom:14px;font-family:'DM Sans',sans-serif;
-}
-.section-tag::before{content:'';width:18px;height:2px;background:var(--accent);border-radius:1px}
-.section-title{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(36px,5.5vw,68px);
-  font-weight:800;
-  letter-spacing:-1px;line-height:.95;
-  color:var(--t1);margin-bottom:14px
-}
-.section-sub{font-size:16px;color:var(--t2);max-width:500px;line-height:1.7;font-weight:400;font-family:'DM Sans',sans-serif;}
+/* ── LANDING SECTIONS ── */
+.section{padding:90px 0;position:relative;overflow:hidden}
 
-/* STATS */
-.stats-bar{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
-  background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;
-  margin:50px 0
+/* Stats bar */
+.stats-row{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:0;background:var(--border);border:1px solid var(--border);
+  border-radius:10px;overflow:hidden;margin:50px 0;
 }
-.stat{background:var(--card);padding:24px 20px}
-.stat-num{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;letter-spacing:-1px;line-height:1;color:var(--accent);margin-bottom:4px}
-.stat-label{font-size:13px;font-weight:400;color:var(--t2);line-height:1.4;font-family:'DM Sans',sans-serif;}
+.stat-cell{background:var(--surface);padding:24px 20px}
+.stat-num{font-family:'Fraunces',serif;font-size:50px;font-weight:900;line-height:1;color:var(--accent);margin-bottom:4px;font-style:italic}
+.stat-label{font-size:13px;color:var(--ink2);line-height:1.4}
 
-/* HOW IT WORKS */
-.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:44px}
+/* How it works */
+.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:44px}
 .how-card{
-  background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:22px;position:relative;overflow:hidden;
-  transition:border-color .2s,transform .2s,box-shadow .2s;
-}
-.how-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--glow)}
-.how-num{font-family:'Syne',sans-serif;font-size:56px;font-weight:800;letter-spacing:-2px;line-height:1;color:var(--border2);position:absolute;top:10px;right:14px;transition:color .2s}
-.how-card:hover .how-num{color:rgba(79,110,247,.15)}
-.how-icon{font-size:26px;margin-bottom:12px}
-.how-title{font-size:14px;font-weight:600;color:var(--t1);margin-bottom:6px;font-family:'Syne',sans-serif;}
-.how-desc{font-size:13px;color:var(--t2);line-height:1.6;font-family:'DM Sans',sans-serif;}
-
-/* WHO */
-.who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:36px}
-.who-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:20px 18px;text-align:center;transition:border-color .2s,transform .2s}
-.who-card:hover{border-color:var(--accent2);transform:translateY(-3px)}
-.who-emoji{font-size:28px;margin-bottom:10px;display:block}
-.who-role{font-size:14px;font-weight:700;color:var(--t1);margin-bottom:5px;font-family:'Syne',sans-serif;}
-.who-desc{font-size:12px;color:var(--t2);line-height:1.55;font-family:'DM Sans',sans-serif;}
-
-/* FEATURES */
-.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
-.feat-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:20px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s}
-.feat-card:hover{border-color:var(--accent)}
-.feat-icon{font-size:22px;flex-shrink:0;width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;background:var(--card2);border:1px solid var(--border)}
-.feat-title{font-size:13px;font-weight:600;color:var(--t1);margin-bottom:4px;font-family:'Syne',sans-serif;}
-.feat-desc{font-size:12px;color:var(--t2);line-height:1.6;font-family:'DM Sans',sans-serif;}
-
-/* ══ TESTIMONIALS MARQUEE ══ */
-.testi-section{padding:80px 0;overflow:hidden;position:relative}
-.testi-section::before,.testi-section::after{
-  content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;
-}
-.testi-section::before{left:0;background:linear-gradient(to right,var(--bg2),transparent)}
-.testi-section::after{right:0;background:linear-gradient(to left,var(--bg2),transparent)}
-
-.testi-track{
-  display:flex;gap:16px;
-  animation:marquee 35s linear infinite;
-  width:max-content;
-}
-.testi-track:hover{animation-play-state:paused}
-
-@keyframes marquee{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
-}
-
-.testi-card{
-  background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:22px;width:300px;flex-shrink:0;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:22px;position:relative;overflow:hidden;
   transition:border-color .2s,transform .2s;
 }
-.testi-card:hover{border-color:var(--border2);transform:translateY(-2px)}
-.testi-stars{color:var(--gold);font-size:13px;margin-bottom:10px;letter-spacing:2px}
-.testi-text{font-size:14px;color:var(--t1);line-height:1.7;margin-bottom:14px;font-style:italic;font-family:'DM Sans',sans-serif;}
+.how-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.how-step{
+  position:absolute;top:16px;right:16px;
+  font-family:'Fraunces',serif;font-size:52px;font-weight:900;
+  color:var(--border);line-height:1;transition:color .2s;font-style:italic;
+}
+.how-card:hover .how-step{color:rgba(91,122,255,.1)}
+.how-card-title{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.how-card-desc{font-size:13px;color:var(--ink2);line-height:1.65}
+
+/* Who it's for */
+.who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-top:32px}
+.who-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:18px;text-align:center;
+  transition:border-color .2s,transform .2s;
+}
+.who-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.who-role{font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.who-desc{font-size:12px;color:var(--ink2);line-height:1.6}
+.who-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);margin:0 auto 12px;opacity:.6}
+
+/* Features */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:32px}
+.feat-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:18px 20px;
+  transition:border-color .2s;display:flex;align-items:flex-start;gap:14px;
+}
+.feat-card:hover{border-color:var(--accent)}
+.feat-mark{
+  width:36px;height:36px;border-radius:7px;flex-shrink:0;
+  background:var(--accent-dim);border:1px solid rgba(91,122,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Martian Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);
+}
+.feat-title{font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.feat-desc{font-size:12px;color:var(--ink2);line-height:1.65}
+
+/* Testimonials marquee */
+.testi-section{padding:80px 0;overflow:hidden;position:relative}
+.testi-section::before,.testi-section::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
+.testi-section::before{left:0;background:linear-gradient(to right,var(--bg2),transparent)}
+.testi-section::after{right:0;background:linear-gradient(to left,var(--bg2),transparent)}
+.marquee-track{display:flex;gap:12px;animation:marquee 38s linear infinite;width:max-content}
+.marquee-track:hover{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.testi-card{
+  width:290px;flex-shrink:0;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:20px;
+  transition:border-color .2s;
+}
+.testi-card:hover{border-color:var(--border2)}
+.testi-rating{font-family:'Martian Mono',monospace;font-size:11px;color:var(--amber);letter-spacing:3px;margin-bottom:10px}
+.testi-body{font-size:14px;color:var(--ink);line-height:1.7;margin-bottom:14px;font-family:'Fraunces',serif;font-style:italic;font-weight:300}
 .testi-author{display:flex;align-items:center;gap:10px}
 .testi-avatar{
-  width:38px;height:38px;border-radius:50%;
+  width:36px;height:36px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  font-size:15px;font-weight:700;flex-shrink:0;
-  font-family:'Syne',sans-serif;
+  font-family:'Martian Mono',monospace;font-size:12px;font-weight:500;flex-shrink:0;
 }
-.testi-name{font-size:13px;font-weight:600;color:var(--t1);font-family:'Syne',sans-serif;}
-.testi-role{font-size:11px;color:var(--t3);font-family:'DM Sans',sans-serif;}
+.testi-name{font-size:12px;font-weight:600;color:var(--ink);font-family:'Instrument Sans',sans-serif}
+.testi-role{font-size:11px;color:var(--ink3);font-family:'Instrument Sans',sans-serif}
 
-/* CTA */
-.cta-section{
-  padding:90px 0;text-align:center;
-  background:radial-gradient(ellipse 800px 400px at 50% 50%,var(--accent-glow),transparent 65%)
+/* Section typography */
+.sec-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:12px;
 }
-.cta-title{font-family:'Syne',sans-serif;font-size:clamp(40px,6vw,82px);font-weight:800;letter-spacing:-1px;color:var(--t1);line-height:.95;margin-bottom:14px}
-.cta-sub{font-size:16px;color:var(--t2);margin-bottom:32px;max-width:400px;margin-left:auto;margin-right:auto;font-family:'DM Sans',sans-serif;}
+.sec-tag::before{content:'';width:16px;height:1.5px;background:var(--accent);border-radius:1px}
+.sec-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(38px,5.5vw,72px);
+  font-weight:900;letter-spacing:-1.5px;line-height:.9;
+  color:var(--ink);margin-bottom:14px;
+}
+.sec-sub{font-size:16px;color:var(--ink2);max-width:480px;line-height:1.75}
+
+/* CTA section */
+.cta-section{
+  padding:90px 0;text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 700px 400px at 50% 50%,rgba(91,122,255,.08),transparent);
+}
+.cta-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(44px,7vw,90px);font-weight:900;letter-spacing:-2px;
+  line-height:.9;color:var(--ink);margin-bottom:14px;
+}
+.cta-title .accent{color:var(--accent);font-style:italic}
+.cta-sub{font-size:16px;color:var(--ink2);margin-bottom:32px;max-width:380px;margin-left:auto;margin-right:auto}
 .cta-btn{
   display:inline-flex;align-items:center;gap:10px;
   background:var(--accent);color:#fff;
-  border-radius:100px;padding:15px 34px;
-  font-family:'Syne',sans-serif;font-size:15px;font-weight:700;
-  text-decoration:none;border:none;cursor:pointer;
-  box-shadow:0 8px 40px rgba(79,110,247,.5);
-  transition:all .2s;
+  border:none;border-radius:6px;padding:15px 32px;cursor:pointer;
+  font-family:'Fraunces',serif;font-size:16px;font-weight:700;font-style:italic;
+  box-shadow:0 6px 32px var(--accent-glow);
+  transition:all .2s;text-decoration:none;
 }
-.cta-btn:hover{background:#3a56e8;box-shadow:0 8px 60px rgba(79,110,247,.7);transform:translateY(-2px)}
+.cta-btn:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 10px 48px var(--accent-glow)}
 
-/* FOOTER */
+/* Footer */
 footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
-.footer-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.5px;color:var(--t2)}
-.footer-logo span{color:var(--accent)}
-.footer-links{display:flex;gap:18px}
-.footer-links a{font-size:12px;color:var(--t3);text-decoration:none;font-weight:400;transition:color .15s;font-family:'DM Sans',sans-serif;}
-.footer-links a:hover{color:var(--t1)}
-.footer-copy{font-size:11px;color:var(--t3);text-align:center;width:100%;margin-top:8px;font-family:'DM Sans',sans-serif;}
+.footer-brand{font-family:'Fraunces',serif;font-size:20px;font-weight:700;font-style:italic;color:var(--ink2)}
+.footer-brand em{font-style:normal;color:var(--accent)}
+.footer-nav{display:flex;gap:20px;flex-wrap:wrap}
+.footer-nav a{font-size:12px;color:var(--ink3);text-decoration:none;transition:color .15s}
+.footer-nav a:hover{color:var(--ink)}
+.footer-copy{font-size:11px;color:var(--ink3);text-align:center;width:100%;margin-top:10px;font-family:'Martian Mono',monospace;letter-spacing:.5px}
 
 /* Reveal */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.vis{opacity:1;transform:translateY(0)}
 
-/* ══ RESPONSIVE ══ */
+/* ── RESPONSIVE ── */
 @media(max-width:768px){
   .feat-grid{grid-template-columns:1fr}
-  .section{padding:60px 0}
-  .hero{padding:50px 0 40px}
+  .section{padding:64px 0}
+  .hero{padding:64px 0 48px}
+  .score-wrap{flex-direction:column;text-align:center}
 }
 @media(max-width:640px){
   .main-row{flex-direction:column}
-  .go-btn{width:100%;justify-content:center}
-  .opt-row{grid-template-columns:1fr 1fr}
-  .ov-grid{grid-template-columns:1fr 1fr}
+  .go-btn{justify-content:center}
+  .opts-grid{grid-template-columns:1fr 1fr}
+  .metrics-grid{grid-template-columns:1fr 1fr}
   .adv-grid{grid-template-columns:1fr}
-  .score-wrap{flex-direction:column;text-align:center}
-  .bh{flex-wrap:wrap}
-  .bh-badge{margin-left:0}
-  .stats-bar{grid-template-columns:1fr 1fr}
-  .comp-meter{flex-direction:column;gap:8px;width:100%;text-align:center}
-  .comp-bar{width:100%;max-width:200px}
-  .footer-inner{flex-direction:column;text-align:center}
-  .footer-links{flex-wrap:wrap;justify-content:center}
-  .testi-card{width:260px}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .testi-card{width:250px;padding:16px}
   .who-grid{grid-template-columns:1fr 1fr}
+  .bh{flex-wrap:wrap}
+  .footer-inner{flex-direction:column;text-align:center}
+  .footer-nav{justify-content:center}
+  .comp-strip{flex-direction:column;text-align:center;width:100%}
+  .comp-bar-track{width:180px}
 }
 @media(max-width:480px){
-  .hero h1{font-size:40px;letter-spacing:-0.5px}
-  .hero{padding:36px 0 28px}
-  .tab-btn{font-size:11px;padding:8px 10px}
-  .go-btn{font-size:13px;padding:12px 16px}
-  .kw-inp{font-size:16px;padding:12px 14px}
-  .nav-wordmark{font-size:19px}
-  .input-card{padding:16px}
-  .hero-pills{gap:5px}
-  .pill{font-size:10px;padding:4px 10px}
+  .hero h1{letter-spacing:-1px}
+  .hero{padding:44px 0 32px}
+  .mode-tab{font-size:11px;padding:8px 10px}
+  .container,.container-wide{padding:0 16px}
   .block{padding:16px 14px}
   .section-title{font-size:34px}
+  .sec-title{font-size:34px}
   .stat-num{font-size:40px}
-  .testi-card{width:240px;padding:16px}
-  .wrap,.wrap-wide{padding:0 14px}
-  .opt-row{grid-template-columns:1fr}
+  .input-card{padding:16px}
+  .testi-card{width:230px;padding:14px}
+  .hero-tags{gap:4px}
+  .htag{font-size:10px;padding:4px 10px}
+  .opts-grid{grid-template-columns:1fr}
 }
 @media(max-width:360px){
-  .hero h1{font-size:34px}
-  .go-btn span:not(.go-icon){display:none}
-  .who-grid{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
+  .go-btn .go-text{display:none}
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="wrap-wide">
+  <div class="container-wide">
     <div class="nav-inner">
-      <a class="nav-logo" href="#">
-        <div class="nav-wordmark">30Sec<span>SEO</span></div>
-        <div class="nav-badge">Free Tool</div>
+      <a class="nav-brand" href="#">
+        <span class="nav-name">30Sec<em>SEO</em></span>
+        <span class="nav-tag">Free Tool</span>
       </a>
-      <div style="display:flex;align-items:center;gap:10px">
-        <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">
-          <span id="themeIcon">☀️</span>
+      <div class="nav-right">
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+          <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
           <span id="themeLabel">Light</span>
         </button>
       </div>
@@ -663,69 +746,80 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="wrap">
-    <div class="hero-tag"><div class="hero-tag-dot"></div>AI-Powered · 100% Free · No Signup</div>
-    <h1>RANK HIGHER.<br><span class="stroke">WRITE</span> <span class="accent">SMARTER.</span></h1>
-    <p class="hero-sub">Generate a <strong>complete SEO blueprint</strong> in under 30 seconds. Titles, keywords, meta tags, schema, snippets & a full 40-point publish checklist.</p>
-    <div class="hero-pills">
-      <span class="pill hi">✦ 100% Free</span>
-      <span class="pill">Ultra Fast AI</span>
-      <span class="pill">40-Point Checklist</span>
-      <span class="pill">Schema Generator</span>
-      <span class="pill">Featured Snippets</span>
-      <span class="pill">Rank Math Ready</span>
-      <span class="pill">Competitor Gaps</span>
-      <span class="pill">WordPress Guide</span>
-    </div>
-    <div class="comp-meter" id="compMeter">
-      <div>
-        <div class="comp-label">Keyword Competition</div>
-        <div class="comp-info" id="compInfo">Enter keyword to analyze</div>
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <div class="eyebrow-dot"></div>
+        AI-Powered · 100% Free · No Signup
       </div>
-      <div class="comp-bar">
-        <div class="comp-fill" id="compFill" style="width:0%"></div>
-        <div class="comp-indicator" id="compIndicator" style="left:0%"></div>
+      <h1>RANK<br><span class="italic">HIGHER.</span><br><span class="outline">WRITE</span> <span class="italic" style="color:var(--ink)">SMARTER.</span></h1>
+      <p class="hero-sub">Generate a <strong>complete SEO blueprint</strong> in under 30 seconds. Titles, keywords, meta tags, schema, snippets & a full 40-point publish checklist.</p>
+      <div class="hero-tags">
+        <span class="htag on">100% Free</span>
+        <span class="htag">Ultra Fast AI</span>
+        <span class="htag">40-Point Checklist</span>
+        <span class="htag">Schema Generator</span>
+        <span class="htag">Featured Snippets</span>
+        <span class="htag">Rank Math Ready</span>
+        <span class="htag">Competitor Gaps</span>
+        <span class="htag">WordPress Guide</span>
       </div>
-      <div class="comp-val" id="compVal">—</div>
+      <div class="comp-strip" id="compStrip">
+        <div>
+          <div class="comp-l">Keyword Competition</div>
+          <div class="comp-label" id="compInfo" style="font-size:11px;color:var(--ink3);margin-top:2px">Enter keyword to analyze</div>
+        </div>
+        <div class="comp-bar-track">
+          <div class="comp-bar-fill" id="compFill" style="width:0%"></div>
+        </div>
+        <div class="comp-val" id="compVal">—</div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- TOOL -->
 <section class="tool-section">
-  <div class="wrap">
-    <div class="tab-bar">
-      <button class="tab-btn active" onclick="setMode('blueprint',this)">📋 Full Blueprint</button>
-      <button class="tab-btn" onclick="setMode('rankmath',this)">📊 Rank Math</button>
-      <button class="tab-btn" onclick="setMode('competitor',this)">🔍 Competitor Gaps</button>
-      <button class="tab-btn" onclick="setMode('brief',this)">📝 Content Brief</button>
-      <button class="tab-btn" onclick="setMode('wordpress',this)">🔧 WordPress</button>
+  <div class="container">
+
+    <!-- Mode tabs -->
+    <div class="mode-tabs">
+      <button class="mode-tab active" onclick="setMode('blueprint',this)">Full Blueprint</button>
+      <button class="mode-tab" onclick="setMode('rankmath',this)">Rank Math</button>
+      <button class="mode-tab" onclick="setMode('competitor',this)">Competitor Gaps</button>
+      <button class="mode-tab" onclick="setMode('brief',this)">Content Brief</button>
+      <button class="mode-tab" onclick="setMode('wordpress',this)">WordPress</button>
     </div>
 
+    <!-- Input -->
     <div class="input-card">
-      <div class="field-lbl"><span class="req">*</span> Enter Your Keyword</div>
+      <div class="field-label"><span class="req">*</span> Enter Your Keyword</div>
       <div class="main-row">
-        <input class="kw-inp" id="kwInp" type="text" placeholder="e.g. best free seo tools for bloggers" autocomplete="off" autocorrect="off">
+        <input class="kw-input" id="kwInp" type="text" placeholder="e.g. best free seo tools for bloggers" autocomplete="off" autocorrect="off" spellcheck="false">
         <button class="go-btn" id="goBtn" onclick="run()">
-          <span class="go-icon">⚡</span> <span>Generate</span>
+          <span class="go-icon">⚡</span>
+          <span class="go-text">Generate</span>
         </button>
       </div>
-      <div class="opt-row">
+      <div class="opts-grid">
         <div>
-          <div class="field-lbl" style="margin-top:12px">Focus Keyword <span style="color:var(--t3);font-weight:400;text-transform:none;letter-spacing:0;font-size:11px">(optional)</span></div>
-          <input class="sub-inp" id="focInp" type="text" placeholder="e.g. free seo tools" autocomplete="off">
+          <div class="field-label" style="margin-top:12px">Focus Keyword <span style="color:var(--ink3);font-weight:400;text-transform:none;letter-spacing:0;font-size:11px">(optional)</span></div>
+          <input class="sub-input" id="focInp" type="text" placeholder="e.g. free seo tools" autocomplete="off">
         </div>
         <div>
-          <div class="field-lbl" style="margin-top:12px">Language</div>
-          <select class="sub-inp" id="langInp">
+          <div class="field-label" style="margin-top:12px">Language</div>
+          <select class="sub-input" id="langInp">
             <option>English</option><option>Telugu</option><option>Hindi</option>
             <option>Spanish</option><option>French</option><option>German</option>
             <option>Portuguese</option><option>Arabic</option><option>Japanese</option>
           </select>
         </div>
         <div>
-          <div class="field-lbl" style="margin-top:12px">Content Type</div>
-          <select class="sub-inp" id="typeInp">
+          <div class="field-label" style="margin-top:12px">Content Type</div>
+          <select class="sub-input" id="typeInp">
             <option value="">Auto Detect</option>
             <option>Blog Post</option><option>Pillar Page</option>
             <option>How-To Guide</option><option>Listicle</option>
@@ -733,304 +827,218 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
           </select>
         </div>
       </div>
-      <button class="adv-toggle" onclick="toggleAdv()">⚙️ Advanced Options <span id="advArrow">▼</span></button>
+      <button class="adv-btn" onclick="toggleAdv()">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        Advanced Options
+        <span id="advArrow">▼</span>
+      </button>
       <div class="adv-panel" id="advPanel">
         <div class="adv-grid">
-          <div><div class="field-lbl" style="margin-top:0;margin-bottom:7px">Target Audience</div><input class="sub-inp" id="audienceInp" placeholder="e.g. beginners, marketers"></div>
-          <div><div class="field-lbl" style="margin-top:0;margin-bottom:7px">Tone of Voice</div>
-            <select class="sub-inp" id="toneInp">
+          <div>
+            <div class="field-label" style="margin-top:0;margin-bottom:6px">Target Audience</div>
+            <input class="sub-input" id="audienceInp" placeholder="e.g. beginners, marketers">
+          </div>
+          <div>
+            <div class="field-label" style="margin-top:0;margin-bottom:6px">Tone of Voice</div>
+            <select class="sub-input" id="toneInp">
               <option value="">Auto</option><option>Conversational</option>
-              <option>Professional</option><option>Educational</option><option>Casual & Friendly</option><option>Authoritative</option>
+              <option>Professional</option><option>Educational</option>
+              <option>Casual & Friendly</option><option>Authoritative</option>
             </select>
           </div>
-          <div><div class="field-lbl" style="margin-top:0;margin-bottom:7px">Target Word Count</div>
-            <select class="sub-inp" id="wordcountInp">
-              <option value="">Auto</option><option value="500-800">Short (500-800)</option>
-              <option value="800-1500">Medium (800-1500)</option>
-              <option value="1500-2500">Long (1500-2500)</option>
-              <option value="2500-4000">Pillar (2500-4000)</option>
+          <div>
+            <div class="field-label" style="margin-top:0;margin-bottom:6px">Target Word Count</div>
+            <select class="sub-input" id="wordcountInp">
+              <option value="">Auto</option>
+              <option value="500-800">Short (500–800)</option>
+              <option value="800-1500">Medium (800–1500)</option>
+              <option value="1500-2500">Long (1500–2500)</option>
+              <option value="2500-4000">Pillar (2500–4000)</option>
             </select>
           </div>
-          <div><div class="field-lbl" style="margin-top:0;margin-bottom:7px">Competitor Domain</div><input class="sub-inp" id="competitorInp" placeholder="e.g. ahrefs.com"></div>
+          <div>
+            <div class="field-label" style="margin-top:0;margin-bottom:6px">Competitor Domain</div>
+            <input class="sub-input" id="competitorInp" placeholder="e.g. ahrefs.com">
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="progress-area" id="progArea">
-      <div class="prog-title"><div class="prog-spinner"></div><span id="progLabel">Generating your SEO blueprint…</span></div>
-      <div class="step-grid" id="stepGrid"></div>
+    <!-- Progress -->
+    <div class="progress-card" id="progArea">
+      <div class="prog-header">
+        <div class="prog-spinner"></div>
+        <span class="prog-lbl" id="progLabel">Generating your SEO blueprint…</span>
+      </div>
+      <div class="step-list" id="stepGrid"></div>
     </div>
 
+    <!-- Results -->
     <div id="results"></div>
+
   </div>
 </section>
 
+<!-- STATS -->
 <section class="section" style="padding-top:0">
-  <div class="wrap-wide">
-    <div class="stats-bar reveal">
-      <div class="stat"><div class="stat-num">30s</div><div class="stat-label">Average time to full SEO blueprint</div></div>
-      <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Point publish-ready checklist</div></div>
-      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Free, no account required</div></div>
-      <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Languages supported</div></div>
+  <div class="container-wide">
+    <div class="stats-row reveal">
+      <div class="stat-cell"><div class="stat-num">30s</div><div class="stat-label">Average time to full SEO blueprint</div></div>
+      <div class="stat-cell"><div class="stat-num">40+</div><div class="stat-label">Point publish-ready checklist</div></div>
+      <div class="stat-cell"><div class="stat-num">100%</div><div class="stat-label">Free, no account required</div></div>
+      <div class="stat-cell"><div class="stat-num">8+</div><div class="stat-label">Languages supported</div></div>
     </div>
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section class="section">
-  <div class="wrap-wide">
+  <div class="container-wide">
     <div class="reveal">
-      <div class="section-tag">How It Works</div>
-      <h2 class="section-title">THREE STEPS.<br>ZERO GUESSWORK.</h2>
-      <p class="section-sub">No experience needed. Just type your keyword and get everything you need to rank on Google — instantly.</p>
+      <div class="sec-tag">How It Works</div>
+      <h2 class="sec-title">THREE STEPS.<br><em style="font-style:italic">ZERO</em> GUESSWORK.</h2>
+      <p class="sec-sub">No experience needed. Type your keyword and get everything you need to rank on Google — instantly.</p>
     </div>
     <div class="how-grid">
       <div class="how-card reveal">
-        <div class="how-num">01</div>
-        <div class="how-icon">⌨️</div>
-        <div class="how-title">Enter Your Keyword</div>
-        <div class="how-desc">Type the keyword you want to rank for. Add a focus keyword, language, and content type. That's all.</div>
+        <div class="how-step">01</div>
+        <div style="margin-bottom:12px;width:32px;height:3px;background:var(--accent);border-radius:2px"></div>
+        <div class="how-card-title">Enter Your Keyword</div>
+        <div class="how-card-desc">Type the keyword you want to rank for. Add a focus keyword, language, and content type. That's all.</div>
       </div>
-      <div class="how-card reveal" style="transition-delay:.1s">
-        <div class="how-num">02</div>
-        <div class="how-icon">🤖</div>
-        <div class="how-title">AI Analyzes & Builds</div>
-        <div class="how-desc">Our AI analyzes search intent, competitor content, and generates a complete blueprint in under 30 seconds.</div>
+      <div class="how-card reveal" style="transition-delay:.08s">
+        <div class="how-step">02</div>
+        <div style="margin-bottom:12px;width:32px;height:3px;background:var(--green);border-radius:2px"></div>
+        <div class="how-card-title">AI Analyzes & Builds</div>
+        <div class="how-card-desc">Our AI analyzes search intent, competitor content, and generates a complete blueprint in under 30 seconds.</div>
       </div>
-      <div class="how-card reveal" style="transition-delay:.2s">
-        <div class="how-num">03</div>
-        <div class="how-icon">🚀</div>
-        <div class="how-title">Copy, Write & Rank</div>
-        <div class="how-desc">Copy your titles, meta tags, schema, and outline directly into your CMS. Follow the checklist. Rank.</div>
+      <div class="how-card reveal" style="transition-delay:.16s">
+        <div class="how-step">03</div>
+        <div style="margin-bottom:12px;width:32px;height:3px;background:var(--amber);border-radius:2px"></div>
+        <div class="how-card-title">Copy, Write & Rank</div>
+        <div class="how-card-desc">Copy your titles, meta tags, schema, and outline directly into your CMS. Follow the checklist. Rank.</div>
       </div>
-      <div class="how-card reveal" style="transition-delay:.3s">
-        <div class="how-num">04</div>
-        <div class="how-icon">📈</div>
-        <div class="how-title">Track & Repeat</div>
-        <div class="how-desc">Submit to Google Search Console, monitor rankings, use SEOPro again for every new article.</div>
+      <div class="how-card reveal" style="transition-delay:.24s">
+        <div class="how-step">04</div>
+        <div style="margin-bottom:12px;width:32px;height:3px;background:var(--accent);border-radius:2px"></div>
+        <div class="how-card-title">Track & Repeat</div>
+        <div class="how-card-desc">Submit to Google Search Console, monitor rankings, use 30SecSEO again for every new article.</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FEATURES -->
 <section class="section" style="background:var(--bg2)">
-  <div class="wrap-wide">
+  <div class="container-wide">
     <div class="reveal">
-      <div class="section-tag">What You Get</div>
-      <h2 class="section-title">EVERYTHING IN<br><span style="color:var(--accent)">ONE CLICK.</span></h2>
-      <p class="section-sub">30SecSEO replaces 5 different SEO tools and hours of manual research.</p>
+      <div class="sec-tag">What You Get</div>
+      <h2 class="sec-title">EVERYTHING IN<br><em style="color:var(--accent)">ONE CLICK.</em></h2>
+      <p class="sec-sub">30SecSEO replaces 5 different SEO tools and hours of manual research.</p>
     </div>
-    <div class="feat-grid" style="margin-top:36px">
-      <div class="feat-card reveal"><div class="feat-icon">📌</div><div><div class="feat-title">5 Title Tag Options</div><div class="feat-desc">Power words, numbers, emotional triggers. All under 60 characters.</div></div></div>
-      <div class="feat-card reveal" style="transition-delay:.05s"><div class="feat-icon">🔍</div><div><div class="feat-title">Meta Description ×2</div><div class="feat-desc">Two 150-158 character meta descriptions with focus keyword + CTA.</div></div></div>
-      <div class="feat-card reveal" style="transition-delay:.1s"><div class="feat-icon">🎯</div><div><div class="feat-title">Full Keyword Research</div><div class="feat-desc">Primary, secondary, LSI, long-tail, questions, and keywords to avoid.</div></div></div>
-      <div class="feat-card reveal" style="transition-delay:.15s"><div class="feat-icon">📋</div><div><div class="feat-title">H2/H3 Content Outline</div><div class="feat-desc">Full article structure with section-by-section writing tips.</div></div></div>
-      <div class="feat-card reveal" style="transition-delay:.2s"><div class="feat-icon">⚡</div><div><div class="feat-title">Featured Snippet Optimizer</div><div class="feat-desc">Paragraph snippet, comparison table, and 4 FAQ answers for Position Zero.</div></div></div>
-      <div class="feat-card reveal" style="transition-delay:.25s"><div class="feat-icon">⚙️</div><div><div class="feat-title">JSON-LD Schema Markup</div><div class="feat-desc">Article, HowTo, or FAQPage schema ready to paste into your page head.</div></div></div>
-      <div class="feat-card reveal" style="transition-delay:.3s"><div class="feat-icon">📊</div><div><div class="feat-title">Rank Math Guide</div><div class="feat-desc">Exact values to paste into every Rank Math field. Hit 80+ score.</div></div></div>
-      <div class="feat-card reveal" style="transition-delay:.35s"><div class="feat-icon">✅</div><div><div class="feat-title">40-Point Publish Checklist</div><div class="feat-desc">Interactive checklist sorted by priority before hitting publish.</div></div></div>
+    <div class="feat-grid">
+      <div class="feat-card reveal"><div class="feat-mark">T</div><div><div class="feat-title">5 Title Tag Options</div><div class="feat-desc">Power words, numbers, emotional triggers. All under 60 characters.</div></div></div>
+      <div class="feat-card reveal" style="transition-delay:.05s"><div class="feat-mark">M</div><div><div class="feat-title">Meta Description ×2</div><div class="feat-desc">Two 150–158 character meta descriptions with focus keyword + CTA.</div></div></div>
+      <div class="feat-card reveal" style="transition-delay:.1s"><div class="feat-mark">KW</div><div><div class="feat-title">Full Keyword Research</div><div class="feat-desc">Primary, secondary, LSI, long-tail, questions, and keywords to avoid.</div></div></div>
+      <div class="feat-card reveal" style="transition-delay:.15s"><div class="feat-mark">H2</div><div><div class="feat-title">H2/H3 Content Outline</div><div class="feat-desc">Full article structure with section-by-section writing tips.</div></div></div>
+      <div class="feat-card reveal" style="transition-delay:.2s"><div class="feat-mark">FS</div><div><div class="feat-title">Featured Snippet Optimizer</div><div class="feat-desc">Paragraph snippet, comparison table, and 4 FAQ answers for Position Zero.</div></div></div>
+      <div class="feat-card reveal" style="transition-delay:.25s"><div class="feat-mark">{}</div><div><div class="feat-title">JSON-LD Schema Markup</div><div class="feat-desc">Article, HowTo, or FAQPage schema ready to paste into your page head.</div></div></div>
+      <div class="feat-card reveal" style="transition-delay:.3s"><div class="feat-mark">RM</div><div><div class="feat-title">Rank Math Guide</div><div class="feat-desc">Exact values to paste into every Rank Math field. Hit 80+ score.</div></div></div>
+      <div class="feat-card reveal" style="transition-delay:.35s"><div class="feat-mark">40</div><div><div class="feat-title">40-Point Publish Checklist</div><div class="feat-desc">Interactive checklist sorted by priority before hitting publish.</div></div></div>
     </div>
   </div>
 </section>
 
+<!-- WHO IT'S FOR -->
 <section class="section">
-  <div class="wrap-wide">
+  <div class="container-wide">
     <div class="reveal">
-      <div class="section-tag">Who Is This For</div>
-      <h2 class="section-title">BUILT FOR<br>REAL CREATORS.</h2>
-      <p class="section-sub">Whether you write one blog post a month or manage a content team — 30SecSEO saves you hours every time.</p>
+      <div class="sec-tag">Who Is This For</div>
+      <h2 class="sec-title">BUILT FOR<br><em>REAL CREATORS.</em></h2>
+      <p class="sec-sub">Whether you write one blog post a month or manage a content team — 30SecSEO saves you hours every time.</p>
     </div>
     <div class="who-grid">
-      <div class="who-card reveal"><span class="who-emoji">✍️</span><div class="who-role">Bloggers</div><div class="who-desc">Rank your articles faster without paying for expensive SEO tools.</div></div>
-      <div class="who-card reveal" style="transition-delay:.07s"><span class="who-emoji">🛍️</span><div class="who-role">Affiliates</div><div class="who-desc">Dominate low-competition keywords and drive commission traffic.</div></div>
-      <div class="who-card reveal" style="transition-delay:.14s"><span class="who-emoji">🏪</span><div class="who-role">Small Business</div><div class="who-desc">Get found on Google without hiring an expensive SEO agency.</div></div>
-      <div class="who-card reveal" style="transition-delay:.21s"><span class="who-emoji">📱</span><div class="who-role">Content Creators</div><div class="who-desc">Turn your videos and social content into SEO-optimized articles.</div></div>
-      <div class="who-card reveal" style="transition-delay:.28s"><span class="who-emoji">💼</span><div class="who-role">Freelancers</div><div class="who-desc">Deliver SEO-ready content briefs to clients and charge more.</div></div>
-      <div class="who-card reveal" style="transition-delay:.35s"><span class="who-emoji">🔥</span><div class="who-role">SEO Agencies</div><div class="who-desc">Rapid keyword research and content briefs across multiple clients.</div></div>
+      <div class="who-card reveal"><div class="who-dot"></div><div class="who-role">Bloggers</div><div class="who-desc">Rank your articles faster without paying for expensive SEO tools.</div></div>
+      <div class="who-card reveal" style="transition-delay:.07s"><div class="who-dot" style="background:var(--green)"></div><div class="who-role">Affiliates</div><div class="who-desc">Dominate low-competition keywords and drive commission traffic.</div></div>
+      <div class="who-card reveal" style="transition-delay:.14s"><div class="who-dot" style="background:var(--amber)"></div><div class="who-role">Small Business</div><div class="who-desc">Get found on Google without hiring an expensive SEO agency.</div></div>
+      <div class="who-card reveal" style="transition-delay:.21s"><div class="who-dot"></div><div class="who-role">Content Creators</div><div class="who-desc">Turn your videos and social content into SEO-optimized articles.</div></div>
+      <div class="who-card reveal" style="transition-delay:.28s"><div class="who-dot" style="background:var(--green)"></div><div class="who-role">Freelancers</div><div class="who-desc">Deliver SEO-ready content briefs to clients and charge more.</div></div>
+      <div class="who-card reveal" style="transition-delay:.35s"><div class="who-dot" style="background:var(--amber)"></div><div class="who-role">SEO Agencies</div><div class="who-desc">Rapid keyword research and content briefs across multiple clients.</div></div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS MARQUEE -->
+<!-- TESTIMONIALS -->
 <section class="testi-section" style="background:var(--bg2)">
-  <div class="wrap-wide" style="margin-bottom:36px">
+  <div class="container-wide" style="margin-bottom:36px">
     <div class="reveal" style="text-align:center">
-      <div class="section-tag" style="justify-content:center">Real Results</div>
-      <h2 class="section-title" style="text-align:center">RANKING STORIES.</h2>
-      <p class="section-sub" style="margin:0 auto;text-align:center">Real people, real rankings. Here's what they said.</p>
+      <div class="sec-tag" style="justify-content:center">Real Results</div>
+      <h2 class="sec-title" style="text-align:center;font-size:clamp(36px,5vw,64px)">RANKING STORIES.</h2>
     </div>
   </div>
   <div style="overflow:hidden">
-    <div class="testi-track" id="testiTrack">
-      <!-- Row 1 -->
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"Went from page 5 to position #3 for my main keyword in 6 weeks. The schema markup alone made a huge difference in my click-through rate."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(79,110,247,.15);color:var(--accent2)">PS</div>
-          <div><div class="testi-name">Priya S.</div><div class="testi-role">Tech Blogger · Mumbai</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"This replaced my $99/month Ahrefs subscription for content planning. The keyword research gives me everything I need in one shot."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(15,207,111,.12);color:var(--green)">MT</div>
-          <div><div class="testi-name">Marcus T.</div><div class="testi-role">Affiliate Marketer · UK</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"The Rank Math guide is exactly what I was missing. Now I hit 90+ scores on every post and clients are getting more organic traffic."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(155,109,255,.12);color:var(--purple)">RK</div>
-          <div><div class="testi-name">Ravi K.</div><div class="testi-role">Freelance SEO Writer · Hyderabad</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"I used to spend 3 hours on keyword research. Now I get a complete blueprint in 30 seconds. My blog grew from 200 to 8,000 visitors/month."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(245,166,35,.12);color:var(--amber)">SL</div>
-          <div><div class="testi-name">Sarah L.</div><div class="testi-role">Food Blogger · Toronto</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"As a non-native English speaker, the content outline helps me write articles that sound natural AND rank well. Absolute game changer."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(0,212,255,.1);color:var(--cyan)">JM</div>
-          <div><div class="testi-name">João M.</div><div class="testi-role">Digital Marketer · Brazil</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"I manage SEO for 12 clients. This tool cuts my content brief time from 2 hours to under 5 minutes. ROI is insane for a free tool."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(240,64,96,.1);color:var(--red)">AN</div>
-          <div><div class="testi-name">Aisha N.</div><div class="testi-role">SEO Agency Owner · Dubai</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"Featured snippet in 3 weeks! I used the paragraph snippet template exactly as generated and boom — Position Zero for my target keyword."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(79,110,247,.15);color:var(--accent2)">TW</div>
-          <div><div class="testi-name">Tom W.</div><div class="testi-role">SaaS Founder · Berlin</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"My ecommerce product pages now rank on page 1. The schema markup for products is exactly what Google needs. Sales up 40% organically."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(15,207,111,.12);color:var(--green)">LP</div>
-          <div><div class="testi-name">Lisa P.</div><div class="testi-role">E-commerce Owner · Sydney</div></div>
-        </div>
-      </div>
+    <div class="marquee-track" id="testiTrack">
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"Went from page 5 to position #3 for my main keyword in 6 weeks. The schema markup alone made a huge difference in my CTR."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--accent-dim);color:var(--accent)">PS</div><div><div class="testi-name">Priya S.</div><div class="testi-role">Tech Blogger · Mumbai</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"This replaced my $99/month Ahrefs subscription for content planning. The keyword research gives me everything I need in one shot."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--green-dim);color:var(--green)">MT</div><div><div class="testi-name">Marcus T.</div><div class="testi-role">Affiliate Marketer · UK</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"The Rank Math guide is exactly what I was missing. Now I hit 90+ scores on every post and clients are getting more organic traffic."</div><div class="testi-author"><div class="testi-avatar" style="background:rgba(160,100,255,.1);color:#b080ff">RK</div><div><div class="testi-name">Ravi K.</div><div class="testi-role">Freelance SEO Writer · Hyderabad</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"I used to spend 3 hours on keyword research. Now I get a complete blueprint in 30 seconds. My blog grew from 200 to 8,000 visitors/month."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--amber-dim);color:var(--amber)">SL</div><div><div class="testi-name">Sarah L.</div><div class="testi-role">Food Blogger · Toronto</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"As a non-native English speaker, the content outline helps me write articles that sound natural AND rank well. Absolute game changer."</div><div class="testi-author"><div class="testi-avatar" style="background:rgba(0,200,220,.1);color:#00c8dc">JM</div><div><div class="testi-name">João M.</div><div class="testi-role">Digital Marketer · Brazil</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"I manage SEO for 12 clients. This tool cuts my content brief time from 2 hours to under 5 minutes. ROI is insane for a free tool."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--red-dim);color:var(--red)">AN</div><div><div class="testi-name">Aisha N.</div><div class="testi-role">SEO Agency Owner · Dubai</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"Featured snippet in 3 weeks! I used the paragraph snippet template exactly as generated and boom — Position Zero for my target keyword."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--accent-dim);color:var(--accent)">TW</div><div><div class="testi-name">Tom W.</div><div class="testi-role">SaaS Founder · Berlin</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"My ecommerce product pages now rank on page 1. The schema markup for products is exactly what Google needs. Sales up 40% organically."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--green-dim);color:var(--green)">LP</div><div><div class="testi-name">Lisa P.</div><div class="testi-role">E-commerce Owner · Sydney</div></div></div></div>
       <!-- Duplicate for seamless loop -->
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"Went from page 5 to position #3 for my main keyword in 6 weeks. The schema markup alone made a huge difference in my click-through rate."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(79,110,247,.15);color:var(--accent2)">PS</div>
-          <div><div class="testi-name">Priya S.</div><div class="testi-role">Tech Blogger · Mumbai</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"This replaced my $99/month Ahrefs subscription for content planning. The keyword research gives me everything I need in one shot."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(15,207,111,.12);color:var(--green)">MT</div>
-          <div><div class="testi-name">Marcus T.</div><div class="testi-role">Affiliate Marketer · UK</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"The Rank Math guide is exactly what I was missing. Now I hit 90+ scores on every post and clients are getting more organic traffic."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(155,109,255,.12);color:var(--purple)">RK</div>
-          <div><div class="testi-name">Ravi K.</div><div class="testi-role">Freelance SEO Writer · Hyderabad</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"I used to spend 3 hours on keyword research. Now I get a complete blueprint in 30 seconds. My blog grew from 200 to 8,000 visitors/month."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(245,166,35,.12);color:var(--amber)">SL</div>
-          <div><div class="testi-name">Sarah L.</div><div class="testi-role">Food Blogger · Toronto</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"As a non-native English speaker, the content outline helps me write articles that sound natural AND rank well. Absolute game changer."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(0,212,255,.1);color:var(--cyan)">JM</div>
-          <div><div class="testi-name">João M.</div><div class="testi-role">Digital Marketer · Brazil</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"I manage SEO for 12 clients. This tool cuts my content brief time from 2 hours to under 5 minutes. ROI is insane for a free tool."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(240,64,96,.1);color:var(--red)">AN</div>
-          <div><div class="testi-name">Aisha N.</div><div class="testi-role">SEO Agency Owner · Dubai</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"Featured snippet in 3 weeks! I used the paragraph snippet template exactly as generated and boom — Position Zero for my target keyword."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(79,110,247,.15);color:var(--accent2)">TW</div>
-          <div><div class="testi-name">Tom W.</div><div class="testi-role">SaaS Founder · Berlin</div></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-text">"My ecommerce product pages now rank on page 1. The schema markup for products is exactly what Google needs. Sales up 40% organically."</div>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:rgba(15,207,111,.12);color:var(--green)">LP</div>
-          <div><div class="testi-name">Lisa P.</div><div class="testi-role">E-commerce Owner · Sydney</div></div>
-        </div>
-      </div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"Went from page 5 to position #3 for my main keyword in 6 weeks. The schema markup alone made a huge difference in my CTR."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--accent-dim);color:var(--accent)">PS</div><div><div class="testi-name">Priya S.</div><div class="testi-role">Tech Blogger · Mumbai</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"This replaced my $99/month Ahrefs subscription for content planning. The keyword research gives me everything I need in one shot."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--green-dim);color:var(--green)">MT</div><div><div class="testi-name">Marcus T.</div><div class="testi-role">Affiliate Marketer · UK</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"The Rank Math guide is exactly what I was missing. Now I hit 90+ scores on every post and clients are getting more organic traffic."</div><div class="testi-author"><div class="testi-avatar" style="background:rgba(160,100,255,.1);color:#b080ff">RK</div><div><div class="testi-name">Ravi K.</div><div class="testi-role">Freelance SEO Writer · Hyderabad</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"I used to spend 3 hours on keyword research. Now I get a complete blueprint in 30 seconds. My blog grew from 200 to 8,000 visitors/month."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--amber-dim);color:var(--amber)">SL</div><div><div class="testi-name">Sarah L.</div><div class="testi-role">Food Blogger · Toronto</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"Featured snippet in 3 weeks! I used the paragraph snippet template exactly as generated and boom — Position Zero for my target keyword."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--accent-dim);color:var(--accent)">TW</div><div><div class="testi-name">Tom W.</div><div class="testi-role">SaaS Founder · Berlin</div></div></div></div>
+      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"My ecommerce product pages now rank on page 1. The schema markup for products is exactly what Google needs. Sales up 40% organically."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--green-dim);color:var(--green)">LP</div><div><div class="testi-name">Lisa P.</div><div class="testi-role">E-commerce Owner · Sydney</div></div></div></div>
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-section">
-  <div class="wrap">
+  <div class="container">
     <div class="reveal">
-      <h2 class="cta-title">START RANKING<br><span style="color:var(--accent)">TODAY.</span></h2>
+      <h2 class="cta-title">START RANKING<br><span class="accent">TODAY.</span></h2>
       <p class="cta-sub">Free forever. No account needed. Just enter your keyword and go.</p>
-      <button class="cta-btn" onclick="document.querySelector('.kw-inp').focus();document.querySelector('.kw-inp').scrollIntoView({behavior:'smooth'})">
-        ⚡ Generate My Blueprint
+      <button class="cta-btn" onclick="document.querySelector('.kw-input').focus();document.querySelector('.kw-input').scrollIntoView({behavior:'smooth'})">
+        Generate My Blueprint
       </button>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="wrap-wide">
+  <div class="container-wide">
     <div class="footer-inner">
-      <div class="footer-logo">30Sec<span>SEO</span></div>
-      <div class="footer-links">
+      <div class="footer-brand">30Sec<em>SEO</em></div>
+      <div class="footer-nav">
         <a href="#">About</a>
         <a href="#">How It Works</a>
         <a href="#">Privacy</a>
         <a href="#">Contact</a>
       </div>
     </div>
-    <div class="footer-copy">Built for content creators. Free forever. © 2026 30SecSEO</div>
+    <div class="footer-copy">BUILT FOR CONTENT CREATORS · FREE FOREVER · © 2026 30SecSEO</div>
   </div>
 </footer>
 
 <script>
 'use strict';
 
+/* ── THEME ── */
 let currentTheme = localStorage.getItem('sp-theme') || 'dark';
 applyTheme();
 function applyTheme(){
   document.documentElement.setAttribute('data-theme', currentTheme);
   const dark = currentTheme === 'dark';
-  document.getElementById('themeIcon').textContent = dark ? '☀️' : '🌙';
+  const icon = document.getElementById('themeIcon');
+  icon.innerHTML = dark
+    ? '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>'
+    : '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
   document.getElementById('themeLabel').textContent = dark ? 'Light' : 'Dark';
 }
 function toggleTheme(){
@@ -1039,11 +1047,13 @@ function toggleTheme(){
   applyTheme();
 }
 
+/* ── REVEAL ── */
 const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target); }});
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('vis'); ro.unobserve(e.target); }});
 }, {threshold:.1, rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
+/* ── COMPETITION METER ── */
 let compTimeout;
 document.getElementById('kwInp').addEventListener('input', function(){
   clearTimeout(compTimeout);
@@ -1053,7 +1063,6 @@ document.getElementById('kwInp').addEventListener('input', function(){
 });
 function resetComp(){
   document.getElementById('compFill').style.width = '0%';
-  document.getElementById('compIndicator').style.left = '0%';
   document.getElementById('compVal').textContent = '—';
   document.getElementById('compInfo').textContent = 'Enter keyword to analyze';
 }
@@ -1061,18 +1070,16 @@ function estimateComp(kw){
   const words = kw.split(' ').length;
   const len = kw.length;
   let score = Math.max(10, Math.min(95, 85 - (words - 1) * 12 - (len > 30 ? 10 : 0) + Math.floor(Math.random()*15)));
-  const pct = score + '%';
-  document.getElementById('compFill').style.width = pct;
-  document.getElementById('compIndicator').style.left = 'calc(' + pct + ' - 7px)';
-  const label = score < 35 ? '🟢 Low Competition' : score < 65 ? '🟡 Medium' : '🔴 High Competition';
+  document.getElementById('compFill').style.width = score + '%';
   document.getElementById('compVal').textContent = score + '/100';
-  document.getElementById('compInfo').textContent = label;
+  document.getElementById('compInfo').textContent = score < 35 ? 'Low Competition' : score < 65 ? 'Medium Competition' : 'High Competition';
 }
 
+/* ── MODE ── */
 let currentMode = 'blueprint';
 function setMode(m, btn){
   currentMode = m;
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.mode-tab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }
 function toggleAdv(){
@@ -1082,6 +1089,7 @@ function toggleAdv(){
   a.textContent = o ? '▲' : '▼';
 }
 
+/* ── STEPS ── */
 const STEPS_MAP = {
   blueprint:[
     {l:'Detecting search intent & difficulty',s:'Analyzing keyword type, volume tier…'},
@@ -1131,28 +1139,27 @@ const STEPS_MAP = {
   ]
 };
 
+/* ── UTILS ── */
 let checkState={}, clData=[], clFilter='all';
-function $(id){return document.getElementById(id)}
+function $i(id){return document.getElementById(id)}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function escQ(s){return String(s||'').replace(/\\/g,'\\\\').replace(/`/g,'\\`').replace(/\$/g,'\\$')}
-
 function copy(text,btn){
   navigator.clipboard.writeText(text).then(()=>{
-    const p=btn.textContent; btn.textContent='✓ Copied'; btn.classList.add('ok');
+    const p=btn.textContent;btn.textContent='✓';btn.classList.add('ok');
     setTimeout(()=>{btn.textContent=p;btn.classList.remove('ok');},1800);
   });
 }
-
 function charBar(len,min,max){
   const pct=Math.min(100,Math.round((len/max)*100));
   const ok=len>=min&&len<=max,over=len>max;
   const cls=ok?'ok':over?'bad':'warn';
-  const msg=ok?`✓ ${len} chars`:(over?`✗ ${len} chars (trim ${len-max})`:`⚠ ${len} chars (need ${min-len} more)`);
-  return `<div class="char-hint ${cls}">${msg}<div class="char-bar"><div class="char-fill" style="width:${pct}%;background:${ok?'var(--green)':over?'var(--red)':'var(--amber)'}"></div></div></div>`;
+  const msg=ok?`✓ ${len} chars`:(over?`✗ ${len} chars (−${len-max})`:`⚠ ${len} chars (+${min-len})`);
+  return `<div class="char-bar-wrap"><span class="char-hint ${cls}">${msg}</span><div class="char-track"><div class="char-fill" style="width:${pct}%;background:${ok?'var(--green)':over?'var(--red)':'var(--amber)'}"></div></div></div>`;
 }
 
 function drawSteps(active,steps){
-  $('stepGrid').innerHTML=steps.map((s,i)=>{
+  $i('stepGrid').innerHTML=steps.map((s,i)=>{
     const cls=i<active?'done':i===active?'active':'pending';
     const dot=i<active?'✓':(i+1);
     return `<div class="step ${cls}"><div class="step-dot">${dot}</div><div><div class="step-text">${s.l}</div><div class="step-sub">${s.s}</div></div></div>`;
@@ -1160,17 +1167,22 @@ function drawSteps(active,steps){
 }
 
 function animateProgress(steps,cb){
-  let i=0; drawSteps(0,steps);
-  const iv=setInterval(()=>{i++;if(i>=steps.length){clearInterval(iv);drawSteps(steps.length,steps);setTimeout(cb,250);return;}drawSteps(i,steps);},330);
+  let i=0;drawSteps(0,steps);
+  const iv=setInterval(()=>{
+    i++;
+    if(i>=steps.length){clearInterval(iv);drawSteps(steps.length,steps);setTimeout(cb,250);return;}
+    drawSteps(i,steps);
+  },320);
 }
 
+/* ── PROMPT BUILDER ── */
 function buildPrompt(mode,kw,focus,lang,opts){
-  const ctx = [
-    opts.audience ? `Target Audience: "${opts.audience}"` : '',
-    opts.competitor ? `Competitor Domain: "${opts.competitor}"` : '',
-    opts.tone ? `Tone: "${opts.tone}"` : '',
-    opts.wordcount ? `Target Word Count: "${opts.wordcount}"` : '',
-    opts.type ? `Content Type: "${opts.type}"` : ''
+  const ctx=[
+    opts.audience?`Target Audience: "${opts.audience}"`:null,
+    opts.competitor?`Competitor Domain: "${opts.competitor}"`:null,
+    opts.tone?`Tone: "${opts.tone}"`:null,
+    opts.wordcount?`Target Word Count: "${opts.wordcount}"`:null,
+    opts.type?`Content Type: "${opts.type}"`:null
   ].filter(Boolean).join('\n');
 
   if(mode==='rankmath') return `Generate a complete Rank Math SEO optimization guide.
@@ -1200,376 +1212,434 @@ Return ONLY this JSON (no extra text):
 {"keyword":"${kw}","focusKeyword":"${focus}","intent":"Informational|Commercial|Transactional|Navigational","difficulty":"Easy|Medium|Hard","volumeTier":"Low (<1k)|Medium (1k-10k)|High (10k-100k)|Very High (100k+)","contentType":"Blog Post|Pillar Page|How-To Guide|Listicle|Product Page","wordCount":"e.g. 1800-2500 words","writingTone":"Conversational|Professional|Educational|Technical","titles":["Title 1 with power word number keyword under 60 chars","Title 2 question format under 60","Title 3 how-to format under 60","Title 4 listicle with benefit under 60","Title 5 emotional urgency under 60"],"h1s":["H1 option 1 with focus keyword","H1 option 2 different angle","H1 option 3 conversational"],"metaDescription":"FULL 150-158 character meta description with focus keyword and clear CTA.","metaDescriptionB":"FULL alternative 150-158 char meta description with different angle and CTA.","slug":"focus-keyword-url-slug","keywords":{"primary":"${focus}","secondary":["kw2","kw3","kw4","kw5","kw6"],"lsi":["lsi1","lsi2","lsi3","lsi4","lsi5","lsi6"],"longtail":["long tail phrase 1","long tail phrase 2","long tail phrase 3","long tail phrase 4","long tail phrase 5"],"questions":["People also ask question 1?","question 2?","question 3?","question 4?","question 5?"],"avoid":["negative keyword 1","negative keyword 2","negative keyword 3"]},"outline":{"intro":"FULL 3-sentence hook intro paragraph.","sections":[{"h2":"H2 with secondary keyword","h3s":["H3 subheading 1","H3 subheading 2","H3 subheading 3"],"tip":"Detailed writing tip for this section"},{"h2":"H2 heading 2","h3s":["H3 a","H3 b"],"tip":"writing tip"},{"h2":"H2 heading 3","h3s":["H3 a","H3 b","H3 c"],"tip":"writing tip"},{"h2":"H2 heading 4","h3s":["H3 a","H3 b"],"tip":"writing tip"},{"h2":"FAQ: Common Questions About topic","h3s":["FAQ question 1?","FAQ question 2?","FAQ question 3?"],"tip":"Answer each FAQ in 40-60 words directly"}],"conclusion":"FULL 3-sentence conclusion paragraph.","cta":"Specific detailed call-to-action recommendation"},"altTexts":["Feature image: focus keyword descriptive alt text","Section image 1: secondary keyword descriptive","Infographic: topic overview descriptive","Supporting image: related concept descriptive","Closing image: CTA related descriptive"],"snippets":{"paragraph":"FULL 45-50 word direct-answer paragraph to win featured snippet.","table":{"caption":"Comparison table title","headers":["Column 1","Column 2","Column 3"],"rows":[["r1c1","r1c2","r1c3"],["r2c1","r2c2","r2c3"],["r3c1","r3c2","r3c3"],["r4c1","r4c2","r4c3"]]},"faqs":[{"q":"FAQ question 1?","a":"Full 40-word direct answer to FAQ 1."},{"q":"FAQ question 2?","a":"Full 40-word direct answer to FAQ 2."},{"q":"FAQ question 3?","a":"Full 40-word direct answer to FAQ 3."},{"q":"FAQ question 4?","a":"Full 40-word direct answer to FAQ 4."}]},"schema":{"type":"Article|BlogPosting|HowTo|FAQPage","code":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"TITLE\",\"description\":\"META\",\"author\":{\"@type\":\"Person\",\"name\":\"Author Name\"},\"datePublished\":\"2025-01-01\"}"},"openGraph":{"title":"OG title under 60 chars","description":"OG description under 200 chars with keyword"},"twitter":{"title":"Twitter title","description":"Twitter description under 200 chars"},"internalLinks":{"anchors":["anchor text 1","anchor text 2","anchor text 3","anchor text 4"],"hubTopics":["related topic 1","related topic 2","related topic 3"],"strategy":"One clear sentence on internal linking strategy"},"checklist":[{"id":"t1","cat":"Title","task":"Title contains focus keyword in first 3 words","priority":"critical"},{"id":"t2","cat":"Title","task":"Title tag is under 60 characters","priority":"critical"},{"id":"t3","cat":"Title","task":"Title has a power word, number, or emotion trigger","priority":"high"},{"id":"h1","cat":"H1","task":"H1 tag is set and includes focus keyword","priority":"critical"},{"id":"h2","cat":"H1","task":"H1 is different wording from the title tag","priority":"medium"},{"id":"m1","cat":"Meta","task":"Meta description is written (150-158 chars)","priority":"critical"},{"id":"m2","cat":"Meta","task":"Meta description includes focus keyword naturally","priority":"critical"},{"id":"m3","cat":"Meta","task":"Meta description ends with a clear CTA","priority":"high"},{"id":"u1","cat":"URL","task":"Slug uses focus keyword, hyphens, no stop words","priority":"critical"},{"id":"u2","cat":"URL","task":"Slug is under 75 characters total","priority":"medium"},{"id":"k1","cat":"Keywords","task":"Focus keyword appears in first 100 words","priority":"critical"},{"id":"k2","cat":"Keywords","task":"Focus keyword density is 1-2% not stuffed","priority":"high"},{"id":"k3","cat":"Keywords","task":"At least 3 LSI keywords used naturally","priority":"high"},{"id":"k4","cat":"Keywords","task":"Long-tail keywords used in at least 2 H2/H3","priority":"medium"},{"id":"k5","cat":"Keywords","task":"Questions keywords used in FAQ section","priority":"medium"},{"id":"c1","cat":"Content","task":"Word count meets recommended target","priority":"high"},{"id":"c2","cat":"Content","task":"Intro hooks reader within first 2 sentences","priority":"high"},{"id":"c3","cat":"Content","task":"Every H2 section has at least one keyword variant","priority":"medium"},{"id":"c4","cat":"Content","task":"Conclusion restates focus keyword and has CTA","priority":"high"},{"id":"c5","cat":"Content","task":"Content fully satisfies the search intent","priority":"critical"},{"id":"c6","cat":"Content","task":"Paragraphs are max 3-4 lines no walls of text","priority":"medium"},{"id":"c7","cat":"Content","task":"Sentences average under 20 words","priority":"medium"},{"id":"i1","cat":"Images","task":"Feature image with focus keyword in filename","priority":"high"},{"id":"i2","cat":"Images","task":"All images have descriptive alt text with keywords","priority":"critical"},{"id":"i3","cat":"Images","task":"Images compressed to WebP or optimized JPEG","priority":"medium"},{"id":"i4","cat":"Images","task":"At least one image per H2 section","priority":"low"},{"id":"s1","cat":"Snippets","task":"Featured snippet paragraph added 40-50 words","priority":"high"},{"id":"s2","cat":"Snippets","task":"FAQ section with 4+ questions added","priority":"medium"},{"id":"s3","cat":"Snippets","task":"At least one table or bullet list added","priority":"medium"},{"id":"sc1","cat":"Schema","task":"JSON-LD schema markup pasted into page head","priority":"critical"},{"id":"sc2","cat":"Schema","task":"Schema type matches content type","priority":"high"},{"id":"og1","cat":"Social","task":"Open Graph title and description set","priority":"high"},{"id":"og2","cat":"Social","task":"Twitter Card meta tags added","priority":"medium"},{"id":"og3","cat":"Social","task":"Social share image uploaded 1200x630px","priority":"high"},{"id":"l1","cat":"Links","task":"2-3 internal links with keyword-rich anchor text","priority":"high"},{"id":"l2","cat":"Links","task":"1-2 external links to authority sources","priority":"medium"},{"id":"l3","cat":"Links","task":"No broken links anywhere in the post","priority":"critical"},{"id":"te1","cat":"Technical","task":"Canonical tag set to correct URL","priority":"high"},{"id":"te2","cat":"Technical","task":"Page set to index follow","priority":"critical"},{"id":"te3","cat":"Technical","task":"Page loads under 3 seconds on mobile","priority":"high"},{"id":"pub","cat":"Publish","task":"URL submitted to Google Search Console","priority":"high"}]}`;
 }
 
+/* ── RUN ── */
 async function run(){
-  const kw=$('kwInp').value.trim();
+  const kw = $i('kwInp').value.trim();
   if(!kw){
-    $('kwInp').focus();
-    $('kwInp').style.borderColor='var(--red)';
-    setTimeout(()=>{$('kwInp').style.borderColor='';},1500);
+    $i('kwInp').focus();
+    $i('kwInp').style.borderColor = 'var(--red)';
+    setTimeout(()=>{ $i('kwInp').style.borderColor = ''; }, 1500);
     return;
   }
-  const foc=$('focInp').value.trim()||kw;
-  const lang=$('langInp').value||'English';
-  const opts={
-    audience:$('audienceInp').value.trim(),
-    competitor:$('competitorInp').value.trim(),
-    tone:$('toneInp').value,
-    wordcount:$('wordcountInp').value,
-    type:$('typeInp').value
+  const foc = $i('focInp').value.trim() || kw;
+  const lang = $i('langInp').value || 'English';
+  const opts = {
+    audience:   $i('audienceInp').value.trim(),
+    competitor: $i('competitorInp').value.trim(),
+    tone:       $i('toneInp').value,
+    wordcount:  $i('wordcountInp').value,
+    type:       $i('typeInp').value,
   };
-  $('goBtn').disabled=true;
-  $('progArea').classList.add('show');
-  $('results').style.display='none';
-  $('results').innerHTML='';
-  checkState={}; clData=[]; clFilter='all';
-  const steps=STEPS_MAP[currentMode]||STEPS_MAP.blueprint;
-  animateProgress(steps,async()=>{
-    try{
-      const sysPrompt=`You are a world-class SEO strategist. Always respond with valid JSON only — no markdown, no explanation, no code fences.`;
-      const userPrompt=buildPrompt(currentMode,kw,foc,lang,opts);
-      const r=await fetch('/api/analyze',{
-        method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({keyword:kw,focusKeyword:foc,language:lang,mode:currentMode,options:opts,customPrompt:userPrompt,systemPrompt:sysPrompt})
+  $i('goBtn').disabled = true;
+  $i('progArea').classList.add('show');
+  $i('results').style.display = 'none';
+  $i('results').innerHTML = '';
+  checkState = {}; clData = []; clFilter = 'all';
+
+  const steps = STEPS_MAP[currentMode] || STEPS_MAP.blueprint;
+  animateProgress(steps, async () => {
+    try {
+      const sysPrompt = `You are a world-class SEO strategist. Always respond with valid JSON only — no markdown, no explanation, no code fences.`;
+      const userPrompt = buildPrompt(currentMode, kw, foc, lang, opts);
+      const r = await fetch('/api/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ keyword: kw, focusKeyword: foc, language: lang, mode: currentMode, options: opts, customPrompt: userPrompt, systemPrompt: sysPrompt })
       });
-      if(!r.ok){const e=await r.json();throw new Error(e.error||'Server error');}
-      const data=await r.json();
-      clData=data.checklist||[];
-      $('progArea').classList.remove('show');
-      $('results').style.display='block';
-      if(currentMode==='blueprint') render(data);
-      else if(currentMode==='rankmath') renderRankMath(data);
-      else if(currentMode==='competitor') renderCompetitor(data);
-      else if(currentMode==='brief') renderBrief(data);
-      else if(currentMode==='wordpress') renderWordPress(data);
-      setTimeout(()=>$('results').scrollIntoView({behavior:'smooth',block:'start'}),100);
-    }catch(e){
-      $('progArea').classList.remove('show');
-      $('results').style.display='block';
-      $('results').innerHTML=`<div class="block" style="border-color:rgba(240,64,96,.3)">
-        <div style="color:var(--red);font-weight:700;font-size:15px;margin-bottom:7px">⚠ Error</div>
-        <div style="color:var(--t2);font-size:14px">${esc(e.message)}</div>
-        <div style="color:var(--t3);font-size:12px;margin-top:8px">Check your connection and try again.</div>
+      if(!r.ok){ const e = await r.json(); throw new Error(e.error || 'Server error'); }
+      const data = await r.json();
+      clData = data.checklist || [];
+      $i('progArea').classList.remove('show');
+      $i('results').style.display = 'block';
+      if(currentMode === 'blueprint')    render(data);
+      else if(currentMode === 'rankmath')    renderRankMath(data);
+      else if(currentMode === 'competitor')  renderCompetitor(data);
+      else if(currentMode === 'brief')       renderBrief(data);
+      else if(currentMode === 'wordpress')   renderWordPress(data);
+      setTimeout(() => $i('results').scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    } catch(e) {
+      $i('progArea').classList.remove('show');
+      $i('results').style.display = 'block';
+      $i('results').innerHTML = `<div class="block" style="border-color:rgba(240,48,96,.3)">
+        <div style="color:var(--red);font-weight:700;font-size:15px;margin-bottom:8px;font-family:'Fraunces',serif">Error</div>
+        <div style="color:var(--ink2);font-size:14px">${esc(e.message)}</div>
+        <div style="color:var(--ink3);font-size:12px;margin-top:6px">Check your connection and try again.</div>
       </div>`;
     }
-    $('goBtn').disabled=false;
+    $i('goBtn').disabled = false;
   });
 }
-$('kwInp').addEventListener('keydown',e=>e.key==='Enter'&&run());
+$i('kwInp').addEventListener('keydown', e => e.key === 'Enter' && run());
 
+/* ── EXPORT ── */
 function exportText(data){
-  let t=`30SecSEO Blueprint — ${data.keyword}\n${'='.repeat(50)}\n\n`;
-  if(data.titles) t+=`TITLES:\n${(data.titles||[]).map((x,i)=>`${i+1}. ${x}`).join('\n')}\n\n`;
-  if(data.metaDescription) t+=`META DESCRIPTION:\n${data.metaDescription}\n\n`;
-  if(data.slug) t+=`URL SLUG: /${data.slug}\n\n`;
-  if(data.keywords) t+=`KEYWORDS:\nPrimary: ${data.keywords.primary}\nSecondary: ${(data.keywords.secondary||[]).join(', ')}\nLSI: ${(data.keywords.lsi||[]).join(', ')}\n`;
-  const blob=new Blob([t],{type:'text/plain'});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');
-  a.href=url;a.download=`seo-blueprint-${(data.keyword||'export').replace(/\s+/g,'-')}.txt`;
-  a.click();URL.revokeObjectURL(url);
+  let t = `30SecSEO Blueprint — ${data.keyword}\n${'─'.repeat(50)}\n\n`;
+  if(data.titles) t += `TITLES:\n${(data.titles||[]).map((x,i)=>`${i+1}. ${x}`).join('\n')}\n\n`;
+  if(data.metaDescription) t += `META DESCRIPTION:\n${data.metaDescription}\n\n`;
+  if(data.slug) t += `URL SLUG: /${data.slug}\n\n`;
+  if(data.keywords) t += `KEYWORDS:\nPrimary: ${data.keywords.primary}\nSecondary: ${(data.keywords.secondary||[]).join(', ')}\nLSI: ${(data.keywords.lsi||[]).join(', ')}\n`;
+  const blob = new Blob([t], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `seo-blueprint-${(data.keyword||'export').replace(/\s+/g,'-')}.txt`;
+  a.click(); URL.revokeObjectURL(url);
 }
 function exportJSON(data){
-  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');
-  a.href=url;a.download=`seo-blueprint-${(data.keyword||'export').replace(/\s+/g,'-')}.json`;
-  a.click();URL.revokeObjectURL(url);
+  const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `seo-blueprint-${(data.keyword||'export').replace(/\s+/g,'-')}.json`;
+  a.click(); URL.revokeObjectURL(url);
 }
 
+/* ── RENDER BLUEPRINT ── */
 function render(d){
-  const out=$('results');
-  const parts=[];
-  let delay=0;
-  function block(c,del){return `<div class="block" style="animation-delay:${del}s">${c}</div>`;}
-  window.__lastData=d;
+  const out = $i('results');
+  const parts = [];
+  window.__lastData = d;
+
   parts.push(`<div class="export-bar">
-    <button class="exp-btn" onclick="exportText(window.__lastData)">📄 Export .txt</button>
-    <button class="exp-btn" onclick="exportJSON(window.__lastData)">📦 Export JSON</button>
-    <button class="exp-btn" onclick="navigator.clipboard.writeText(JSON.stringify(window.__lastData,null,2))">📋 Copy JSON</button>
+    <button class="exp-btn" onclick="exportText(window.__lastData)">Export .txt</button>
+    <button class="exp-btn" onclick="exportJSON(window.__lastData)">Export JSON</button>
+    <button class="exp-btn" onclick="navigator.clipboard.writeText(JSON.stringify(window.__lastData,null,2))">Copy JSON</button>
   </div>`);
-  const score=Math.min(98,62+Math.min(18,(d.keywords?.lsi?.length||0)*2)+Math.min(16,(d.outline?.sections?.length||0)*3));
-  const grade=score>=90?'A+':score>=82?'A':score>=74?'B+':score>=65?'B':'C+';
-  const sCol=score>=75?'var(--green)':score>=55?'var(--amber)':'var(--red)';
-  const circ=2*Math.PI*40;const off=circ-(score/100)*circ;
-  parts.push(block(`
+
+  // Score
+  const score = Math.min(98, 62 + Math.min(18,(d.keywords?.lsi?.length||0)*2) + Math.min(16,(d.outline?.sections?.length||0)*3));
+  const grade = score>=90?'A+':score>=82?'A':score>=74?'B+':score>=65?'B':'C+';
+  const sCol = score>=75?'var(--green)':score>=55?'var(--amber)':'var(--red)';
+  const circ = 2*Math.PI*38; const off = circ-(score/100)*circ;
+
+  parts.push(`<div class="block">
     <div class="bh">
-      <div class="bh-icon blue">🎯</div>
-      <div><div class="bh-title">SEO Blueprint Overview</div><div class="bh-sub">Based on: "${esc(d.keyword)}"</div></div>
-      <div class="bh-badge">${esc(d.contentType||'Blog Post')}</div>
+      <div class="bh-label blue">Blueprint</div>
+      <div><div class="bh-title">SEO Overview</div><div class="bh-sub">Based on: "${esc(d.keyword)}"</div></div>
+      <div class="bh-count">${esc(d.contentType||'Blog Post')}</div>
     </div>
     <div class="score-wrap">
-      <div class="ring-cont">
-        <svg class="ring-svg" viewBox="0 0 96 96"><circle class="ring-bg" cx="48" cy="48" r="40"/><circle class="ring-fg" cx="48" cy="48" r="40" style="stroke:${sCol};stroke-dasharray:${circ};stroke-dashoffset:${off}"/></svg>
-        <div class="ring-inner"><div class="ring-n" style="color:${sCol}">${score}</div><div class="ring-of">/100</div></div>
+      <div class="ring-wrap">
+        <svg class="ring-svg" viewBox="0 0 88 88"><circle class="ring-bg" cx="44" cy="44" r="38"/><circle class="ring-fg" cx="44" cy="44" r="38" style="stroke:${sCol};stroke-dasharray:${circ};stroke-dashoffset:${off}"/></svg>
+        <div class="ring-inside"><div class="ring-num" style="color:${sCol}">${score}</div><div class="ring-den">/100</div></div>
       </div>
-      <div>
-        <div class="ring-grade">Grade: ${grade}</div>
-        <div class="ring-desc">${esc(d.intent||'Informational')} intent · ${esc(d.difficulty||'Medium')} difficulty<br>${esc(d.volumeTier||'Medium')} search volume</div>
+      <div class="score-meta">
+        <div class="grade">Grade: ${grade}</div>
+        <div class="desc">${esc(d.intent||'Informational')} intent · ${esc(d.difficulty||'Medium')} difficulty<br>${esc(d.volumeTier||'Medium')} search volume</div>
       </div>
     </div>
-    <div class="ov-grid">
-      ${[['Search Intent',d.intent,'accent'],['KW Difficulty',d.difficulty,d.difficulty==='Easy'?'green':d.difficulty==='Hard'?'amber':''],['Volume Tier',d.volumeTier,''],['Content Type',d.contentType,''],['Word Count',d.wordCount,''],['Writing Tone',d.writingTone,'']].map(([l,v,c])=>`<div class="ov-card"><div class="ov-label">${l}</div><div class="ov-val${c?' '+c:''}">${esc(v||'—')}</div></div>`).join('')}
-    </div>`,delay+=0));
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon blue">📌</div><div><div class="bh-title">Title Tags — 5 Options</div><div class="bh-sub">Pick the one with best CTR</div></div></div>
-    <div class="tip-box"><span>💡</span><span>Keep under 60 chars, keyword near the start, include a power word or number.</span></div>
-    <div class="opts" id="titleOpts">
-      ${(d.titles||[]).map((t,i)=>`<div class="opt" onclick="selOpt(this,'title',\`${escQ(t)}\`)"><div class="opt-n">${i+1}</div><div class="opt-txt">${esc(t)}</div><button class="cbtn" onclick="event.stopPropagation();copy(\`${escQ(t)}\`,this)">Copy</button></div>`).join('')}
+    <div class="metrics-grid">
+      ${[['Intent',d.intent,'accent'],['Difficulty',d.difficulty,d.difficulty==='Easy'?'green':d.difficulty==='Hard'?'amber':''],['Volume',d.volumeTier,''],['Type',d.contentType,''],['Word Count',d.wordCount,''],['Tone',d.writingTone,'']].map(([l,v,c])=>`<div class="metric"><div class="metric-lbl">${l}</div><div class="metric-val${c?' '+c:''}">${esc(v||'—')}</div></div>`).join('')}
+    </div>
+  </div>`);
+
+  // Titles
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label blue">Titles</div><div><div class="bh-title">Title Tags — 5 Options</div><div class="bh-sub">Pick the one with best CTR potential</div></div></div>
+    <div class="tip-banner"><strong>Tip:</strong> Keep under 60 chars, focus keyword in first 3 words, include a power word or number.</div>
+    <div class="opt-list" id="titleOpts">
+      ${(d.titles||[]).map((t,i)=>`<div class="opt-item" onclick="selOpt(this,'title',\`${escQ(t)}\`)"><div class="opt-n">${i+1}</div><div class="opt-txt">${esc(t)}</div><button class="cbtn" onclick="event.stopPropagation();copy(\`${escQ(t)}\`,this)">Copy</button></div>`).join('')}
     </div>
     <div id="selTitleOut" style="margin-top:10px;display:none">
-      <div class="obox"><div class="obox-top"><span class="obox-lbl">Selected Title</span><button class="cbtn" id="selTitleCopy">Copy</button></div><div class="obox-val large" id="selTitleVal"></div><div id="selTitleChars"></div></div>
-    </div>`,delay+=.05));
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon green">H1</div><div><div class="bh-title">H1 Tag Options</div><div class="bh-sub">Must differ from title — contains focus keyword</div></div></div>
-    <div class="opts">${(d.h1s||[]).map((h,i)=>`<div class="opt" onclick="selOpt(this,'h1',\`${escQ(h)}\`)"><div class="opt-n">${i+1}</div><div class="opt-txt">${esc(h)}</div><button class="cbtn" onclick="event.stopPropagation();copy(\`${escQ(h)}\`,this)">Copy</button></div>`).join('')}</div>`,delay+=.05));
-  const meta=d.metaDescription||'';const metaB=d.metaDescriptionB||'';const slug=d.slug||'';
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon purple">🔍</div><div><div class="bh-title">Meta Description & URL Slug</div><div class="bh-sub">Copy directly into your CMS</div></div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Meta Description — Primary</span><button class="cbtn" onclick="copy(\`${escQ(meta)}\`,this)">Copy</button></div><div class="obox-val">${esc(meta)}</div>${charBar(meta.length,140,158)}</div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Meta Description — Alternative</span><button class="cbtn" onclick="copy(\`${escQ(metaB)}\`,this)">Copy</button></div><div class="obox-val">${esc(metaB)}</div>${charBar(metaB.length,140,158)}</div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">URL Slug</span><button class="cbtn" onclick="copy('${esc(slug)}',this)">Copy</button></div><div class="obox-val mono">/${esc(slug)}</div></div>`,delay+=.05));
-  const kw=d.keywords||{};
-  function chips(arr,type){return(arr||[]).map(k=>`<div class="chip ${type}" onclick="navigator.clipboard.writeText('${esc(k)}')" title="Click to copy">${esc(k)}<span class="tag">${type.toUpperCase()}</span></div>`).join('');}
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon amber">🎯</div><div><div class="bh-title">Keyword Research</div><div class="bh-sub">Click any chip to copy</div></div><div class="bh-badge">${((kw.secondary||[]).length+(kw.lsi||[]).length+(kw.longtail||[]).length+(kw.questions||[]).length)+1} keywords</div></div>
-    <div class="obox" style="border-color:rgba(79,110,247,.25)"><div class="obox-top"><span class="obox-lbl">Primary Focus Keyword</span></div><div style="font-size:18px;font-weight:700;color:var(--accent2);margin-top:4px;font-family:'Syne',sans-serif;">🎯 ${esc(kw.primary||d.focusKeyword)}</div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Secondary Keywords</span></div><div class="chip-wrap">${chips(kw.secondary,'sec')}</div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">LSI / Semantic Keywords</span></div><div class="chip-wrap">${chips(kw.lsi,'lsi')}</div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Long-Tail Keywords</span></div><div class="chip-wrap">${chips(kw.longtail,'lt')}</div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">People Also Ask</span></div><div class="chip-wrap">${chips(kw.questions,'q')}</div></div>
-    <div class="obox" style="border-color:rgba(240,64,96,.2)"><div class="obox-top"><span class="obox-lbl" style="color:var(--red)">⛔ Avoid These</span></div><div class="chip-wrap">${chips(kw.avoid,'avoid')}</div></div>`,delay+=.05));
-  const ol=d.outline||{};
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon cyan">📋</div><div><div class="bh-title">Full Content Outline</div><div class="bh-sub">H2/H3 structure + copy-ready intro & conclusion</div></div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Intro Paragraph</span><button class="cbtn" onclick="copy(\`${escQ(ol.intro||'')}\`,this)">Copy</button></div><div class="obox-val">${esc(ol.intro||'')}</div></div>
-    <div class="sdiv">H2 / H3 Structure</div>
+      <div class="obox"><div class="obox-header"><span class="obox-lbl">Selected Title</span><button class="cbtn" id="selTitleCopy">Copy</button></div><div class="obox-val large" id="selTitleVal"></div><div id="selTitleChars"></div></div>
+    </div>
+  </div>`);
+
+  // H1
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label green">H1</div><div><div class="bh-title">H1 Tag Options</div><div class="bh-sub">Must differ from title — contains focus keyword</div></div></div>
+    <div class="opt-list">${(d.h1s||[]).map((h,i)=>`<div class="opt-item" onclick="selOpt(this,'h1',\`${escQ(h)}\`)"><div class="opt-n">${i+1}</div><div class="opt-txt">${esc(h)}</div><button class="cbtn" onclick="event.stopPropagation();copy(\`${escQ(h)}\`,this)">Copy</button></div>`).join('')}</div>
+  </div>`);
+
+  // Meta + Slug
+  const meta = d.metaDescription||''; const metaB = d.metaDescriptionB||''; const slug = d.slug||'';
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label purple">Meta</div><div><div class="bh-title">Meta Description & URL Slug</div><div class="bh-sub">Copy directly into your CMS</div></div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Meta Description — Primary</span><button class="cbtn" onclick="copy(\`${escQ(meta)}\`,this)">Copy</button></div><div class="obox-val">${esc(meta)}</div>${charBar(meta.length,140,158)}</div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Meta Description — Alternative</span><button class="cbtn" onclick="copy(\`${escQ(metaB)}\`,this)">Copy</button></div><div class="obox-val">${esc(metaB)}</div>${charBar(metaB.length,140,158)}</div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">URL Slug</span><button class="cbtn" onclick="copy('${esc(slug)}',this)">Copy</button></div><div class="obox-val mono">/${esc(slug)}</div></div>
+  </div>`);
+
+  // Keywords
+  const kw = d.keywords||{};
+  function chips(arr,type){return(arr||[]).map(k=>`<div class="chip ${type}" onclick="navigator.clipboard.writeText('${esc(k)}')" title="Click to copy">${esc(k)}<span class="ct">${type.toUpperCase()}</span></div>`).join('');}
+  const kwCount = ((kw.secondary||[]).length+(kw.lsi||[]).length+(kw.longtail||[]).length+(kw.questions||[]).length)+1;
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label amber">Keywords</div><div><div class="bh-title">Keyword Research</div><div class="bh-sub">Click any chip to copy</div></div><div class="bh-count">${kwCount} keywords</div></div>
+    <div class="obox" style="border-color:rgba(91,122,255,.2)"><div class="obox-header"><span class="obox-lbl">Primary Focus Keyword</span></div><div style="font-size:17px;font-weight:700;font-family:'Fraunces',serif;color:var(--accent);margin-top:4px">${esc(kw.primary||d.focusKeyword)}</div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Secondary Keywords</span></div><div class="chip-row">${chips(kw.secondary,'sec')}</div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">LSI / Semantic Keywords</span></div><div class="chip-row">${chips(kw.lsi,'lsi')}</div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Long-Tail Keywords</span></div><div class="chip-row">${chips(kw.longtail,'lt')}</div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">People Also Ask</span></div><div class="chip-row">${chips(kw.questions,'q')}</div></div>
+    <div class="obox" style="border-color:rgba(240,48,96,.2)"><div class="obox-header"><span class="obox-lbl" style="color:var(--red)">Avoid These Keywords</span></div><div class="chip-row">${chips(kw.avoid,'avoid')}</div></div>
+  </div>`);
+
+  // Outline
+  const ol = d.outline||{};
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label cyan">Outline</div><div><div class="bh-title">Full Content Outline</div><div class="bh-sub">H2/H3 structure + copy-ready intro & conclusion</div></div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Intro Paragraph</span><button class="cbtn" onclick="copy(\`${escQ(ol.intro||'')}\`,this)">Copy</button></div><div class="obox-val">${esc(ol.intro||'')}</div></div>
+    <div class="divider">H2 / H3 Structure</div>
     ${(ol.sections||[]).map(s=>`
       <div class="h2-block">
         <div class="h2-row" onclick="toggleH2(this)">
-          <span class="h2-label">H2</span><span class="h2-text">${esc(s.h2)}</span>
+          <span class="h2-badge">H2</span>
+          <span class="h2-text">${esc(s.h2)}</span>
           <button class="cbtn" onclick="event.stopPropagation();copy('## ${escQ(s.h2)}\\n${(s.h3s||[]).map(h=>'### '+h).join('\\n')}',this)">Copy</button>
-          <span class="h2-toggle">▼</span>
+          <span class="h2-arrow">▼</span>
         </div>
         <div class="h2-children">
-          ${(s.h3s||[]).map(h=>`<div class="h3-row"><span style="font-size:9px;font-weight:700;color:var(--t3);flex-shrink:0;font-family:'DM Sans',sans-serif;">H3</span>${esc(h)}</div>`).join('')}
-          ${s.tip?`<div class="tip-row"><span>💡</span><span>${esc(s.tip)}</span></div>`:''}
+          ${(s.h3s||[]).map(h=>`<div class="h3-row"><span class="h3-badge">H3</span>${esc(h)}</div>`).join('')}
+          ${s.tip?`<div class="tip-line"><span style="flex-shrink:0">→</span><span>${esc(s.tip)}</span></div>`:''}
         </div>
       </div>`).join('')}
-    <div class="sdiv">Conclusion</div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Conclusion</span><button class="cbtn" onclick="copy(\`${escQ(ol.conclusion||'')}\`,this)">Copy</button></div><div class="obox-val">${esc(ol.conclusion||'')}</div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Call To Action</span><button class="cbtn" onclick="copy(\`${escQ(ol.cta||'')}\`,this)">Copy</button></div><div class="obox-val">${esc(ol.cta||'')}</div></div>`,delay+=.07));
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon green">🖼️</div><div><div class="bh-title">Image Alt Texts</div><div class="bh-sub">5 keyword-rich alt attributes ready to use</div></div></div>
-    <div class="obox">${(d.altTexts||[]).map((a,i)=>`<div class="alt-row"><div class="alt-num">${i+1}</div><div class="alt-txt">${esc(a)}</div><button class="cbtn" style="flex-shrink:0;margin-left:8px" onclick="copy(\`${escQ(a)}\`,this)">Copy</button></div>`).join('')}</div>`,delay+=.07));
-  const sn=d.snippets||{};const tbl=sn.table||{};
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon amber">⚡</div><div><div class="bh-title">Featured Snippet Optimization</div><div class="bh-sub">Win Position Zero</div></div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Paragraph Snippet (40-50 words)</span><button class="cbtn" onclick="copy(\`${escQ(sn.paragraph||'')}\`,this)">Copy</button></div><div style="position:relative;margin-top:10px"><div class="snippet-tag">Featured Snippet</div><div class="snippet-box">${esc(sn.paragraph||'')}</div></div></div>
-    ${tbl.headers?`<div class="obox"><div class="obox-top"><span class="obox-lbl">Table Snippet — ${esc(tbl.caption||'')}</span></div><div style="overflow-x:auto"><table class="seo-tbl"><thead><tr>${(tbl.headers||[]).map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${(tbl.rows||[]).map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`:''}
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">FAQ Snippets</span></div>${(sn.faqs||[]).map(f=>`<div class="faq-item"><div class="faq-q">Q: ${esc(f.q)}</div><div class="faq-a">A: ${esc(f.a)}</div></div>`).join('')}</div>`,delay+=.07));
-  let schemaStr='{}';try{schemaStr=JSON.stringify(JSON.parse(d.schema?.code||'{}'),null,2);}catch{schemaStr=d.schema?.code||'';}
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon purple">⚙️</div><div><div class="bh-title">Schema Markup (JSON-LD)</div><div class="bh-sub">${esc(d.schema?.type||'Article')} — paste inside &lt;script type="application/ld+json"&gt;</div></div></div>
-    <div style="position:relative"><button class="cbtn" style="position:absolute;top:10px;right:10px;z-index:2" onclick="copy(\`${escQ(schemaStr)}\`,this)">Copy</button><div class="code-box">${esc(schemaStr)}</div></div>`,delay+=.07));
-  const og=d.openGraph||{};const tw=d.twitter||{};const urlSlug=`yoursite.com/blog/${d.slug||''}`;
-  const ogCode=`<meta property="og:title" content="${esc(og.title||'')}">\n<meta property="og:description" content="${esc(og.description||'')}">\n<meta property="og:type" content="article">\n<meta property="og:url" content="https://${urlSlug}">`;
-  const twCode=`<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="${esc(tw.title||'')}">\n<meta name="twitter:description" content="${esc(tw.description||'')}">`;
-  const il=d.internalLinks||{};
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon cyan">📲</div><div><div class="bh-title">Social & OG Tags</div><div class="bh-sub">Open Graph + Twitter Card</div></div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Google Search Preview</span></div><div class="g-prev"><div class="g-url">🔒 <span>${esc(urlSlug)}</span></div><div class="g-title">${esc(d.titles?.[0]||d.keyword)}</div><div class="g-desc">${esc(d.metaDescription||'')}</div></div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Open Graph Tags</span><button class="cbtn" onclick="copy(\`${escQ(ogCode)}\`,this)">Copy</button></div><div class="obox-val mono">${esc(ogCode)}</div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Twitter Card Tags</span><button class="cbtn" onclick="copy(\`${escQ(twCode)}\`,this)">Copy</button></div><div class="obox-val mono">${esc(twCode)}</div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Internal Linking</span></div><div class="obox-val" style="margin-bottom:10px">${esc(il.strategy||'')}</div><div class="chip-wrap">${(il.anchors||[]).map(a=>`<div class="chip q" onclick="navigator.clipboard.writeText('${esc(a)}')">${esc(a)}<span class="tag">ANCHOR</span></div>`).join('')}</div></div>`,delay+=.07));
-  parts.push(block(`
-    <div class="bh"><div class="bh-icon green">✅</div><div><div class="bh-title">40-Point SEO Publish Checklist</div><div class="bh-sub">Tick off before you hit Publish</div></div></div>
-    <div class="cl-stats"><div><div class="cl-pct" id="clPct">0%</div><div class="cl-of" id="clOf">0 / 40 complete</div></div><div class="pr-legend"><div class="pr-leg-item"><div class="pr-dot critical"></div>Critical</div><div class="pr-leg-item"><div class="pr-dot high"></div>High</div><div class="pr-leg-item"><div class="pr-dot medium"></div>Medium</div></div></div>
-    <div class="cl-bar-wrap"><div class="cl-bar" id="clBar" style="width:0%"></div></div>
-    <div class="cl-cats" id="clCats"></div>
-    <div class="cl-list" id="clList"></div>`,delay+=.08));
-  out.innerHTML=parts.join('');
+    <div class="divider">Conclusion</div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Conclusion</span><button class="cbtn" onclick="copy(\`${escQ(ol.conclusion||'')}\`,this)">Copy</button></div><div class="obox-val">${esc(ol.conclusion||'')}</div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Call To Action</span><button class="cbtn" onclick="copy(\`${escQ(ol.cta||'')}\`,this)">Copy</button></div><div class="obox-val">${esc(ol.cta||'')}</div></div>
+  </div>`);
+
+  // Alt Texts
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label green">Images</div><div><div class="bh-title">Image Alt Texts</div><div class="bh-sub">5 keyword-rich alt attributes ready to use</div></div></div>
+    <div class="obox">${(d.altTexts||[]).map((a,i)=>`<div class="alt-row"><div class="alt-n">${i+1}</div><div class="alt-text">${esc(a)}</div><button class="cbtn" style="margin-left:8px;flex-shrink:0" onclick="copy(\`${escQ(a)}\`,this)">Copy</button></div>`).join('')}</div>
+  </div>`);
+
+  // Snippets
+  const sn = d.snippets||{}; const tbl = sn.table||{};
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label amber">Snippets</div><div><div class="bh-title">Featured Snippet Optimization</div><div class="bh-sub">Win Position Zero on Google</div></div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Paragraph Snippet (40–50 words)</span><button class="cbtn" onclick="copy(\`${escQ(sn.paragraph||'')}\`,this)">Copy</button></div><div style="position:relative;margin-top:10px"><div class="snippet-pill">Featured Snippet</div><div class="snippet-card">${esc(sn.paragraph||'')}</div></div></div>
+    ${tbl.headers?`<div class="obox"><div class="obox-header"><span class="obox-lbl">Table Snippet — ${esc(tbl.caption||'')}</span></div><div style="overflow-x:auto"><table class="seo-tbl"><thead><tr>${(tbl.headers||[]).map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${(tbl.rows||[]).map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`:''}
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">FAQ Snippets</span></div>${(sn.faqs||[]).map(f=>`<div class="faq-item"><div class="faq-q">${esc(f.q)}</div><div class="faq-a">${esc(f.a)}</div></div>`).join('')}</div>
+  </div>`);
+
+  // Schema
+  let schemaStr='{}';
+  try{ schemaStr = JSON.stringify(JSON.parse(d.schema?.code||'{}'),null,2); }catch{ schemaStr = d.schema?.code||''; }
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label purple">Schema</div><div><div class="bh-title">JSON-LD Schema Markup</div><div class="bh-sub">${esc(d.schema?.type||'Article')} — paste in &lt;script type="application/ld+json"&gt;</div></div></div>
+    <div style="position:relative"><button class="cbtn" style="position:absolute;top:10px;right:10px;z-index:2" onclick="copy(\`${escQ(schemaStr)}\`,this)">Copy</button><div class="code-block">${esc(schemaStr)}</div></div>
+  </div>`);
+
+  // Social + OG
+  const og = d.openGraph||{}; const tw = d.twitter||{}; const urlSlug = `yoursite.com/blog/${d.slug||''}`;
+  const ogCode = `<meta property="og:title" content="${esc(og.title||'')}">\n<meta property="og:description" content="${esc(og.description||'')}">\n<meta property="og:type" content="article">\n<meta property="og:url" content="https://${urlSlug}">`;
+  const twCode = `<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="${esc(tw.title||'')}">\n<meta name="twitter:description" content="${esc(tw.description||'')}">`;
+  const il = d.internalLinks||{};
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label cyan">Social</div><div><div class="bh-title">Social & Open Graph</div><div class="bh-sub">SERP preview + OG + Twitter Card</div></div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Google Search Preview</span></div><div class="serp-card"><div class="serp-url">https://${esc(urlSlug)}</div><div class="serp-title">${esc(d.titles?.[0]||d.keyword)}</div><div class="serp-desc">${esc(d.metaDescription||'')}</div></div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Open Graph Tags</span><button class="cbtn" onclick="copy(\`${escQ(ogCode)}\`,this)">Copy</button></div><div class="obox-val mono">${esc(ogCode)}</div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Twitter Card Tags</span><button class="cbtn" onclick="copy(\`${escQ(twCode)}\`,this)">Copy</button></div><div class="obox-val mono">${esc(twCode)}</div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Internal Linking Strategy</span></div><div class="obox-val" style="margin-bottom:10px">${esc(il.strategy||'')}</div><div class="chip-row">${(il.anchors||[]).map(a=>`<div class="chip q" onclick="navigator.clipboard.writeText('${esc(a)}')">${esc(a)}<span class="ct">ANCHOR</span></div>`).join('')}</div></div>
+  </div>`);
+
+  // Checklist
+  parts.push(`<div class="block">
+    <div class="bh"><div class="bh-label green">Checklist</div><div><div class="bh-title">40-Point Publish Checklist</div><div class="bh-sub">Tick off before you hit Publish</div></div></div>
+    <div class="cl-stats">
+      <div><div class="cl-percent" id="clPct">0%</div><div class="cl-fraction" id="clOf">0 / 40 complete</div></div>
+      <div class="priority-legend">
+        <div class="legend-item"><div class="pr-pip critical"></div>Critical</div>
+        <div class="legend-item"><div class="pr-pip high"></div>High</div>
+        <div class="legend-item"><div class="pr-pip medium"></div>Medium</div>
+      </div>
+    </div>
+    <div class="cl-bar-track"><div class="cl-bar-fill" id="clBar" style="width:0%"></div></div>
+    <div class="cl-filter" id="clCats"></div>
+    <div class="cl-list" id="clList"></div>
+  </div>`);
+
+  out.innerHTML = parts.join('');
   buildChecklist();
-  document.querySelectorAll('.block').forEach(el=>ro.observe(el));
+  document.querySelectorAll('.block').forEach(el => ro.observe(el));
 }
 
+/* ── RENDER RANK MATH ── */
 function renderRankMath(d){
-  const out=$('results');
-  const rm=d.rankMathGuide||{};
+  const out = $i('results');
+  const rm = d.rankMathGuide||{};
   function rmSec(title,items,col){
     if(!items?.length) return '';
-    return `<div class="obox" style="margin-bottom:12px">
-      <div class="obox-top" style="margin-bottom:10px"><span class="obox-lbl" style="color:${col||'var(--t3)'}">${title}</span></div>
+    return `<div class="obox" style="margin-bottom:10px">
+      <div class="obox-header" style="margin-bottom:10px"><span class="obox-lbl" style="color:${col||'var(--ink3)'}">${title}</span></div>
       ${items.map(item=>`<div style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)">
-        <div class="pr-dot ${item.status==='required'?'critical':'medium'}" style="margin-top:5px;flex-shrink:0"></div>
+        <div class="pr-pip ${item.status==='required'?'critical':'medium'}" style="margin-top:5px;flex-shrink:0"></div>
         <div style="flex:1">
-          <div style="font-size:13px;font-weight:600;color:var(--t1);margin-bottom:3px;font-family:'DM Sans',sans-serif;">${esc(item.item)}</div>
-          ${item.value?`<div style="font-size:12px;color:var(--cyan);background:var(--card3);border-radius:6px;padding:5px 10px;margin:4px 0;font-family:'Syne Mono',monospace;word-break:break-all">${esc(item.value)}</div>`:''}
-          ${item.tip?`<div style="font-size:12px;color:var(--t3);font-family:'DM Sans',sans-serif;">${esc(item.tip)}</div>`:''}
+          <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px">${esc(item.item)}</div>
+          ${item.value?`<div style="font-size:11.5px;font-family:'Martian Mono',monospace;color:#5af;background:var(--surface3);border-radius:5px;padding:4px 10px;margin:3px 0;word-break:break-all">${esc(item.value)}</div>`:''}
+          ${item.tip?`<div style="font-size:12px;color:var(--ink3)">${esc(item.tip)}</div>`:''}
         </div>
         ${item.value?`<button class="cbtn" onclick="copy(\`${escQ(item.value)}\`,this)">Copy</button>`:''}
       </div>`).join('')}
     </div>`;
   }
   out.innerHTML=`<div class="block">
-    <div class="bh"><div class="bh-icon blue">📊</div><div><div class="bh-title">Rank Math Optimization Guide</div><div class="bh-sub">For: "${esc(d.keyword)}"</div></div></div>
-    ${rmSec('🔴 Basic SEO — 6 Required Checks',rm.basicSEO,'var(--red)')}
-    <div class="sdiv">Title Options (5)</div>
-    <div class="opts" style="margin-bottom:14px">${(rm.titleOptions||[]).map((t,i)=>`
-      <div class="opt" onclick="selOpt(this,'title',\`${escQ(t.title||'')}\`)">
+    <div class="bh"><div class="bh-label blue">Rank Math</div><div><div class="bh-title">Rank Math Optimization Guide</div><div class="bh-sub">For: "${esc(d.keyword)}"</div></div></div>
+    ${rmSec('Basic SEO — 6 Required Checks',rm.basicSEO,'var(--red)')}
+    <div class="divider">Title Options</div>
+    <div class="opt-list" style="margin-bottom:14px">${(rm.titleOptions||[]).map((t,i)=>`
+      <div class="opt-item" onclick="selOpt(this,'title',\`${escQ(t.title||'')}\`)">
         <div class="opt-n">${i+1}</div>
-        <div style="flex:1"><div class="opt-txt">${esc(t.title||'')}</div>
-          <div style="font-size:11px;color:var(--t3);margin-top:2px;font-family:'DM Sans',sans-serif;">${(t.title||'').length} chars · ${esc(t.sentiment||'')} · ${esc(t.powerWord||'—')}</div>
+        <div style="flex:1">
+          <div class="opt-txt">${esc(t.title||'')}</div>
+          <div style="font-size:11px;color:var(--ink3);margin-top:2px;font-family:'Martian Mono',monospace">${(t.title||'').length}ch · ${esc(t.sentiment||'')} · ${esc(t.powerWord||'—')}</div>
         </div>
         <button class="cbtn" onclick="event.stopPropagation();copy(\`${escQ(t.title||'')}\`,this)">Copy</button>
       </div>`).join('')}</div>
-    <div class="obox" style="margin-bottom:10px"><div class="obox-top"><span class="obox-lbl">Meta Description</span><button class="cbtn" onclick="copy(\`${escQ(rm.metaDescription||'')}\`,this)">Copy</button></div><div class="obox-val">${esc(rm.metaDescription||'')}</div>${charBar((rm.metaDescription||'').length,140,158)}</div>
-    <div class="obox" style="margin-bottom:10px"><div class="obox-top"><span class="obox-lbl">URL Slug</span><button class="cbtn" onclick="copy(\`${escQ(rm.urlSlug||'')}\`,this)">Copy</button></div><div class="obox-val mono">/${esc(rm.urlSlug||'')}</div></div>
-    <div class="obox" style="margin-bottom:10px"><div class="obox-top"><span class="obox-lbl">H1 Tag</span><button class="cbtn" onclick="copy(\`${escQ(rm.h1||'')}\`,this)">Copy</button></div><div class="obox-val large">${esc(rm.h1||'')}</div></div>
-    ${rmSec('🟡 Additional SEO Checks',rm.additionalChecks,'var(--amber)')}
-    ${rmSec('📝 Title Readability',rm.titleReadability,'var(--purple)')}
-    ${rmSec('📖 Content Readability',rm.contentReadability,'var(--cyan)')}
-    <div class="sdiv">Schema for Rank Math</div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">JSON-LD Schema</span><button class="cbtn" onclick="copy(\`${escQ(d.schemaForRankMath||'')}\`,this)">Copy</button></div><div class="code-box">${esc(d.schemaForRankMath||'')}</div></div>
+    <div class="obox" style="margin-bottom:8px"><div class="obox-header"><span class="obox-lbl">Meta Description</span><button class="cbtn" onclick="copy(\`${escQ(rm.metaDescription||'')}\`,this)">Copy</button></div><div class="obox-val">${esc(rm.metaDescription||'')}</div>${charBar((rm.metaDescription||'').length,140,158)}</div>
+    <div class="obox" style="margin-bottom:8px"><div class="obox-header"><span class="obox-lbl">URL Slug</span><button class="cbtn" onclick="copy(\`${escQ(rm.urlSlug||'')}\`,this)">Copy</button></div><div class="obox-val mono">/${esc(rm.urlSlug||'')}</div></div>
+    <div class="obox" style="margin-bottom:8px"><div class="obox-header"><span class="obox-lbl">H1 Tag</span><button class="cbtn" onclick="copy(\`${escQ(rm.h1||'')}\`,this)">Copy</button></div><div class="obox-val large">${esc(rm.h1||'')}</div></div>
+    ${rmSec('Additional SEO Checks',rm.additionalChecks,'var(--amber)')}
+    ${rmSec('Title Readability',rm.titleReadability,'#b080ff')}
+    ${rmSec('Content Readability',rm.contentReadability,'#00c8dc')}
+    <div class="divider">Schema for Rank Math</div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">JSON-LD Schema</span><button class="cbtn" onclick="copy(\`${escQ(d.schemaForRankMath||'')}\`,this)">Copy</button></div><div class="code-block">${esc(d.schemaForRankMath||'')}</div></div>
   </div>`;
 }
 
+/* ── RENDER COMPETITOR ── */
 function renderCompetitor(d){
-  const out=$('results');
-  const ci=d.competitorInsights||{};const gaps=d.contentGaps||[];const kg=d.keywordGaps||{};const ws=d.winningStrategy||{};
-  function chips(arr,type){return(arr||[]).map(k=>`<div class="chip ${type}" onclick="navigator.clipboard.writeText('${esc(k)}')">${esc(k)}<span class="tag">${type.toUpperCase()}</span></div>`).join('');}
+  const out = $i('results');
+  const ci = d.competitorInsights||{}; const gaps = d.contentGaps||[]; const kg = d.keywordGaps||{}; const ws = d.winningStrategy||{};
+  function chips(arr,type){return(arr||[]).map(k=>`<div class="chip ${type}" onclick="navigator.clipboard.writeText('${esc(k)}')">${esc(k)}<span class="ct">${type.toUpperCase()}</span></div>`).join('');}
   out.innerHTML=`<div class="block">
-    <div class="bh"><div class="bh-icon red">🔍</div><div><div class="bh-title">Competitor Gap Analysis</div><div class="bh-sub">For: "${esc(d.keyword)}"</div></div></div>
-    <div class="ov-grid" style="margin-bottom:14px">
-      <div class="ov-card"><div class="ov-label">Avg Word Count</div><div class="ov-val amber">${esc(ci.avgWordCount||'—')}</div></div>
-      <div class="ov-card"><div class="ov-label">Common Schema</div><div class="ov-val">${(ci.commonSchemaUsed||[]).join(', ')||'—'}</div></div>
-      <div class="ov-card"><div class="ov-label">Content Types</div><div class="ov-val">${(ci.commonContentTypes||[]).join(', ')||'—'}</div></div>
-      <div class="ov-card"><div class="ov-label">Gaps Found</div><div class="ov-val green">${gaps.length}</div></div>
+    <div class="bh"><div class="bh-label" style="background:var(--red-dim);color:var(--red);border:1px solid rgba(240,48,96,.2)">Gaps</div><div><div class="bh-title">Competitor Gap Analysis</div><div class="bh-sub">For: "${esc(d.keyword)}"</div></div></div>
+    <div class="metrics-grid" style="margin-bottom:14px">
+      <div class="metric"><div class="metric-lbl">Avg Word Count</div><div class="metric-val amber">${esc(ci.avgWordCount||'—')}</div></div>
+      <div class="metric"><div class="metric-lbl">Common Schema</div><div class="metric-val">${(ci.commonSchemaUsed||[]).join(', ')||'—'}</div></div>
+      <div class="metric"><div class="metric-lbl">Content Types</div><div class="metric-val">${(ci.commonContentTypes||[]).join(', ')||'—'}</div></div>
+      <div class="metric"><div class="metric-lbl">Gaps Found</div><div class="metric-val green">${gaps.length}</div></div>
     </div>
-    <div class="sdiv">Content Gaps to Exploit</div>
-    <div style="display:flex;flex-direction:column;gap:8px">
-      ${gaps.map((g,i)=>`<div style="display:flex;align-items:flex-start;gap:12px;padding:13px;background:var(--card2);border:1px solid var(--border);border-radius:10px">
-        <div style="font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:var(--border2);flex-shrink:0;line-height:1;margin-top:2px">${i+1}</div>
+    <div class="divider">Content Gaps to Exploit</div>
+    <div style="display:flex;flex-direction:column;gap:7px">
+      ${gaps.map((g,i)=>`<div style="display:flex;align-items:flex-start;gap:12px;padding:13px;background:var(--surface2);border:1px solid var(--border);border-radius:8px">
+        <div style="font-family:'Fraunces',serif;font-size:24px;font-weight:900;font-style:italic;color:var(--border2);flex-shrink:0;line-height:1;margin-top:2px">${i+1}</div>
         <div style="flex:1">
-          <div style="font-size:13px;font-weight:600;color:var(--t1);margin-bottom:4px;font-family:'DM Sans',sans-serif;">${esc(g.gap)}</div>
-          <div style="font-size:13px;color:var(--t2);margin-bottom:4px;font-family:'DM Sans',sans-serif;">${esc(g.opportunity)}</div>
-          <div style="font-size:12px;color:var(--accent2);font-style:italic;font-family:'DM Sans',sans-serif;">Angle: ${esc(g.angle)}</div>
+          <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px">${esc(g.gap)}</div>
+          <div style="font-size:13px;color:var(--ink2);margin-bottom:3px">${esc(g.opportunity)}</div>
+          <div style="font-size:12px;color:var(--accent);font-style:italic">Angle: ${esc(g.angle)}</div>
         </div>
-        <div style="font-size:10px;font-weight:600;padding:3px 9px;border-radius:100px;flex-shrink:0;font-family:'DM Sans',sans-serif;${g.priority==='High'?'background:rgba(240,64,96,.12);color:var(--red);border:1px solid rgba(240,64,96,.2)':'background:rgba(245,166,35,.1);color:var(--amber);border:1px solid rgba(245,166,35,.2)'}">${esc(g.priority)}</div>
+        <div style="font-size:9px;font-weight:700;letter-spacing:.5px;padding:3px 9px;border-radius:3px;flex-shrink:0;font-family:'Martian Mono',monospace;${g.priority==='High'?'background:var(--red-dim);color:var(--red);border:1px solid rgba(240,48,96,.2)':'background:var(--amber-dim);color:var(--amber);border:1px solid rgba(240,160,48,.2)'}">${esc(g.priority)}</div>
       </div>`).join('')}
     </div>
-    <div class="sdiv">Keyword Gaps</div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Missing LSI</span></div><div class="chip-wrap">${chips(kg.missingLSI,'lsi')}</div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Missing Long-Tail</span></div><div class="chip-wrap">${chips(kg.missingLongTail,'lt')}</div></div>
-    <div class="obox"><div class="obox-top"><span class="obox-lbl">Unanswered Questions</span></div><div class="chip-wrap">${chips(kg.missingQuestions,'q')}</div></div>
-    <div class="obox" style="border-color:rgba(15,207,111,.25);margin-top:12px">
-      <div style="font-size:15px;font-weight:700;color:var(--green);margin-bottom:10px;font-family:'Syne',sans-serif;">🏆 How to Outrank</div>
-      <div style="margin-bottom:8px"><div style="font-size:10px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;font-family:'DM Sans',sans-serif;">Unique Angle</div><div style="font-size:13px;font-family:'DM Sans',sans-serif;">${esc(ws.uniqueAngle||'')}</div></div>
-      <div style="margin-bottom:8px"><div style="font-size:10px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;font-family:'DM Sans',sans-serif;">Differentiator</div><div style="font-size:13px;font-family:'DM Sans',sans-serif;">${esc(ws.differentiator||'')}</div></div>
-      ${(ws.mustInclude||[]).map((m,i)=>`<div style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:1px dashed var(--border);font-size:13px;color:var(--t2);font-family:'DM Sans',sans-serif;"><span style="color:var(--t3);flex-shrink:0;font-size:10px;margin-top:3px">${i+1}</span>${esc(m)}</div>`).join('')}
+    <div class="divider">Keyword Gaps</div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Missing LSI</span></div><div class="chip-row">${chips(kg.missingLSI,'lsi')}</div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Missing Long-Tail</span></div><div class="chip-row">${chips(kg.missingLongTail,'lt')}</div></div>
+    <div class="obox"><div class="obox-header"><span class="obox-lbl">Unanswered Questions</span></div><div class="chip-row">${chips(kg.missingQuestions,'q')}</div></div>
+    <div class="obox" style="border-color:rgba(0,196,110,.2);margin-top:10px">
+      <div style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--green);margin-bottom:10px">How to Outrank</div>
+      <div style="margin-bottom:8px"><div style="font-size:10px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px">Unique Angle</div><div style="font-size:13px">${esc(ws.uniqueAngle||'')}</div></div>
+      <div style="margin-bottom:8px"><div style="font-size:10px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px">Differentiator</div><div style="font-size:13px">${esc(ws.differentiator||'')}</div></div>
+      ${(ws.mustInclude||[]).map((m,i)=>`<div style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:1px dashed var(--border);font-size:13px;color:var(--ink2)"><span style="font-family:'Martian Mono',monospace;font-size:10px;color:var(--ink3);flex-shrink:0;margin-top:2px">${i+1}</span>${esc(m)}</div>`).join('')}
     </div>
   </div>`;
 }
 
+/* ── RENDER BRIEF ── */
 function renderBrief(d){
-  const out=$('results');
-  const ap=d.audiencePersona||{};const eo=d.editorialNotes||{};
+  const out = $i('results');
+  const ap = d.audiencePersona||{};
   out.innerHTML=`<div class="block">
-    <div class="bh"><div class="bh-icon purple">📝</div><div><div class="bh-title">Content Brief</div><div class="bh-sub">${esc(d.keyword)} · ${esc(d.estimatedWordCount||'')}</div></div></div>
-    <div class="obox" style="margin-bottom:10px"><div class="obox-top"><span class="obox-lbl">Content Goal</span></div><div class="obox-val large">${esc(d.contentGoal||'')}</div></div>
-    <div class="obox" style="margin-bottom:10px"><div class="obox-top"><span class="obox-lbl">Suggested Title</span><button class="cbtn" onclick="copy(\`${escQ(d.suggestedTitle||'')}\`,this)">Copy</button></div><div class="obox-val large">${esc(d.suggestedTitle||'')}</div></div>
-    <div class="obox" style="margin-bottom:10px"><div class="obox-top"><span class="obox-lbl">Unique Angle</span></div><div class="obox-val" style="color:var(--accent2);font-weight:500">${esc(d.contentAngle||'')}</div></div>
-    <div class="sdiv">Target Audience</div>
-    <div class="obox" style="margin-bottom:10px">
-      <div style="font-size:13px;margin-bottom:8px;font-family:'DM Sans',sans-serif;">${esc(ap.who||'')}</div>
-      ${(ap.painPoints||[]).map(p=>`<div style="display:flex;gap:8px;padding:4px 0;font-size:13px;color:var(--t2);font-family:'DM Sans',sans-serif;"><span style="color:var(--red)">→</span>${esc(p)}</div>`).join('')}
+    <div class="bh"><div class="bh-label purple">Brief</div><div><div class="bh-title">Content Brief</div><div class="bh-sub">${esc(d.keyword)} · ${esc(d.estimatedWordCount||'')}</div></div></div>
+    <div class="obox" style="margin-bottom:8px"><div class="obox-header"><span class="obox-lbl">Content Goal</span></div><div class="obox-val large">${esc(d.contentGoal||'')}</div></div>
+    <div class="obox" style="margin-bottom:8px"><div class="obox-header"><span class="obox-lbl">Suggested Title</span><button class="cbtn" onclick="copy(\`${escQ(d.suggestedTitle||'')}\`,this)">Copy</button></div><div class="obox-val large">${esc(d.suggestedTitle||'')}</div></div>
+    <div class="obox" style="margin-bottom:8px"><div class="obox-header"><span class="obox-lbl">Unique Angle</span></div><div class="obox-val" style="color:var(--accent)">${esc(d.contentAngle||'')}</div></div>
+    <div class="divider">Target Audience</div>
+    <div class="obox" style="margin-bottom:8px">
+      <div style="font-size:13px;margin-bottom:8px">${esc(ap.who||'')}</div>
+      ${(ap.painPoints||[]).map(p=>`<div style="display:flex;gap:8px;padding:4px 0;font-size:13px;color:var(--ink2)"><span style="color:var(--red);flex-shrink:0">→</span>${esc(p)}</div>`).join('')}
     </div>
-    <div class="sdiv">Outline</div>
-    <div class="obox" style="margin-bottom:10px">
+    <div class="divider">Article Outline</div>
+    <div class="obox" style="margin-bottom:8px">
       ${(d.outline||[]).map((s,i)=>`
         <div style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-            <span style="font-size:9px;font-weight:700;color:var(--accent2);background:rgba(79,110,247,.1);padding:2px 8px;border-radius:4px;font-family:'DM Sans',sans-serif;">${i===0?'INTRO':i===(d.outline.length-1)?'CONCLUSION':'H2'}</span>
-            <span style="font-size:13px;font-weight:600;font-family:'DM Sans',sans-serif;">${esc(s.section)}</span>
+            <span style="font-size:9px;font-weight:700;font-family:'Martian Mono',monospace;color:var(--accent);background:var(--accent-dim);padding:2px 7px;border-radius:3px">${i===0?'INTRO':i===(d.outline.length-1)?'OUTRO':'H2'}</span>
+            <span style="font-size:13px;font-weight:600">${esc(s.section)}</span>
           </div>
-          ${(s.keyPoints||[]).map(p=>`<div style="display:flex;gap:8px;padding:3px 0;font-size:13px;color:var(--t2);font-family:'DM Sans',sans-serif;"><span>•</span>${esc(p)}</div>`).join('')}
+          ${(s.keyPoints||[]).map(p=>`<div style="display:flex;gap:8px;padding:3px 0;font-size:13px;color:var(--ink2)"><span style="color:var(--ink3)">·</span>${esc(p)}</div>`).join('')}
         </div>`).join('')}
     </div>
-    <div class="ov-grid" style="margin-top:10px">
-      <div class="ov-card"><div class="ov-label">Word Count</div><div class="ov-val amber">${esc(d.estimatedWordCount||'—')}</div></div>
-      <div class="ov-card"><div class="ov-label">Primary CTA</div><div class="ov-val">${esc(d.primaryCTA||'—')}</div></div>
-      <div class="ov-card"><div class="ov-label">Deadline</div><div class="ov-val">${esc(d.deadline||'—')}</div></div>
-      <div class="ov-card"><div class="ov-label">Success Metric</div><div class="ov-val">${esc(d.successMetric||'—')}</div></div>
+    <div class="metrics-grid">
+      <div class="metric"><div class="metric-lbl">Word Count</div><div class="metric-val amber">${esc(d.estimatedWordCount||'—')}</div></div>
+      <div class="metric"><div class="metric-lbl">Primary CTA</div><div class="metric-val">${esc(d.primaryCTA||'—')}</div></div>
+      <div class="metric"><div class="metric-lbl">Deadline</div><div class="metric-val">${esc(d.deadline||'—')}</div></div>
+      <div class="metric"><div class="metric-lbl">Success Metric</div><div class="metric-val">${esc(d.successMetric||'—')}</div></div>
     </div>
   </div>`;
 }
 
+/* ── RENDER WORDPRESS ── */
 function renderWordPress(d){
-  const out=$('results');
-  function wpSec(title,icon,items,col){
+  const out = $i('results');
+  function wpSec(title,items,col){
     if(!items?.length) return '';
-    return `<div class="obox" style="margin-bottom:12px">
-      <div class="obox-top" style="margin-bottom:10px"><span class="obox-lbl" style="color:${col||'var(--t3)'}">${icon} ${title}</span></div>
+    return `<div class="obox" style="margin-bottom:10px">
+      <div class="obox-header" style="margin-bottom:10px"><span class="obox-lbl" style="color:${col||'var(--ink3)'}">${title}</span></div>
       ${items.map(item=>`<div style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)">
-        <div class="pr-dot ${item.priority==='critical'?'critical':item.priority==='high'?'high':'medium'}" style="margin-top:5px;flex-shrink:0"></div>
+        <div class="pr-pip ${item.priority==='critical'?'critical':item.priority==='high'?'high':'medium'}" style="margin-top:5px;flex-shrink:0"></div>
         <div style="flex:1">
-          <div style="font-size:13px;font-weight:600;color:var(--t1);margin-bottom:2px;font-family:'DM Sans',sans-serif;">${esc(item.task||item.setting||'')}</div>
-          ${item.value?`<div style="font-size:12px;color:var(--cyan);background:var(--card3);border-radius:6px;padding:4px 10px;margin:3px 0;font-family:'Syne Mono',monospace;word-break:break-all">${esc(item.value)}</div>`:''}
-          <div style="font-size:12px;color:var(--t3);font-family:'DM Sans',sans-serif;">${esc(item.how||item.where||'')}</div>
+          <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px">${esc(item.task||item.setting||'')}</div>
+          ${item.value?`<div style="font-size:11.5px;font-family:'Martian Mono',monospace;color:#5af;background:var(--surface3);border-radius:5px;padding:4px 10px;margin:3px 0;word-break:break-all">${esc(item.value)}</div>`:''}
+          <div style="font-size:12px;color:var(--ink3)">${esc(item.how||item.where||'')}</div>
         </div>
         ${item.value||item.setting?`<button class="cbtn" onclick="copy(\`${escQ(item.value||item.setting||'')}\`,this)">Copy</button>`:''}
       </div>`).join('')}
     </div>`;
   }
   out.innerHTML=`<div class="block">
-    <div class="bh"><div class="bh-icon blue">🔧</div><div><div class="bh-title">WordPress SEO Checklist</div><div class="bh-sub">For: "${esc(d.keyword)}"</div></div></div>
-    ${wpSec('Pre-Writing Setup','⚙️',d.preWriting,'var(--cyan)')}
-    ${wpSec('While Writing','✍️',d.whileWriting,'var(--accent2)')}
-    ${wpSec('Rank Math Settings','📊',d.rankMathSettings,'var(--purple)')}
-    ${wpSec('Pre-Publish Checks','🔍',d.prePublish,'var(--amber)')}
-    ${wpSec('Post-Publish Actions','🚀',d.postPublish,'var(--green)')}
+    <div class="bh"><div class="bh-label blue">WordPress</div><div><div class="bh-title">WordPress SEO Checklist</div><div class="bh-sub">For: "${esc(d.keyword)}"</div></div></div>
+    ${wpSec('Pre-Writing Setup',d.preWriting,'#00c8dc')}
+    ${wpSec('While Writing',d.whileWriting,'var(--accent)')}
+    ${wpSec('Rank Math Settings',d.rankMathSettings,'#b080ff')}
+    ${wpSec('Pre-Publish Checks',d.prePublish,'var(--amber)')}
+    ${wpSec('Post-Publish Actions',d.postPublish,'var(--green)')}
   </div>`;
 }
 
+/* ── HELPERS ── */
 function toggleH2(el){
-  const ch=el.nextElementSibling;const tog=el.querySelector('.h2-toggle');
-  if(ch.style.display==='none'){ch.style.display='flex';tog.textContent='▼';}
-  else{ch.style.display='none';tog.textContent='▶';}
+  const ch = el.nextElementSibling; const tog = el.querySelector('.h2-arrow');
+  if(ch.style.display==='none'){ ch.style.display='flex'; tog.textContent='▼'; }
+  else{ ch.style.display='none'; tog.textContent='▶'; }
 }
-function selOpt(el,type,val){
-  el.closest('.opts').querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
+function selOpt(el, type, val){
+  el.closest('.opt-list').querySelectorAll('.opt-item').forEach(o => o.classList.remove('sel'));
   el.classList.add('sel');
-  if(type==='title'){
-    const out=$('selTitleOut');if(!out)return;
-    out.style.display='block';
-    $('selTitleVal').textContent=val;
-    $('selTitleChars').innerHTML=charBar(val.length,40,60);
-    $('selTitleCopy').onclick=function(){copy(val,this);};
+  if(type === 'title'){
+    const out = $i('selTitleOut'); if(!out) return;
+    out.style.display = 'block';
+    $i('selTitleVal').textContent = val;
+    $i('selTitleChars').innerHTML = charBar(val.length, 40, 60);
+    $i('selTitleCopy').onclick = function(){ copy(val, this); };
   }
 }
 function buildChecklist(){
-  const cats=['All',...new Set(clData.map(c=>c.cat))];
-  $('clCats').innerHTML=cats.map(c=>`<button class="cl-cat${c==='All'?' on':''}" onclick="filterCl('${c}',this)">${c}</button>`).join('');
+  const cats = ['All', ...new Set(clData.map(c => c.cat))];
+  $i('clCats').innerHTML = cats.map(c => `<button class="cl-filt${c==='All'?' on':''}" onclick="filterCl('${c}',this)">${c}</button>`).join('');
   renderCl();
 }
-function filterCl(cat,btn){
-  clFilter=cat==='All'?'all':cat;
-  document.querySelectorAll('.cl-cat').forEach(b=>b.classList.remove('on'));
-  btn.classList.add('on');renderCl();
+function filterCl(cat, btn){
+  clFilter = cat === 'All' ? 'all' : cat;
+  document.querySelectorAll('.cl-filt').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  renderCl();
 }
 function renderCl(){
-  const items=clFilter==='all'?clData:clData.filter(c=>c.cat===clFilter);
-  $('clList').innerHTML=items.map(c=>`<div class="cl-row${checkState[c.id]?' done':''}" onclick="tick('${c.id}')">
-    <div class="cl-box">${checkState[c.id]?'✓':''}</div>
-    <div class="cl-info"><div class="cl-cat-lbl">${esc(c.cat)}</div><div class="cl-task">${esc(c.task)}</div></div>
-    <div class="pr-dot ${c.priority||'medium'}"></div>
+  const items = clFilter === 'all' ? clData : clData.filter(c => c.cat === clFilter);
+  $i('clList').innerHTML = items.map(c => `<div class="cl-row${checkState[c.id]?' done':''}" onclick="tick('${c.id}')">
+    <div class="cl-check">${checkState[c.id]?'✓':''}</div>
+    <div class="cl-body"><div class="cl-cat-lbl">${esc(c.cat)}</div><div class="cl-task">${esc(c.task)}</div></div>
+    <div class="pr-pip ${c.priority||'medium'}"></div>
   </div>`).join('');
   updateProg();
 }
-function tick(id){checkState[id]=!checkState[id];renderCl();}
+function tick(id){ checkState[id] = !checkState[id]; renderCl(); }
 function updateProg(){
-  const tot=clData.length,done=Object.values(checkState).filter(Boolean).length;
-  const pct=tot?Math.round((done/tot)*100):0;
-  $('clPct').textContent=pct+'%';$('clOf').textContent=`${done} / ${tot} complete`;$('clBar').style.width=pct+'%';
+  const tot = clData.length, done = Object.values(checkState).filter(Boolean).length;
+  const pct = tot ? Math.round((done/tot)*100) : 0;
+  $i('clPct').textContent = pct + '%';
+  $i('clOf').textContent = `${done} / ${tot} complete`;
+  $i('clBar').style.width = pct + '%';
 }
 </script>
 </body>
