@@ -256,7 +256,7 @@ STRICT RULES:
           'Authorization': `Bearer ${GROQ_API_KEY}`
         },
         body: JSON.stringify({
-          model: 'llama-3.3-70b-versatile',
+          model: model: 'llama-3.1-8b-instant',
           temperature: attempt === 0 ? 0.3 : 0.2,
           max_tokens: 6000,
           response_format: { type: 'json_object' },
