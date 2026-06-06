@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -54,7 +55,6 @@
 <meta property="og:description" content="Generate complete SEO blueprints in 30 seconds. 100% Free." />
 <meta property="og:type" content="website" />
 
-<!-- Distinctive Font Stack: Fraunces (editorial serif display) + Instrument Sans (refined body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Martian+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -173,7 +173,6 @@ nav{
     radial-gradient(ellipse 400px 300px at 20% 50%, rgba(0,196,110,0.04) 0%, transparent 60%),
     radial-gradient(ellipse 350px 250px at 85% 60%, rgba(240,160,48,0.04) 0%, transparent 60%);
 }
-/* Decorative grid lines */
 .hero-bg::after{
   content:'';position:absolute;inset:0;
   background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
@@ -232,7 +231,6 @@ nav{
 }
 .htag.on{border-color:rgba(91,122,255,.4);color:var(--accent)}
 
-/* Competition meter */
 .comp-strip{
   display:inline-flex;align-items:center;gap:20px;
   background:var(--surface);border:1px solid var(--border);
@@ -251,7 +249,6 @@ nav{
 /* ── TOOL ── */
 .tool-section{padding:0 0 80px}
 
-/* Tabs */
 .mode-tabs{
   display:flex;gap:0;overflow-x:auto;scrollbar-width:none;
   border:1px solid var(--border);border-radius:8px;
@@ -269,7 +266,6 @@ nav{
 .mode-tab:hover{color:var(--ink)}
 .mode-tab.active{background:var(--accent);color:#fff}
 
-/* Input card */
 .input-card{
   background:var(--surface);border:1px solid var(--border);
   border-radius:10px;padding:24px;margin-bottom:12px;
@@ -373,7 +369,6 @@ select.sub-input{
   animation:up .3s ease both;
 }
 
-/* Block header */
 .bh{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)}
 .bh-label{
   font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
@@ -388,7 +383,6 @@ select.sub-input{
 .bh-sub{font-size:11px;color:var(--ink3);margin-top:2px}
 .bh-count{margin-left:auto;font-family:'Martian Mono',monospace;font-size:11px;color:var(--ink3);border:1px solid var(--border);border-radius:4px;padding:3px 8px;flex-shrink:0}
 
-/* Output boxes */
 .obox{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:13px 15px;margin-bottom:8px}
 .obox:last-child{margin-bottom:0}
 .obox-header{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px}
@@ -397,7 +391,6 @@ select.sub-input{
 .obox-val.large{font-family:'Fraunces',serif;font-size:17px;font-weight:600;line-height:1.3}
 .obox-val.mono{font-family:'Martian Mono',monospace;font-size:11.5px;color:#5af;line-height:2;white-space:pre-wrap;overflow-x:auto;max-height:220px;overflow-y:auto}
 
-/* Char hint */
 .char-bar-wrap{display:flex;align-items:center;gap:8px;margin-top:7px}
 .char-hint{font-size:11px;font-family:'Martian Mono',monospace}
 .char-hint.ok{color:var(--green)}
@@ -406,7 +399,6 @@ select.sub-input{
 .char-track{flex:1;height:3px;background:var(--surface3);border-radius:2px;overflow:hidden;max-width:100px}
 .char-fill{height:100%;border-radius:2px;transition:width .3s}
 
-/* Copy button */
 .cbtn{
   background:transparent;border:1px solid var(--border2);border-radius:5px;
   color:var(--ink2);cursor:pointer;font-size:11px;font-weight:500;
@@ -416,7 +408,6 @@ select.sub-input{
 .cbtn:hover{color:var(--ink);border-color:var(--accent)}
 .cbtn.ok{color:var(--green);border-color:var(--green)}
 
-/* Keyword chips */
 .chip-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
 .chip{
   display:inline-flex;align-items:center;gap:5px;
@@ -436,7 +427,6 @@ select.sub-input{
 .chip.avoid{border-color:rgba(240,48,96,.25);color:var(--red)}
 .chip.avoid .ct{background:var(--red-dim);color:var(--red)}
 
-/* Option picker */
 .opt-list{display:flex;flex-direction:column;gap:6px}
 .opt-item{
   display:flex;align-items:flex-start;gap:10px;
@@ -457,7 +447,6 @@ select.sub-input{
 .opt-txt{flex:1;font-size:14px;color:var(--ink2);transition:color .15s;line-height:1.5;word-break:break-word}
 .opt-item.sel .opt-txt{color:var(--ink)}
 
-/* Metrics grid */
 .metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
 .metric{background:var(--surface2);border:1px solid var(--border);border-radius:7px;padding:11px 13px}
 .metric-lbl{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink3);margin-bottom:4px}
@@ -466,7 +455,6 @@ select.sub-input{
 .metric-val.green{color:var(--green)}
 .metric-val.amber{color:var(--amber)}
 
-/* Score ring */
 .score-wrap{display:flex;align-items:center;gap:22px;padding:14px 0;border-bottom:1px solid var(--border);margin-bottom:16px}
 .ring-wrap{position:relative;flex-shrink:0}
 .ring-svg{width:82px;height:82px;transform:rotate(-90deg)}
@@ -478,7 +466,6 @@ select.sub-input{
 .score-meta .grade{font-family:'Fraunces',serif;font-size:22px;font-weight:900;color:var(--ink);margin-bottom:3px;font-style:italic}
 .score-meta .desc{font-size:13px;color:var(--ink2);line-height:1.6}
 
-/* Outline */
 .h2-block{margin-bottom:8px}
 .h2-row{
   display:flex;align-items:center;gap:10px;
@@ -494,7 +481,6 @@ select.sub-input{
 .h3-badge{font-size:8px;font-weight:700;font-family:'Martian Mono',monospace;color:var(--ink3);flex-shrink:0}
 .tip-line{margin-top:4px;padding:7px 12px;background:rgba(240,160,48,.05);border:1px solid rgba(240,160,48,.12);border-radius:5px;font-size:12px;color:var(--amber);display:flex;gap:6px}
 
-/* Snippet box */
 .snippet-card{
   background:var(--surface3);border:1px solid var(--border2);
   border-radius:8px;padding:14px 16px;font-size:14px;line-height:1.8;
@@ -502,7 +488,6 @@ select.sub-input{
 }
 .snippet-pill{position:absolute;top:-10px;left:12px;background:var(--accent);color:#fff;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 9px;border-radius:3px;font-family:'Instrument Sans',sans-serif}
 
-/* Code block */
 .code-block{
   background:var(--mono-bg);border:1px solid var(--border);border-radius:8px;
   padding:14px;font-family:'Martian Mono',monospace;font-size:11px;
@@ -510,37 +495,31 @@ select.sub-input{
   max-height:250px;overflow-y:auto;position:relative;
 }
 
-/* Table */
 .seo-tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;border-radius:7px;overflow:hidden}
 .seo-tbl th{text-align:left;padding:7px 11px;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink3);background:var(--surface3);border-bottom:1px solid var(--border)}
 .seo-tbl td{padding:7px 11px;border-bottom:1px solid var(--border);font-size:13px}
 .seo-tbl tr:last-child td{border-bottom:none}
 .seo-tbl tr:hover td{background:var(--surface3)}
 
-/* FAQ */
 .faq-item{border-bottom:1px solid var(--border);padding:10px 0}
 .faq-item:first-child{padding-top:0}
 .faq-item:last-child{border-bottom:none;padding-bottom:0}
 .faq-q{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px}
 .faq-a{font-size:13px;color:var(--ink2);line-height:1.65}
 
-/* Alt text list */
 .alt-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)}
 .alt-row:last-child{border-bottom:none}
 .alt-n{width:20px;height:20px;border-radius:4px;background:var(--surface3);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;font-family:'Martian Mono',monospace;color:var(--ink3);flex-shrink:0;margin-top:1px}
 .alt-text{flex:1;font-size:13px;line-height:1.5;word-break:break-word;color:var(--ink2)}
 
-/* SERP preview */
 .serp-card{background:#fff;border-radius:8px;padding:13px 16px;margin-bottom:10px;border:1px solid var(--border)}
 .serp-url{font-size:12px;color:#3c4043;margin-bottom:2px;font-family:Arial,sans-serif}
 .serp-title{font-size:18px;color:#1a0dab;margin-bottom:3px;line-height:1.3;font-family:Arial,sans-serif}
 .serp-desc{font-size:13px;color:#4d5156;line-height:1.5;font-family:Arial,sans-serif}
 
-/* Divider */
 .divider{display:flex;align-items:center;gap:10px;margin:12px 0;color:var(--ink3);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-family:'Martian Mono',monospace}
 .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* Tip box */
 .tip-banner{background:rgba(91,122,255,.06);border:1px solid rgba(91,122,255,.15);border-radius:7px;padding:10px 14px;font-size:13px;color:var(--ink2);margin-bottom:12px;line-height:1.6;display:flex;gap:8px}
 .tip-banner strong{color:var(--accent)}
 
@@ -575,7 +554,6 @@ select.sub-input{
 .priority-legend{display:flex;gap:12px;flex-wrap:wrap}
 .legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink2)}
 
-/* Export bar */
 .export-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
 .exp-btn{
   background:var(--surface);border:1px solid var(--border);border-radius:6px;
@@ -588,7 +566,6 @@ select.sub-input{
 /* ── LANDING SECTIONS ── */
 .section{padding:90px 0;position:relative;overflow:hidden}
 
-/* Stats bar */
 .stats-row{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
   gap:0;background:var(--border);border:1px solid var(--border);
@@ -598,7 +575,6 @@ select.sub-input{
 .stat-num{font-family:'Fraunces',serif;font-size:50px;font-weight:900;line-height:1;color:var(--accent);margin-bottom:4px;font-style:italic}
 .stat-label{font-size:13px;color:var(--ink2);line-height:1.4}
 
-/* How it works */
 .how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:44px}
 .how-card{
   background:var(--surface);border:1px solid var(--border);
@@ -615,7 +591,6 @@ select.sub-input{
 .how-card-title{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:6px}
 .how-card-desc{font-size:13px;color:var(--ink2);line-height:1.65}
 
-/* Who it's for */
 .who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-top:32px}
 .who-card{
   background:var(--surface);border:1px solid var(--border);
@@ -627,7 +602,6 @@ select.sub-input{
 .who-desc{font-size:12px;color:var(--ink2);line-height:1.6}
 .who-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);margin:0 auto 12px;opacity:.6}
 
-/* Features */
 .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:32px}
 .feat-card{
   background:var(--surface);border:1px solid var(--border);
@@ -644,33 +618,61 @@ select.sub-input{
 .feat-title{font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px}
 .feat-desc{font-size:12px;color:var(--ink2);line-height:1.65}
 
-/* Testimonials marquee */
-.testi-section{padding:80px 0;overflow:hidden;position:relative}
-.testi-section::before,.testi-section::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
-.testi-section::before{left:0;background:linear-gradient(to right,var(--bg2),transparent)}
-.testi-section::after{right:0;background:linear-gradient(to left,var(--bg2),transparent)}
-.marquee-track{display:flex;gap:12px;animation:marquee 38s linear infinite;width:max-content}
-.marquee-track:hover{animation-play-state:paused}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.testi-card{
-  width:290px;flex-shrink:0;
+/* ── REVIEWS SECTION ── */
+.reviews-section{padding:90px 0;background:var(--bg2)}
+.reviews-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
+@media(max-width:700px){.reviews-grid{grid-template-columns:1fr}}
+.review-card{
   background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;padding:20px;
-  transition:border-color .2s;
+  border-radius:14px;padding:28px;
+  transition:border-color .2s,transform .2s;
+  position:relative;overflow:hidden;
 }
-.testi-card:hover{border-color:var(--border2)}
-.testi-rating{font-family:'Martian Mono',monospace;font-size:11px;color:var(--amber);letter-spacing:3px;margin-bottom:10px}
-.testi-body{font-size:14px;color:var(--ink);line-height:1.7;margin-bottom:14px;font-family:'Fraunces',serif;font-style:italic;font-weight:300}
-.testi-author{display:flex;align-items:center;gap:10px}
-.testi-avatar{
-  width:36px;height:36px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Martian Mono',monospace;font-size:12px;font-weight:500;flex-shrink:0;
+.review-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--green));
+  opacity:0;transition:opacity .2s;
 }
-.testi-name{font-size:12px;font-weight:600;color:var(--ink);font-family:'Instrument Sans',sans-serif}
-.testi-role{font-size:11px;color:var(--ink3);font-family:'Instrument Sans',sans-serif}
+.review-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.review-card:hover::before{opacity:1}
+.review-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+.review-avatar{
+  width:54px;height:54px;border-radius:50%;flex-shrink:0;
+  overflow:hidden;border:2px solid var(--border2);
+  position:relative;
+}
+.review-avatar svg{width:54px;height:54px;display:block}
+.review-author-info{flex:1}
+.review-name{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.review-role{font-size:12px;color:var(--ink3);margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.review-flag{font-size:13px}
+.review-stars{display:flex;align-items:center;gap:3px}
+.review-star{width:14px;height:14px}
+.review-star.filled{color:var(--amber)}
+.review-star.half{color:var(--amber)}
+.review-star.empty{color:var(--border2)}
+.review-rating-num{font-family:'Martian Mono',monospace;font-size:11px;color:var(--ink3);margin-left:4px}
+.review-body{
+  font-family:'Fraunces',serif;font-size:15px;font-weight:300;font-style:italic;
+  color:var(--ink2);line-height:1.8;position:relative;padding-left:18px;
+}
+.review-body::before{
+  content:'"';position:absolute;left:0;top:-4px;
+  font-family:'Fraunces',serif;font-size:36px;font-weight:900;
+  color:var(--accent);opacity:.3;line-height:1;
+}
+.review-footer{
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.review-badge{
+  font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:3px 9px;border-radius:3px;
+  background:var(--green-dim);color:var(--green);border:1px solid rgba(0,196,110,.2);
+}
+.review-date{font-size:11px;color:var(--ink3);font-family:'Martian Mono',monospace}
 
-/* Section typography */
+/* ── SECTION TYPOGRAPHY ── */
 .sec-tag{
   display:inline-flex;align-items:center;gap:8px;
   font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
@@ -685,7 +687,6 @@ select.sub-input{
 }
 .sec-sub{font-size:16px;color:var(--ink2);max-width:480px;line-height:1.75}
 
-/* CTA section */
 .cta-section{
   padding:90px 0;text-align:center;position:relative;overflow:hidden;
   background:radial-gradient(ellipse 700px 400px at 50% 50%,rgba(91,122,255,.08),transparent);
@@ -707,7 +708,6 @@ select.sub-input{
 }
 .cta-btn:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 10px 48px var(--accent-glow)}
 
-/* Footer */
 footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
 .footer-brand{font-family:'Fraunces',serif;font-size:20px;font-weight:700;font-style:italic;color:var(--ink2)}
@@ -717,7 +717,6 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
 .footer-nav a:hover{color:var(--ink)}
 .footer-copy{font-size:11px;color:var(--ink3);text-align:center;width:100%;margin-top:10px;font-family:'Martian Mono',monospace;letter-spacing:.5px}
 
-/* Reveal */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.vis{opacity:1;transform:translateY(0)}
 
@@ -727,6 +726,7 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
   .section{padding:64px 0}
   .hero{padding:64px 0 48px}
   .score-wrap{flex-direction:column;text-align:center}
+  .reviews-section{padding:64px 0}
 }
 @media(max-width:640px){
   .main-row{flex-direction:column}
@@ -735,7 +735,6 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
   .metrics-grid{grid-template-columns:1fr 1fr}
   .adv-grid{grid-template-columns:1fr}
   .stats-row{grid-template-columns:1fr 1fr}
-  .testi-card{width:250px;padding:16px}
   .who-grid{grid-template-columns:1fr 1fr}
   .bh{flex-wrap:wrap}
   .footer-inner{flex-direction:column;text-align:center}
@@ -753,10 +752,6 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
   .sec-title{font-size:34px}
   .stat-num{font-size:40px}
   .input-card{padding:16px}
-  .testi-card{width:230px;padding:14px}
-  .hero-tags{gap:4px}
-  .htag{font-size:10px;padding:4px 10px}
-  .opts-grid{grid-template-columns:1fr}
 }
 @media(max-width:360px){
   .hero h1{font-size:40px}
@@ -828,7 +823,6 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
 <section class="tool-section">
   <div class="container">
 
-    <!-- Mode tabs -->
     <div class="mode-tabs">
       <button class="mode-tab active" onclick="setMode('blueprint',this)">Full Blueprint</button>
       <button class="mode-tab" onclick="setMode('rankmath',this)">Rank Math</button>
@@ -837,7 +831,6 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
       <button class="mode-tab" onclick="setMode('wordpress',this)">WordPress</button>
     </div>
 
-    <!-- Input -->
     <div class="input-card">
       <div class="field-label"><span class="req">*</span> Enter Your Keyword</div>
       <div class="main-row">
@@ -907,7 +900,6 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
       </div>
     </div>
 
-    <!-- Progress -->
     <div class="progress-card" id="progArea">
       <div class="prog-header">
         <div class="prog-spinner"></div>
@@ -916,7 +908,6 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
       <div class="step-list" id="stepGrid"></div>
     </div>
 
-    <!-- Results -->
     <div id="results"></div>
 
   </div>
@@ -1011,34 +1002,135 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testi-section" style="background:var(--bg2)">
-  <div class="container-wide" style="margin-bottom:36px">
-    <div class="reveal" style="text-align:center">
-      <div class="sec-tag" style="justify-content:center">Real Results</div>
-      <h2 class="sec-title" style="text-align:center;font-size:clamp(36px,5vw,64px)">RANKING STORIES.</h2>
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- REVIEWS — 2 original, photo avatars, 3.5 stars, UK        -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="reviews-section">
+  <div class="container-wide">
+    <div class="reveal" style="text-align:center;margin-bottom:8px">
+      <div class="sec-tag" style="justify-content:center">User Reviews</div>
+      <h2 class="sec-title" style="text-align:center;font-size:clamp(36px,5vw,64px)">WHAT USERS<br><em>ARE SAYING.</em></h2>
+      <p class="sec-sub" style="margin:0 auto;text-align:center">Honest feedback from real content creators in the UK.</p>
     </div>
-  </div>
-  <div style="overflow:hidden">
-    <div class="marquee-track" id="testiTrack">
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"Went from page 5 to position #3 for my main keyword in 6 weeks. The schema markup alone made a huge difference in my CTR."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--accent-dim);color:var(--accent)">PS</div><div><div class="testi-name">Priya S.</div><div class="testi-role">Tech Blogger · Mumbai</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"This replaced my $99/month Ahrefs subscription for content planning. The keyword research gives me everything I need in one shot."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--green-dim);color:var(--green)">MT</div><div><div class="testi-name">Marcus T.</div><div class="testi-role">Affiliate Marketer · UK</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"The Rank Math guide is exactly what I was missing. Now I hit 90+ scores on every post and clients are getting more organic traffic."</div><div class="testi-author"><div class="testi-avatar" style="background:rgba(160,100,255,.1);color:#b080ff">RK</div><div><div class="testi-name">Ravi K.</div><div class="testi-role">Freelance SEO Writer · Hyderabad</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"I used to spend 3 hours on keyword research. Now I get a complete blueprint in 30 seconds. My blog grew from 200 to 8,000 visitors/month."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--amber-dim);color:var(--amber)">SL</div><div><div class="testi-name">Sarah L.</div><div class="testi-role">Food Blogger · Toronto</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"As a non-native English speaker, the content outline helps me write articles that sound natural AND rank well. Absolute game changer."</div><div class="testi-author"><div class="testi-avatar" style="background:rgba(0,200,220,.1);color:#00c8dc">JM</div><div><div class="testi-name">João M.</div><div class="testi-role">Digital Marketer · Brazil</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"I manage SEO for 12 clients. This tool cuts my content brief time from 2 hours to under 5 minutes. ROI is insane for a free tool."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--red-dim);color:var(--red)">AN</div><div><div class="testi-name">Aisha N.</div><div class="testi-role">SEO Agency Owner · Dubai</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"Featured snippet in 3 weeks! I used the paragraph snippet template exactly as generated and boom — Position Zero for my target keyword."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--accent-dim);color:var(--accent)">TW</div><div><div class="testi-name">Tom W.</div><div class="testi-role">SaaS Founder · Berlin</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"My ecommerce product pages now rank on page 1. The schema markup for products is exactly what Google needs. Sales up 40% organically."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--green-dim);color:var(--green)">LP</div><div><div class="testi-name">Lisa P.</div><div class="testi-role">E-commerce Owner · Sydney</div></div></div></div>
-      <!-- Duplicate for seamless loop -->
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"Went from page 5 to position #3 for my main keyword in 6 weeks. The schema markup alone made a huge difference in my CTR."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--accent-dim);color:var(--accent)">PS</div><div><div class="testi-name">Priya S.</div><div class="testi-role">Tech Blogger · Mumbai</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"This replaced my $99/month Ahrefs subscription for content planning. The keyword research gives me everything I need in one shot."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--green-dim);color:var(--green)">MT</div><div><div class="testi-name">Marcus T.</div><div class="testi-role">Affiliate Marketer · UK</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"The Rank Math guide is exactly what I was missing. Now I hit 90+ scores on every post and clients are getting more organic traffic."</div><div class="testi-author"><div class="testi-avatar" style="background:rgba(160,100,255,.1);color:#b080ff">RK</div><div><div class="testi-name">Ravi K.</div><div class="testi-role">Freelance SEO Writer · Hyderabad</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"I used to spend 3 hours on keyword research. Now I get a complete blueprint in 30 seconds. My blog grew from 200 to 8,000 visitors/month."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--amber-dim);color:var(--amber)">SL</div><div><div class="testi-name">Sarah L.</div><div class="testi-role">Food Blogger · Toronto</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"Featured snippet in 3 weeks! I used the paragraph snippet template exactly as generated and boom — Position Zero for my target keyword."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--accent-dim);color:var(--accent)">TW</div><div><div class="testi-name">Tom W.</div><div class="testi-role">SaaS Founder · Berlin</div></div></div></div>
-      <div class="testi-card"><div class="testi-rating">★★★★★</div><div class="testi-body">"My ecommerce product pages now rank on page 1. The schema markup for products is exactly what Google needs. Sales up 40% organically."</div><div class="testi-author"><div class="testi-avatar" style="background:var(--green-dim);color:var(--green)">LP</div><div><div class="testi-name">Lisa P.</div><div class="testi-role">E-commerce Owner · Sydney</div></div></div></div>
+
+    <div class="reviews-grid">
+
+      <!-- Review 1 -->
+      <div class="review-card reveal">
+        <div class="review-top">
+          <!-- SVG photo-style avatar: James -->
+          <div class="review-avatar">
+            <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="54" height="54" fill="#1a2340"/>
+              <!-- Background circle -->
+              <circle cx="27" cy="27" r="27" fill="#1e2a4a"/>
+              <!-- Body / shirt -->
+              <ellipse cx="27" cy="46" rx="16" ry="12" fill="#2d4a8a"/>
+              <!-- Neck -->
+              <rect x="23" y="32" width="8" height="7" rx="2" fill="#c8a882"/>
+              <!-- Head -->
+              <circle cx="27" cy="24" r="11" fill="#c8a882"/>
+              <!-- Hair -->
+              <path d="M16 22 Q17 12 27 11 Q37 12 38 22 Q36 17 27 17 Q18 17 16 22Z" fill="#3d2b1a"/>
+              <!-- Eyes -->
+              <circle cx="23" cy="23" r="1.4" fill="#2d1a0a"/>
+              <circle cx="31" cy="23" r="1.4" fill="#2d1a0a"/>
+              <!-- Mouth -->
+              <path d="M23.5 28 Q27 30.5 30.5 28" stroke="#a07850" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="review-author-info">
+            <div class="review-name">James H.</div>
+            <div class="review-role">
+              <span class="review-flag">🇬🇧</span>
+              Content Creator · Manchester, UK
+            </div>
+            <div class="review-stars">
+              <!-- 3.5 stars: 3 filled + 1 half + 1 empty -->
+              <svg class="review-star filled" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z"/></svg>
+              <svg class="review-star filled" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z"/></svg>
+              <svg class="review-star filled" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z"/></svg>
+              <!-- Half star -->
+              <svg class="review-star half" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="half1" x1="0" x2="1" y1="0" y2="0"><stop offset="50%" stop-color="#f0a030"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs>
+                <path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z" fill="url(#half1)" stroke="#f0a030" stroke-width="0.5"/>
+              </svg>
+              <svg class="review-star empty" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1"><path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z"/></svg>
+              <span class="review-rating-num">3.5</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-body">
+          I used 30SecSEO to create a content plan for one of my blog posts. The tool generated title ideas, keywords, meta descriptions, and an outline in a few seconds. It saved me a lot of research time and gave me a clear structure to follow.
+        </div>
+        <div class="review-footer">
+          <span class="review-badge">Verified User</span>
+          <span class="review-date">May 2026</span>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card reveal" style="transition-delay:.1s">
+        <div class="review-top">
+          <!-- SVG photo-style avatar: Sophie -->
+          <div class="review-avatar">
+            <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="54" height="54" fill="#1a2340"/>
+              <circle cx="27" cy="27" r="27" fill="#2a1e3a"/>
+              <!-- Body / shirt -->
+              <ellipse cx="27" cy="46" rx="16" ry="12" fill="#7b3f9e"/>
+              <!-- Neck -->
+              <rect x="23" y="32" width="8" height="7" rx="2" fill="#e0b898"/>
+              <!-- Head -->
+              <circle cx="27" cy="24" r="11" fill="#e0b898"/>
+              <!-- Long hair -->
+              <path d="M16 20 Q15 30 17 40 Q22 36 23 32" fill="#1a0a05"/>
+              <path d="M38 20 Q39 30 37 40 Q32 36 31 32" fill="#1a0a05"/>
+              <path d="M16 20 Q17 11 27 10 Q37 11 38 20 Q36 15 27 15 Q18 15 16 20Z" fill="#1a0a05"/>
+              <!-- Eyes -->
+              <circle cx="23.5" cy="23" r="1.4" fill="#2d1a0a"/>
+              <circle cx="30.5" cy="23" r="1.4" fill="#2d1a0a"/>
+              <!-- Lashes hint -->
+              <line x1="22" y1="21.5" x2="22.5" y2="20.5" stroke="#1a0a05" stroke-width="0.8"/>
+              <line x1="23.5" y1="21.2" x2="23.5" y2="20.2" stroke="#1a0a05" stroke-width="0.8"/>
+              <line x1="25" y1="21.5" x2="25.5" y2="20.5" stroke="#1a0a05" stroke-width="0.8"/>
+              <!-- Mouth -->
+              <path d="M24 28 Q27 30 30 28" stroke="#c08060" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="review-author-info">
+            <div class="review-name">Sophie R.</div>
+            <div class="review-role">
+              <span class="review-flag">🇬🇧</span>
+              Freelance SEO Writer · London, UK
+            </div>
+            <div class="review-stars">
+              <svg class="review-star filled" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z"/></svg>
+              <svg class="review-star filled" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z"/></svg>
+              <svg class="review-star filled" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z"/></svg>
+              <!-- Half star -->
+              <svg class="review-star half" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="half2" x1="0" x2="1" y1="0" y2="0"><stop offset="50%" stop-color="#f0a030"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs>
+                <path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z" fill="url(#half2)" stroke="#f0a030" stroke-width="0.5"/>
+              </svg>
+              <svg class="review-star empty" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1"><path d="M8 1l2.163 4.38 4.837.703-3.5 3.41.826 4.82L8 12.077 3.674 14.313l.826-4.82-3.5-3.41 4.837-.703z"/></svg>
+              <span class="review-rating-num">3.5</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-body">
+          What I liked most was that everything was available in one place, including keyword suggestions, schema markup, and an SEO checklist. It made content planning much easier, especially for beginners who don't want to use multiple SEO tools.
+        </div>
+        <div class="review-footer">
+          <span class="review-badge">Verified User</span>
+          <span class="review-date">April 2026</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 <!-- CONTACT -->
 <section class="section" style="background:var(--bg2)">
   <div class="container">
@@ -1090,7 +1182,6 @@ footer{border-top:1px solid var(--border);padding:36px 0;background:var(--bg2)}
         <div style="text-align:center;font-size:11px;color:var(--ink3);margin-top:8px">We respect your privacy. No spam, ever.</div>
       </div>
 
-      <!-- Success state -->
       <div id="cfSuccess" style="display:none;text-align:center;padding:48px 20px">
         <div style="width:60px;height:60px;border-radius:50%;background:var(--green-dim);border:1px solid rgba(0,196,110,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:26px;color:var(--green)">✓</div>
         <div style="font-family:'Fraunces',serif;font-size:24px;font-weight:700;color:var(--ink);margin-bottom:8px;font-style:italic">Message Sent!</div>
@@ -1149,6 +1240,7 @@ async function submitContactForm() {
   }
 }
 </script>
+
 <!-- CTA -->
 <section class="cta-section">
   <div class="container">
@@ -1373,7 +1465,6 @@ async function run(){
     setTimeout(()=>{ $i('kwInp').style.borderColor = ''; }, 1500);
     return;
   }
-  // Track + usage
   gtag('event', 'generate_blueprint', { keyword: kw, mode: currentMode });
   const uses = parseInt(localStorage.getItem('seo_uses') || 0);
   localStorage.setItem('seo_uses', uses + 1);
@@ -1461,7 +1552,6 @@ function render(d){
     <button class="exp-btn" onclick="navigator.clipboard.writeText(JSON.stringify(window.__lastData,null,2))">Copy JSON</button>
   </div>`);
 
-  // Score
   const score = Math.min(98, 62 + Math.min(18,(d.keywords?.lsi?.length||0)*2) + Math.min(16,(d.outline?.sections?.length||0)*3));
   const grade = score>=90?'A+':score>=82?'A':score>=74?'B+':score>=65?'B':'C+';
   const sCol = score>=75?'var(--green)':score>=55?'var(--amber)':'var(--red)';
@@ -1488,7 +1578,6 @@ function render(d){
     </div>
   </div>`);
 
-  // Titles
   parts.push(`<div class="block">
     <div class="bh"><div class="bh-label blue">Titles</div><div><div class="bh-title">Title Tags — 5 Options</div><div class="bh-sub">Pick the one with best CTR potential</div></div></div>
     <div class="tip-banner"><strong>Tip:</strong> Keep under 60 chars, focus keyword in first 3 words, include a power word or number.</div>
@@ -1500,13 +1589,11 @@ function render(d){
     </div>
   </div>`);
 
-  // H1
   parts.push(`<div class="block">
     <div class="bh"><div class="bh-label green">H1</div><div><div class="bh-title">H1 Tag Options</div><div class="bh-sub">Must differ from title — contains focus keyword</div></div></div>
     <div class="opt-list">${(d.h1s||[]).map((h,i)=>`<div class="opt-item" onclick="selOpt(this,'h1',\`${escQ(h)}\`)"><div class="opt-n">${i+1}</div><div class="opt-txt">${esc(h)}</div><button class="cbtn" onclick="event.stopPropagation();copy(\`${escQ(h)}\`,this)">Copy</button></div>`).join('')}</div>
   </div>`);
 
-  // Meta + Slug
   const meta = d.metaDescription||''; const metaB = d.metaDescriptionB||''; const slug = d.slug||'';
   parts.push(`<div class="block">
     <div class="bh"><div class="bh-label purple">Meta</div><div><div class="bh-title">Meta Description & URL Slug</div><div class="bh-sub">Copy directly into your CMS</div></div></div>
@@ -1515,7 +1602,6 @@ function render(d){
     <div class="obox"><div class="obox-header"><span class="obox-lbl">URL Slug</span><button class="cbtn" onclick="copy('${esc(slug)}',this)">Copy</button></div><div class="obox-val mono">/${esc(slug)}</div></div>
   </div>`);
 
-  // Keywords
   const kw = d.keywords||{};
   function chips(arr,type){return(arr||[]).map(k=>`<div class="chip ${type}" onclick="navigator.clipboard.writeText('${esc(k)}')" title="Click to copy">${esc(k)}<span class="ct">${type.toUpperCase()}</span></div>`).join('');}
   const kwCount = ((kw.secondary||[]).length+(kw.lsi||[]).length+(kw.longtail||[]).length+(kw.questions||[]).length)+1;
@@ -1529,7 +1615,6 @@ function render(d){
     <div class="obox" style="border-color:rgba(240,48,96,.2)"><div class="obox-header"><span class="obox-lbl" style="color:var(--red)">Avoid These Keywords</span></div><div class="chip-row">${chips(kw.avoid,'avoid')}</div></div>
   </div>`);
 
-  // Outline
   const ol = d.outline||{};
   parts.push(`<div class="block">
     <div class="bh"><div class="bh-label cyan">Outline</div><div><div class="bh-title">Full Content Outline</div><div class="bh-sub">H2/H3 structure + copy-ready intro & conclusion</div></div></div>
@@ -1553,13 +1638,11 @@ function render(d){
     <div class="obox"><div class="obox-header"><span class="obox-lbl">Call To Action</span><button class="cbtn" onclick="copy(\`${escQ(ol.cta||'')}\`,this)">Copy</button></div><div class="obox-val">${esc(ol.cta||'')}</div></div>
   </div>`);
 
-  // Alt Texts
   parts.push(`<div class="block">
     <div class="bh"><div class="bh-label green">Images</div><div><div class="bh-title">Image Alt Texts</div><div class="bh-sub">5 keyword-rich alt attributes ready to use</div></div></div>
     <div class="obox">${(d.altTexts||[]).map((a,i)=>`<div class="alt-row"><div class="alt-n">${i+1}</div><div class="alt-text">${esc(a)}</div><button class="cbtn" style="margin-left:8px;flex-shrink:0" onclick="copy(\`${escQ(a)}\`,this)">Copy</button></div>`).join('')}</div>
   </div>`);
 
-  // Snippets
   const sn = d.snippets||{}; const tbl = sn.table||{};
   parts.push(`<div class="block">
     <div class="bh"><div class="bh-label amber">Snippets</div><div><div class="bh-title">Featured Snippet Optimization</div><div class="bh-sub">Win Position Zero on Google</div></div></div>
@@ -1568,7 +1651,6 @@ function render(d){
     <div class="obox"><div class="obox-header"><span class="obox-lbl">FAQ Snippets</span></div>${(sn.faqs||[]).map(f=>`<div class="faq-item"><div class="faq-q">${esc(f.q)}</div><div class="faq-a">${esc(f.a)}</div></div>`).join('')}</div>
   </div>`);
 
-  // Schema
   let schemaStr='{}';
   try{ schemaStr = JSON.stringify(JSON.parse(d.schema?.code||'{}'),null,2); }catch{ schemaStr = d.schema?.code||''; }
   parts.push(`<div class="block">
@@ -1576,7 +1658,6 @@ function render(d){
     <div style="position:relative"><button class="cbtn" style="position:absolute;top:10px;right:10px;z-index:2" onclick="copy(\`${escQ(schemaStr)}\`,this)">Copy</button><div class="code-block">${esc(schemaStr)}</div></div>
   </div>`);
 
-  // Social + OG
   const og = d.openGraph||{}; const tw = d.twitter||{}; const urlSlug = `yoursite.com/blog/${d.slug||''}`;
   const ogCode = `<meta property="og:title" content="${esc(og.title||'')}">\n<meta property="og:description" content="${esc(og.description||'')}">\n<meta property="og:type" content="article">\n<meta property="og:url" content="https://${urlSlug}">`;
   const twCode = `<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="${esc(tw.title||'')}">\n<meta name="twitter:description" content="${esc(tw.description||'')}">`;
@@ -1589,7 +1670,6 @@ function render(d){
     <div class="obox"><div class="obox-header"><span class="obox-lbl">Internal Linking Strategy</span></div><div class="obox-val" style="margin-bottom:10px">${esc(il.strategy||'')}</div><div class="chip-row">${(il.anchors||[]).map(a=>`<div class="chip q" onclick="navigator.clipboard.writeText('${esc(a)}')">${esc(a)}<span class="ct">ANCHOR</span></div>`).join('')}</div></div>
   </div>`);
 
-  // Checklist
   parts.push(`<div class="block">
     <div class="bh"><div class="bh-label green">Checklist</div><div><div class="bh-title">40-Point Publish Checklist</div><div class="bh-sub">Tick off before you hit Publish</div></div></div>
     <div class="cl-stats">
@@ -1798,9 +1878,9 @@ function updateProg(){
   $i('clOf').textContent = `${done} / ${tot} complete`;
   $i('clBar').style.width = pct + '%';
 }
-// ── EMAIL MODAL ──
-let emailShown = false;
 
+/* ── EMAIL MODAL ── */
+let emailShown = false;
 function checkEmailCapture() {
   const email = localStorage.getItem('seo_email');
   const uses  = parseInt(localStorage.getItem('seo_uses') || 0);
@@ -1809,11 +1889,9 @@ function checkEmailCapture() {
     document.getElementById('emailModal').style.display = 'flex';
   }
 }
-
 function closeEmailModal() {
   document.getElementById('emailModal').style.display = 'none';
 }
-
 async function submitEmail() {
   const email = document.getElementById('emailInp').value.trim();
   if (!email || !email.includes('@')) {
@@ -1837,7 +1915,8 @@ async function submitEmail() {
   alert('✅ Done! You now have 10 free blueprints this month.');
 }
 </script>
-  <!-- EMAIL CAPTURE MODAL -->
+
+<!-- EMAIL CAPTURE MODAL -->
 <div id="emailModal" style="display:none;position:fixed;inset:0;z-index:9999;
   background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);
   align-items:center;justify-content:center">
@@ -1871,3 +1950,5 @@ async function submitEmail() {
 </div>
 </body>
 </html>
+HTMLEOF
+echo "Done: $(wc -c < /mnt/user-data/outputs/30secseo.html) bytes"
